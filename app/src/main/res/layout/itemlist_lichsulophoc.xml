@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C9DFA4"
+    android:paddingTop="10dp">
+    <TextView
+        android:id="@+id/txtTenbaihoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Sinh học và tâm sinh lý ảnh hưởng đến đâu"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="60dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time"/>
+        <TextView
+            android:id="@+id/txtGio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19:00"
+            android:textSize="12dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="30dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lich"/>
+        <TextView
+            android:id="@+id/txtNgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31/12/2021"
+            android:textSize="12dp"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/txtNameGV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bùi Văn Thịnh"
+            android:textSize="14dp"
+            android:gravity="right"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -52,11 +52,14 @@
         android:popupBackground="#838380"
         android:layout_marginTop="5dp"/>
     <ListView
+        android:id="@+id/lvLichsulophoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="100dp"
-        android:layout_weight="1"/>
+        android:divider="@color/white"
+        android:dividerHeight="10sp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
