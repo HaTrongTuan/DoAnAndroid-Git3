@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Process"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUẢN LÝ HỌC VỤ"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/btnLichsulophoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch sử lớp học"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:background="@drawable/botron_button" />
+        <Button
+            android:id="@+id/btnLophocsapdienra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lớp học sắp diễn ra"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="13dp"
+            android:background="@drawable/botron_button"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spSapxep"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_gravity="right"
+        android:popupBackground="#838380"
+        android:layout_marginTop="5dp"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="100dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_gravity="bottom"
+        >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homepage"
+        android:icon="@drawable/coolicon"
+        android:title="HomePage"/>
+    <item
+        android:id="@+id/process"
+        android:icon="@drawable/icon"
+        android:title="Process"/>
+    <item
+        android:id="@+id/premium"
+        android:icon="@drawable/logoto"
+        android:title="Premium"/>
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/bell"
+        android:title="Notifications"/>
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/profile"
+        android:title="Profile"/>
+</menu>
