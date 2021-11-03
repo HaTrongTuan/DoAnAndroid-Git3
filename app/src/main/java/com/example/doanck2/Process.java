@@ -37,7 +37,7 @@ public class Process extends AppCompatActivity {
 
                         return true;
                     case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),HomePage.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.user:
