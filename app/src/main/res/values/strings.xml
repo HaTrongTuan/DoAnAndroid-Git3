@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DoAnCK2</string>
+    <string name="chkbox">Tôi đồng ý với <text color="#25577C"><i><u>Điều khoản Dịch vụ</u></i></text> và <text color="#25577C"><i><u>Thông báo về quyền riêng tư</u></i></text></string>
 </resources>
