@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:background="@drawable/card"
+            android:padding="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Xin chào,"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic">
+                </TextView>
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mint Cookie"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp">
+
+
+
+                <ImageView
+                    android:id="@+id/ava"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ava2"
+                    >
+                </ImageView>
+                <ImageView
+                    android:id="@+id/imvPremium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:src="@drawable/premium"
+                    android:layout_gravity="bottom"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*"
+            android:layout_marginTop="30dp">
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/imbLop"
+                    android:src="@drawable/lop"/>
+                <ImageButton
+                    android:id="@+id/imbGv"
+                    android:src="@drawable/gv"/>
+            </TableRow>
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/imbTin"
+                    android:src="@drawable/tin"/>
+                <ImageButton
+                    android:id="@+id/imbLeo"
+                    android:src="@drawable/leo"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_gravity="bottom">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</LinearLayout>
