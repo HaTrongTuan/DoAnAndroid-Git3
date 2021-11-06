@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/drawable/botron_button.xml" value="0.2703125" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_process.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_lichsulophoc.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_notification.xml" value="0.264" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_notification.xml" value="0.264" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_premium.xml" value="0.2" />

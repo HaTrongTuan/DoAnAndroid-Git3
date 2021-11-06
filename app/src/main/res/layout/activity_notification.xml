@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Notification"
     android:orientation="vertical"
-
     android:paddingTop="10dp">
     <TextView
         android:layout_width="wrap_content"
@@ -24,7 +23,7 @@
         android:layout_weight="1"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="#03A9F4"
         android:layout_marginTop="5dp">
         <ImageView
@@ -35,12 +34,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thẻ Premium của bạn còn thời hạn"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:textColor="@color/white"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:textSize="13dp"/>
         <EditText
             android:id="@+id/edtDemnguoc"
-            android:layout_width="30dp"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:text="0"
             android:textColor="#59DD12"
@@ -48,15 +48,17 @@
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:gravity="right"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="15dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ngày"
             android:textColor="#59DD12"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:textStyle="bold"/>
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
