@@ -16,6 +16,13 @@ public class Process extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_process);
 
+        bottomNav();
+
+
+
+    }
+
+    private void bottomNav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.process);
 
@@ -27,7 +34,7 @@ public class Process extends AppCompatActivity {
 
                         return true;
                     case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),HomePage.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.user:
@@ -48,6 +55,5 @@ public class Process extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 }

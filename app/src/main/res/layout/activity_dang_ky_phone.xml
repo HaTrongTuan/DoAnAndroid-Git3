@@ -83,7 +83,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtName"
+            android:id="@+id/edtNamePhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -100,7 +100,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtPass"
+            android:id="@+id/edtPassPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -116,7 +116,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtRePass"
+            android:id="@+id/edtRePassPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -137,7 +137,7 @@
             android:textSize="14dp"/>
 
         <Button
-            android:id="@+id/btnActDk"
+            android:id="@+id/btnActDkPhone"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"

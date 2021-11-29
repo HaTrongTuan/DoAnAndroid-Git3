@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/phone"/>
         <TextView
-            android:id="@+id/txtSDTDK"
+            android:id="@+id/txtPhoneDk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sử dụng số điện thoại"
@@ -84,7 +84,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtName"
+            android:id="@+id/edtNameEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -101,7 +101,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtPass"
+            android:id="@+id/edtPassEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -117,7 +117,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtRePass"
+            android:id="@+id/edtRePassEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -140,13 +140,13 @@
             android:textSize="14dp"/>
 
         <Button
-            android:id="@+id/btnActDk"
+            android:id="@+id/btnActDkEmail"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#3B8CC6"
             android:gravity="center_horizontal"
             android:text="ĐĂNG KÝ"
             android:textSize="20dp"
-            android:backgroundTint="#3B8CC6"
             android:textStyle="bold" />
     </LinearLayout>
 

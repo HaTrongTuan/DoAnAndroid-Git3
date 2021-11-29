@@ -9,12 +9,12 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Premium extends AppCompatActivity {
+public class HomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_premium);
+        setContentView(R.layout.activity_home_page);
 
         bottomNav();
 
@@ -23,7 +23,7 @@ public class Premium extends AppCompatActivity {
 
     private void bottomNav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.premium);
+        bottomNavigationView.setSelectedItemId(R.id.homepage);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -34,14 +34,15 @@ public class Premium extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext(),HomePage.class));
-                        overridePendingTransition(0,0);
+
                         return true;
                     case R.id.user:
                         startActivity(new Intent(getApplicationContext(),UserPage.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.premium:
+                        startActivity(new Intent(getApplicationContext(),Premium.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.notification:
                         startActivity(new Intent(getApplicationContext(),Notification.class));

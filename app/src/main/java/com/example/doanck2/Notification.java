@@ -15,8 +15,13 @@ public class Notification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+        bottomNav();
 
 
+
+    }
+
+    private void bottomNav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.notification);
 
@@ -29,7 +34,7 @@ public class Notification extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),HomePage.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.user:
