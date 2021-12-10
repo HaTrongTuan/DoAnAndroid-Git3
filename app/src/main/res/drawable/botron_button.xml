@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" >
-        <shape android:shape="rectangle"  >
-            <corners android:radius="20dip" />
-            <stroke android:width="0.5dip" android:color="#6699cc" />
-            <gradient android:angle="-90" android:startColor="#66ff00" android:endColor="#bcd4e6"  />
-        </shape>
-    </item>
-    <item android:state_focused="true">
-        <shape android:shape="rectangle"  >
-            <corners android:radius="20dip" />
-            <stroke android:width="0.5dip" android:color="#6699cc" />
-            <solid android:color="#afeeee"/>
-        </shape>
-    </item>
-    <item >
-        <shape android:shape="rectangle"  >
-            <corners android:radius="20dip" />
-            <stroke android:width="0.5dip" android:color="#6699cc" />
-            <gradient android:angle="-90" android:startColor="#E6E6FA" android:endColor="#e6e8fa" />
-        </shape>
-    </item>
-</selector>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10dp"></corners>
+    <solid android:color="#61F306"/>
+<!--    <item android:state_pressed="true" >-->
+<!--        <shape android:shape="rectangle"  >-->
+<!--            <corners android:radius="20dip" />-->
+<!--            <stroke android:width="0.5dip" android:color="#6699cc" />-->
+<!--            <gradient android:angle="-90" android:startColor="#66ff00" android:endColor="#bcd4e6"  />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item android:state_focused="true">-->
+<!--        <shape android:shape="rectangle"  >-->
+<!--            <corners android:radius="20dip" />-->
+<!--            <stroke android:width="0.5dip" android:color="#6699cc" />-->
+<!--            <solid android:color="#afeeee"/>-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item >-->
+<!--        <shape android:shape="rectangle"  >-->
+<!--            <corners android:radius="20dip" />-->
+<!--            <stroke android:width="0.5dip" android:color="#6699cc" />-->
+<!--            <gradient android:angle="-90" android:startColor="#E6E6FA" android:endColor="#e6e8fa" />-->
+<!--        </shape>-->
+<!--    </item>-->
+</shape>
