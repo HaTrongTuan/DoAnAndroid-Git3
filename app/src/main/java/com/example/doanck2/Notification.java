@@ -29,7 +29,7 @@ public class Notification extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),HomePage.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.user:
