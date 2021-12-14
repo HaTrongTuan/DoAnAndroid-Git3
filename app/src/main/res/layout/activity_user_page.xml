@@ -168,6 +168,7 @@
                     android:background="#03A9F4" />
 
                 <Button
+                    android:id="@+id/btnEditAcc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"

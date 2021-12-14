@@ -37,20 +37,18 @@
         android:layout_height="wrap_content"
         android:src="@drawable/logoto"/>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/edtPhonemk"
+        android:background="@drawable/edt_bg"
         android:layout_width="350dp"
-        app:hintEnabled="true"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_height="50dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtPhonemk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Nhập Số điện thoại"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:inputType="phone"
+        android:hint="Nhập Số điện thoại"
+        android:textSize="18sp"
+        android:textColorHint="@color/edtText"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,10 +84,12 @@
             android:id="@+id/btnXnmk"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_login"
             android:gravity="center_horizontal"
             android:text="XÁC NHẬN"
+            android:textStyle="bold"
             android:textSize="20dp"
-            android:backgroundTint="#3B8CC6"
-            android:textStyle="bold" />
+            android:padding="8dp"
+            android:layout_marginBottom="50dp"/>
     </LinearLayout>
 </LinearLayout>

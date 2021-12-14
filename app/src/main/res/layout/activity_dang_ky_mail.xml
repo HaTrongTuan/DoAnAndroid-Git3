@@ -38,35 +38,33 @@
         android:layout_height="wrap_content"
         android:src="@drawable/logoto"/>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/edtEmail"
+        android:background="@drawable/edt_bg"
         android:layout_width="350dp"
-
-        app:hintEnabled="true"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_height="50dp">
+        android:inputType="textEmailAddress"
+        android:hint="Nhập Email"
+        android:textSize="18sp"
+        android:textColorHint="@color/edtText"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Nhập Email"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="10dp">
+        android:layout_margin="10dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/phone"/>
         <TextView
-            android:id="@+id/txtSDTDK"
+            android:id="@+id/txtPhoneDk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sử dụng số điện thoại"
@@ -76,15 +74,16 @@
 
     </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/edtName"
         android:layout_width="350dp"
-
-        app:hintEnabled="true"
+        android:layout_height="50dp"
         android:layout_gravity="center"
+
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtName"
+            android:id="@+id/edtNameEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -92,16 +91,32 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+        android:background="@drawable/edt_bg"
+        android:textColorHint="@color/edtText"
+        android:paddingStart="15dp"
+        android:textSize="18sp"
+        android:paddingEnd="15dp"
+        android:inputType="textEmailAddress"
+        android:hint="Tên tài khoản"/>
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="350dp"
-        app:hintEnabled="true"
-        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_gravity="center"
         app:passwordToggleEnabled="true"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtPass"
+
+            android:id="@+id/edtPassEmail"
+
+            android:textSize="18sp"
+            android:textColorHint="@color/edtText"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -110,20 +125,23 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="350dp"
-        app:hintEnabled="true"
-        android:layout_marginTop="20dp"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_gravity="center"
         app:passwordToggleEnabled="true"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtRePass"
+
+            android:id="@+id/edtRePassEmail"
+            android:textSize="18sp"
+            android:textColorHint="@color/edtText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="Nhập lại mật khẩu" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -140,13 +158,19 @@
             android:textSize="14dp"/>
 
         <Button
-            android:id="@+id/btnActDk"
+            android:id="@+id/btnActDkEmail"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
+
+            android:backgroundTint="#3B8CC6"
+
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_login"
+
             android:gravity="center_horizontal"
+            android:padding="8dp"
             android:text="ĐĂNG KÝ"
             android:textSize="20dp"
-            android:backgroundTint="#3B8CC6"
             android:textStyle="bold" />
     </LinearLayout>
 
