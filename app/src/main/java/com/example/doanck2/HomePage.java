@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomePage extends AppCompatActivity {
+
+    TextView txtName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +21,13 @@ public class HomePage extends AppCompatActivity {
 
 
         bottomNav();
+        linkViews();
 
 
+    }
+
+    private void linkViews() {
+        txtName = findViewById(R.id.txtName);
     }
 
     private void bottomNav() {
