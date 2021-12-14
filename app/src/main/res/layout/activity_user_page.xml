@@ -245,7 +245,8 @@
                     android:backgroundTint="@color/white"
                     android:text="Đăng xuất "
                     android:textColor="#F44336"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:background="@drawable/botron_button"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -254,7 +255,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                app:menu="@menu/bottom_nav_menu">
+                app:menu="@menu/bottom_nav_menu"
+                android:background="#2196F3">
 
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 

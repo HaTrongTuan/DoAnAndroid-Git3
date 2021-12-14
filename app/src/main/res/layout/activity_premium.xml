@@ -80,7 +80,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="ĐĂNG KÝ"
-        android:backgroundTint="#FB1605"/>
+        android:background="@drawable/botron_button"
+        android:backgroundTint="#FB1605"
+        android:layout_marginTop="5dp"/>
     </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -88,6 +90,7 @@
         android:id="@+id/bottom_navigation"
         app:menu="@menu/bottom_nav_menu"
         android:layout_gravity="bottom"
+        android:background="#2196F3"
         >
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
