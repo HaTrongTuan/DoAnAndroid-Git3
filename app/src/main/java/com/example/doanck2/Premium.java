@@ -16,6 +16,12 @@ public class Premium extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium);
 
+        bottomNav();
+
+
+    }
+
+    private void bottomNav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.premium);
 

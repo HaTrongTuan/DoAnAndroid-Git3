@@ -78,6 +78,18 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
+
+        android:layout_height="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNamePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Tên tài khoản"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
         android:background="@drawable/edt_bg"
         android:textColorHint="@color/edtText"
         android:paddingStart="15dp"
@@ -85,6 +97,7 @@
         android:paddingEnd="15dp"
         android:inputType="textEmailAddress"
         android:hint="Tên tài khoản"/>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="350dp"
@@ -97,9 +110,13 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/edtPassPhone"
+
             android:id="@+id/edtPass"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -116,9 +133,13 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/edtRePassPhone"
+
             android:id="@+id/edtRePass"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -140,7 +161,7 @@
             android:textSize="14dp"/>
 
         <Button
-            android:id="@+id/btnActDk"
+            android:id="@+id/btnActDkPhone"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
