@@ -44,6 +44,18 @@
             android:name=".Process"
             android:exported="true" />
         <activity
+            android:name=".XacNhan"
+            android:exported="true" />
+        <activity
+            android:name=".LayLaiTkEmail"
+            android:exported="true" />
+        <activity
+            android:name=".LayLaiTkPhone"
+            android:exported="true" />
+        <activity
+            android:name=".XacNhanLayLaiTK"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
 
