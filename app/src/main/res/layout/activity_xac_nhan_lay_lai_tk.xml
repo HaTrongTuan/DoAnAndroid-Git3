@@ -40,38 +40,42 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="350dp"
-        app:hintEnabled="true"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_gravity="center"
+        app:passwordToggleEnabled="true"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtVerifymk"
+            android:id="@+id/edtNewPass"
+            android:textSize="18sp"
+            android:textColorHint="@color/edtText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Nhập mã OTP (6 ký tự)"/>
-
+            android:inputType="textPassword"
+            android:hint="Nhập mật khẩu mới" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="10dp">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_marginTop="10dp"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_gravity="center"
+        app:passwordToggleEnabled="true"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        android:layout_height="50dp">
 
-        <TextView
-            android:id="@+id/txtChuaNhanmk"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtReNewPass"
+            android:textSize="18sp"
+            android:textColorHint="@color/edtText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginRight="20dp"
-            android:textSize="14dp"
-            android:textColor="#25577C"
-            android:text="Tôi chưa nhận được mã OTP"/>
-
-    </LinearLayout>
-
+            android:inputType="textPassword"
+            android:hint="Nhập lại mật khẩu mới" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
