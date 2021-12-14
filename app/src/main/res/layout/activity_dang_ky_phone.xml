@@ -73,10 +73,10 @@
 
     </LinearLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtName"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+
         android:layout_gravity="center"
 
         android:layout_height="50dp">
@@ -113,7 +113,6 @@
 
             android:id="@+id/edtPassPhone"
 
-            android:id="@+id/edtPass"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
 
@@ -136,7 +135,6 @@
 
             android:id="@+id/edtRePassPhone"
 
-            android:id="@+id/edtRePass"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
 

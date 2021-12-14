@@ -93,7 +93,7 @@ public class AccountDataBase extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         Cursor cursor1 = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_USERNAME +"=?" , new String[]{username});
         Cursor cursor2 = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_PASSWORD +"=?" , new String[]{password});
-        if (cursor1.getCount() > 0 && cursor2.getCount()>0 &&cursor2.equals(cursor1)) {
+        if (cursor1.getCount() > 0 && cursor2.getCount()>0 &&cursor2.getCount()==cursor1.getCount()) {
             return true;
         }else {
             return false;
