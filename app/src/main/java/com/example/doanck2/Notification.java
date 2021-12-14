@@ -6,10 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Notification extends AppCompatActivity {
+    TextView txtThongbao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

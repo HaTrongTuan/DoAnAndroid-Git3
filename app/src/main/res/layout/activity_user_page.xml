@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="10dp"
+    android:paddingTop="5dp"
 
     tools:context=".UserPage">
 
@@ -24,13 +24,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="5dp"
                     android:text="USER"
                     android:textColor="@color/black"
                     android:textSize="28sp"
@@ -56,7 +54,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:background="@null"
-                        android:src="@drawable/cam"
+                        android:src="@drawable/came"
                         app:layout_constraintBottom_toBottomOf="parent"
                         tools:ignore="MissingConstraints"
                         tools:layout_editor_absoluteX="87dp" />
@@ -65,7 +63,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -74,23 +72,24 @@
                         android:layout_marginLeft="40dp"
                         android:text="ID tài khoản"
                         android:textColor="@color/black"
-                        android:textSize="13dp" />
+                        android:textSize="15dp" />
 
-                    <EditText
-                        android:id="@+id/edtIdUser"
+                    <TextView
+                        android:id="@+id/txtIdUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="01000258"
+                        android:textColor="#00BCD4"
+                        android:gravity="right"
                         android:layout_marginRight="20dp"
                         android:background="@color/white"
-                        android:gravity="right"
-                        android:text="01000258"
-                        android:textColor="#00BCD4" />
+                        android:textSize="18dp"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -100,21 +99,22 @@
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
-                    <EditText
-                        android:id="@+id/edtNameUser"
+                    <TextView
+                        android:id="@+id/txtNameUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="MINT COOKIE"
+                        android:textColor="#00BCD4"
+                        android:gravity="right"
                         android:layout_marginRight="20dp"
                         android:background="@color/white"
-                        android:gravity="right"
-                        android:text="MINT COOKIE"
-                        android:textColor="#00BCD4" />
+                        android:textSize="18dp"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -124,21 +124,22 @@
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
-                    <EditText
-                        android:id="@+id/edtPhoneUser"
+                    <TextView
+                        android:id="@+id/txtPhoneUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="0123456789"
+                        android:textColor="#00BCD4"
+                        android:gravity="right"
                         android:layout_marginRight="20dp"
                         android:background="@color/white"
-                        android:gravity="right"
-                        android:text="0123456789"
-                        android:textColor="#00BCD4" />
+                        android:textSize="18dp"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -148,21 +149,22 @@
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
-                    <EditText
-                        android:id="@+id/edtEmailUser"
+                    <TextView
+                        android:id="@+id/txtEmailUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
-                        android:background="@color/white"
-                        android:gravity="right"
                         android:text="abcdef@gmail.com"
-                        android:textColor="#00BCD4" />
+                        android:textColor="#00BCD4"
+                        android:layout_marginRight="20dp"
+                        android:gravity="right"
+                        android:background="@color/white"
+                        android:textSize="18dp"/>
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="7dp"
                     android:background="#03A9F4" />
 
                 <Button
@@ -181,7 +183,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:layout_width="300dp"
+                        android:layout_width="270dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"
                         android:gravity="left"
@@ -193,7 +195,8 @@
                         android:id="@+id/switchOnOff"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tắt" />
+                        android:text="Tắt"
+                        android:layout_marginLeft="10dp"/>
                 </LinearLayout>
 
                 <Button
@@ -243,7 +246,8 @@
                     android:backgroundTint="@color/white"
                     android:text="Đăng xuất "
                     android:textColor="#F44336"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:background="@drawable/botron_button"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -252,7 +256,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                app:menu="@menu/bottom_nav_menu">
+                app:menu="@menu/bottom_nav_menu"
+                android:background="#2196F3">
 
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 
