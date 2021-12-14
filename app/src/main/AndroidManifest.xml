@@ -30,6 +30,7 @@
         <activity
             android:name=".DangKyPhone"
             android:exported="true" />
+
         <activity
             android:name=".Premium"
             android:exported="true" />
