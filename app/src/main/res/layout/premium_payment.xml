@@ -39,7 +39,7 @@
                     android:id="@+id/btnChangePremium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#03A9F4"
+                    android:backgroundTint="#03A9F4"
                     android:text="Thay đổi gói"
                     android:textColor="@color/white"
                     android:gravity="right"
@@ -67,6 +67,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"/>
 
+
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -74,8 +75,17 @@
             android:layout_marginLeft="20dp"
             android:text="Hình thức thanh toán"
             android:textStyle="bold"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/revPayment"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
 
 
 
