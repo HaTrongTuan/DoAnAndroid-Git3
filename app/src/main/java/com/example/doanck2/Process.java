@@ -27,6 +27,16 @@ public class Process extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_process);
+
+
+        bottomNav();
+
+
+
+    }
+
+    private void bottomNav() {
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.process);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -58,6 +68,7 @@ public class Process extends AppCompatActivity {
                 return false;
             }
         });
+
         this.spSapxep = (Spinner) findViewById(R.id.spSapxep);
         loadDataSapxep();
         linkview();
@@ -87,5 +98,6 @@ public class Process extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(Process.this, android.R.layout.simple_spinner_dropdown_item);
         adapter.addAll(Sapxep);
         spSapxep.setAdapter(adapter);
+
     }
 }
