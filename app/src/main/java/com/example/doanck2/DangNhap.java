@@ -1,7 +1,5 @@
 package com.example.doanck2;
 
-import static com.example.doanck2.R.layout.activity_dang_nhap;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;

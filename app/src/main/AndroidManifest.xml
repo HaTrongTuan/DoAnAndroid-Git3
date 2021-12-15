@@ -24,10 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".DangKyMail"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".DangKyPhone"
             android:exported="true" />
