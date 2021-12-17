@@ -11,7 +11,8 @@
         android:title="Process"/>
     <item
         android:id="@+id/premium"
-        android:icon="@drawable/logoto"
+        android:icon="@drawable/icpr"
+
         android:title="Premium"/>
     <item
         android:id="@+id/notification"
