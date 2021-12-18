@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import java.io.ByteArrayOutputStream;
 public class DangKyPhone extends AppCompatActivity {
 
     TextView txtEmailDk;
+    ImageView imvback;
     EditText edtPhonePhone, edtNamePhone, edtPassPhone, edtRePassPhone;
     Button btnActDkPhone;
     AccountDataBase ADB = new AccountDataBase(this);
@@ -30,7 +32,18 @@ public class DangKyPhone extends AppCompatActivity {
         linkViews();
         dangKyPhone();
         transToEmail();
+        back();
 
+    }
+
+    private void back() {
+        imvback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentTranstoPhone = new Intent(DangKyPhone.this, DangNhap.class);
+                startActivity(intentTranstoPhone);
+            }
+        });
     }
 
     private byte[] convertPhoto(int image) {
@@ -94,5 +107,6 @@ public class DangKyPhone extends AppCompatActivity {
         edtPassPhone= findViewById(R.id.edtPassPhone);
         edtRePassPhone = findViewById(R.id.edtRePassPhone);
         btnActDkPhone = findViewById(R.id.btnActDkPhone);
+        imvback = findViewById(R.id.back);
     }
 }
