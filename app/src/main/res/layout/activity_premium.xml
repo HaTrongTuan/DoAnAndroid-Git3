@@ -80,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="ĐĂNG KÝ"
+        app:backgroundTint="@null"
         android:background="@drawable/botron_button"
         android:backgroundTint="#FB1605"
         android:layout_marginTop="5dp"/>
