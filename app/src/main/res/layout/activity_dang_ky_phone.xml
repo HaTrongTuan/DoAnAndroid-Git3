@@ -81,7 +81,7 @@
 
         <EditText
             android:background="@drawable/edt_bg"
-            android:id="@+id/edtNameEmail"
+            android:id="@+id/edtNamePhone"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:inputType="textEmailAddress"
