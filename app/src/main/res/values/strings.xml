@@ -7,6 +7,11 @@
         <item>@drawable/hinh5</item>
 
     </string-array>
+    <string name="dieukhoan">Áp dụng <b>Điều khoản và điều kiện</b> khi đăng ký</string>
+    <string name="motthang"> 300,000<U>đ</U></string>
+    <string name="bathang"> 700,000<U>đ</U></string>
+    <string name="sauthang"> 1,200,000<U>đ</U></string>
+    <string name="motnam"> 2,500,000<U>đ</U></string>
     <string name="loadingText">LEARN \n ENGLISH \n ONLINE </string>
     <string name="changePack"><u>Thay đổi gói</u></string>
 </resources>
