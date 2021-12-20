@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
+            android:name=".User_Page_Contact"
+            android:exported="true" />
+        <activity
+            android:name=".User_Page_Rules"
+            android:exported="true" />
+        <activity
+            android:name=".User_Page_FAQ"
+            android:exported="true" />
+        <activity
             android:name=".User_Page_Edit"
             android:exported="true" />
         <activity

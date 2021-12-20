@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class User_Page_Edit extends AppCompatActivity {
-
+public class User_Page_Contact extends AppCompatActivity {
     ImageButton imbBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_page_edit);
+        setContentView(R.layout.activity_user_page_contact);
         linkViews();
         setEvents();
     }
@@ -30,5 +30,4 @@ public class User_Page_Edit extends AppCompatActivity {
     private void linkViews() {
         imbBack =findViewById(R.id.imbBack);
     }
-
 }

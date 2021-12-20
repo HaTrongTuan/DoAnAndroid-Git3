@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.utils.General;
@@ -17,6 +20,7 @@ public class UserPage extends AppCompatActivity {
 
     TextView txtIdUser, txtNameUser, txtPhoneUser, txtEmailUser;
     Button btnChangePass, btnPolicy, btnContact, btnQues,btnEditAcc;
+    ImageView imvAva;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,30 +38,38 @@ public class UserPage extends AppCompatActivity {
 
     private void showInfo() {
         Intent nhanUsername = getIntent();
-        String fullname = nhanUsername.getStringExtra("UserNametoUsers");
-        txtIdUser.setText(General.ADB.ShowInfo(fullname).getString(0));
-        txtNameUser.setText(General.ADB.ShowInfo(fullname).getString(3));
-        txtPhoneUser.setText(General.ADB.ShowInfo(fullname).getString(4));
-        txtEmailUser.setText(General.ADB.ShowInfo(fullname).getString(5));
+        String username = nhanUsername.getStringExtra("UserNametoUsers");
+        byte[] photo = General.ADB.ShowInfo(username).getBlob(7);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+        imvAva.setImageBitmap(bitmap);
+        txtIdUser.setText(General.ADB.ShowInfo(username).getString(0));
+        txtNameUser.setText(General.ADB.ShowInfo(username).getString(3));
+        txtPhoneUser.setText(General.ADB.ShowInfo(username).getString(4));
+        txtEmailUser.setText(General.ADB.ShowInfo(username).getString(5));
+
     }
 
     private void setEvents() {
         btnQues.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.user_page_faq);
+                Intent intent = new Intent(UserPage.this, User_Page_FAQ.class);
+                startActivity(intent);
+
             }
         });
         btnPolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.user_page_rule);
+                Intent intent = new Intent(UserPage.this, User_Page_Rules.class);
+                startActivity(intent);
             }
         });
         btnContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.user_page_contact);
+                Intent intent = new Intent(UserPage.this, User_Page_Contact.class);
+                startActivity(intent);
             }
         });
         btnChangePass.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +85,8 @@ public class UserPage extends AppCompatActivity {
         btnEditAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_user_page_edit);
+                Intent intent = new Intent(UserPage.this, User_Page_Contact.class);
+                startActivity(intent);
             }
         });
     }
@@ -88,6 +101,7 @@ public class UserPage extends AppCompatActivity {
         btnContact = findViewById(R.id.btnLienhe);
         btnQues = findViewById(R.id.btnCauhoithuonggap);
         btnEditAcc = findViewById(R.id.btnEditAcc);
+        imvAva = findViewById(R.id.imvAvatar);
 
     }
 
