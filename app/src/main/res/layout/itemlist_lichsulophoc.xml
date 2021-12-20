@@ -3,7 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C9DFA4"
     android:paddingTop="10dp">
     <TextView
         android:id="@+id/txtTenbaihoc"
@@ -29,6 +28,7 @@
             android:layout_height="wrap_content"
             android:text="19:00"
             android:textSize="12dp"
+            android:textColor="@color/black"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:text="31/12/2021"
             android:textSize="12dp"
+            android:textColor="@color/black"
             android:layout_marginLeft="5dp"/>
         <TextView
             android:id="@+id/txtNameGV"
@@ -55,6 +56,7 @@
             android:layout_height="wrap_content"
             android:text="Bùi Văn Thịnh"
             android:textSize="14dp"
+            android:textColor="@color/black"
             android:gravity="right"/>
     </LinearLayout>
 

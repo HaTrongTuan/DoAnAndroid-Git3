@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +22,9 @@ public class Premium extends AppCompatActivity {
     RadioButton radChangeImage2 = null;
     RadioButton radChangeImage3 = null;
     RadioGroup rgChangeImage = null;
+
+    Button btnDangKy;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +32,19 @@ public class Premium extends AppCompatActivity {
 
 
         bottomNav();
+        register();
+        linkview();
 
+    }
 
+    private void register() {
+        btnDangKy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentTranstoPhone = new Intent(Premium.this, Register.class);
+                startActivity(intentTranstoPhone);
+            }
+        });
     }
 
     private void bottomNav() {
@@ -63,7 +79,7 @@ public class Premium extends AppCompatActivity {
                 return false;
             }
         });
-        linkview();
+
 
         rgChangeImage.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -88,5 +104,6 @@ public class Premium extends AppCompatActivity {
         radChangeImage2 = findViewById(R.id.radChangeImage2);
         radChangeImage3 = findViewById(R.id.radChangeImage3);
         rgChangeImage = findViewById(R.id.rgChangeImage);
+        btnDangKy = findViewById(R.id.btnDangKy);
     }
 }

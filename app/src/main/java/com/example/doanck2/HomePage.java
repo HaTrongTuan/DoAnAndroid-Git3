@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -13,6 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class HomePage extends AppCompatActivity {
 
     TextView txtName;
+    ImageButton imbLop, imbGv, imbTin, imbLeo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +25,35 @@ public class HomePage extends AppCompatActivity {
 
         bottomNav();
         linkViews();
+        changePage();
 
+
+    }
+
+    private void changePage() {
+        imbLop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentTranstoPhone = new Intent(HomePage.this, Class.class);
+                startActivity(intentTranstoPhone);
+            }
+        });
 
     }
 
     private void linkViews() {
         txtName = findViewById(R.id.txtName);
+        imbLop = findViewById(R.id.imbLop);
+        imbGv = findViewById(R.id.imbGv);
+        imbTin = findViewById(R.id.imbTin);
+        imbLeo = findViewById(R.id.imbLeo);
     }
 
     private void bottomNav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.homepage);
 
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.homepage);
+        
 
 
 

@@ -32,7 +32,13 @@
             android:layout_marginLeft="20dp"/>
 
     </LinearLayout>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,31 +79,18 @@
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/edtName"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-
-        android:layout_height="50dp">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:background="@drawable/edt_bg"
             android:id="@+id/edtNamePhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
             android:inputType="textEmailAddress"
+            android:textColorHint="@color/edtText"
+            android:layout_gravity="center"
+            android:paddingStart="15dp"
+            android:textSize="18sp"
+            android:paddingEnd="15dp"
             android:hint="Tên tài khoản"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-        android:background="@drawable/edt_bg"
-        android:textColorHint="@color/edtText"
-        android:paddingStart="15dp"
-        android:textSize="18sp"
-        android:paddingEnd="15dp"
-        android:inputType="textEmailAddress"
-        android:hint="Tên tài khoản"/>
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="350dp"
@@ -113,7 +106,6 @@
 
             android:id="@+id/edtPassPhone"
 
-            android:id="@+id/edtPass"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
 
@@ -136,7 +128,6 @@
 
             android:id="@+id/edtRePassPhone"
 
-            android:id="@+id/edtRePass"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
 
@@ -169,9 +160,11 @@
             android:gravity="center_horizontal"
             android:padding="8dp"
             android:text="ĐĂNG KÝ"
+            app:backgroundTint="@null"
             android:textSize="20dp"
             android:textStyle="bold" />
 
     </LinearLayout>
-
+    </LinearLayout>
+</ScrollView>
 </LinearLayout>

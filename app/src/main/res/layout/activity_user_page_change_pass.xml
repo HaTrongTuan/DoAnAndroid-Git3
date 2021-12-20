@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".User_Page_ChangePass"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,7 +99,7 @@
             android:layout_height="wrap_content"
             android:text="Cập nhật"
             android:textColor="#F10707"
-            android:background="@null"
+            android:background="#00FFFFFF"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"/>
 
@@ -112,5 +114,6 @@
         android:background="#2196F3">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </LinearLayout>
