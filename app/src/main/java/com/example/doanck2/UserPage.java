@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.utils.General;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UserPage extends AppCompatActivity {
@@ -24,10 +25,20 @@ public class UserPage extends AppCompatActivity {
 
         linkViews();
         bottomNav();
+        showInfo();
         setEvents();
 
 
 
+    }
+
+    private void showInfo() {
+        Intent nhanUsername = getIntent();
+        String fullname = nhanUsername.getStringExtra("UserNametoUsers");
+        txtIdUser.setText(General.ADB.ShowInfo(fullname).getString(0));
+        txtNameUser.setText(General.ADB.ShowInfo(fullname).getString(3));
+        txtPhoneUser.setText(General.ADB.ShowInfo(fullname).getString(4));
+        txtEmailUser.setText(General.ADB.ShowInfo(fullname).getString(5));
     }
 
     private void setEvents() {
@@ -52,7 +63,11 @@ public class UserPage extends AppCompatActivity {
         btnChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_user_page_change_pass);
+                Intent nhanUsername = getIntent();
+                String fullname = nhanUsername.getStringExtra("UserNametoUsers");
+               Intent intent = new Intent(UserPage.this,User_Page_ChangePass.class);
+               intent.putExtra("UserNametoChangePass",fullname);
+               startActivity(intent);
             }
         });
         btnEditAcc.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +104,11 @@ public class UserPage extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext(),HomePage.class));
+                        Intent nhanUsername = getIntent();
+                        String username = nhanUsername.getStringExtra("UserNametoUsers");
+                        Intent intent = new Intent(UserPage.this,HomePage.class);
+                        intent.putExtra("UserNametoHP",username);
+                        startActivity(intent);
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.user:
