@@ -52,13 +52,13 @@ public class UserPage extends AppCompatActivity {
         btnChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.user_page_changepass);
+                setContentView(R.layout.activity_user_page_change_pass);
             }
         });
         btnEditAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.user_page_edit);
+                setContentView(R.layout.activity_user_page_edit);
             }
         });
     }
