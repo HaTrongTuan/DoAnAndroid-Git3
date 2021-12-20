@@ -84,7 +84,7 @@ public class DangNhap extends AppCompatActivity {
     private void prepareDb() {
 //        accountDataBase.onUpgrade(accountDataBase.getWritableDatabase(), 0,1);
         if(General.ADB.getCount() == 0) {
-            General.ADB.insertData("admin", "admin", "admin", "0123456789", "admin@gmail.com", "01092001", convertPhoto(R.drawable.ava));
+            General.ADB.insertData("admin", "admin", "admin", "0123456789", "admin@gmail.com", "01092001", convertPhoto(R.drawable.unknownava));
         }
     }
 
