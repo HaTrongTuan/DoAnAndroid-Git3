@@ -59,9 +59,15 @@ public class AccountDataBase extends SQLiteOpenHelper {
     }
 
 
-    public void execSql(String sql){
+    public Boolean updatePass(String username, String password){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL(sql);
+        Cursor cursor = db.rawQuery("UPDATE " + TBL_NAME + " SET " + COL_A_PASSWORD + "=? "
+                + " WHERE " + COL_A_USERNAME + "=? ",new String[]{password,username} );
+        if (cursor.getCount()>0) {
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public  boolean insertData(String username, String password,String fullname, String phone, String email, String birth, byte[] photo){

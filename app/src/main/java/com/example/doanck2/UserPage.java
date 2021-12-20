@@ -63,7 +63,11 @@ public class UserPage extends AppCompatActivity {
         btnChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_user_page_change_pass);
+                Intent nhanUsername = getIntent();
+                String fullname = nhanUsername.getStringExtra("UserNametoUsers");
+               Intent intent = new Intent(UserPage.this,User_Page_ChangePass.class);
+               intent.putExtra("UserNametoChangePass",fullname);
+               startActivity(intent);
             }
         });
         btnEditAcc.setOnClickListener(new View.OnClickListener() {

@@ -49,6 +49,7 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/edt_hcn"
                 android:layout_weight="0.6"/>
@@ -69,6 +70,7 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/edt_hcn"
                 android:layout_weight="0.6"/>
@@ -90,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:background="@drawable/edt_hcn"
                 android:layout_weight="0.6"/>
         </LinearLayout>
