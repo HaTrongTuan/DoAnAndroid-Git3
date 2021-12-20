@@ -75,17 +75,21 @@
             <TableRow>
                 <ImageButton
                     android:id="@+id/imbLop"
+                    android:background="#00FFFFFF"
                     android:src="@drawable/lop"/>
                 <ImageButton
                     android:id="@+id/imbGv"
+                    android:background="#00FFFFFF"
                     android:src="@drawable/gv"/>
             </TableRow>
             <TableRow>
                 <ImageButton
                     android:id="@+id/imbTin"
+                    android:background="#00FFFFFF"
                     android:src="@drawable/tin"/>
                 <ImageButton
                     android:id="@+id/imbLeo"
+                    android:background="#00FFFFFF"
                     android:src="@drawable/leo"/>
             </TableRow>
         </TableLayout>

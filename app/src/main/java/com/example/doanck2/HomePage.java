@@ -4,27 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.database.AccountDataBase;
-import com.example.utils.General;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.io.ByteArrayOutputStream;
 
 public class HomePage extends AppCompatActivity {
 
     TextView txtName;
-    ImageView imvAva;
-
+    ImageButton imbLop, imbGv, imbTin, imbLeo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,32 +25,35 @@ public class HomePage extends AppCompatActivity {
 
         bottomNav();
         linkViews();
-        showInfo();
+        changePage();
 
 
     }
 
-    private void showInfo() {
-        Intent nhanUsername = getIntent();
-        String fullname = nhanUsername.getStringExtra("UserName");
-        txtName.setText(General.ADB.ShowInfo(fullname).getString(2));
-            //convert photo
-        byte[] photo = General.ADB.ShowInfo(fullname).getBlob(7);
-        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
-        imvAva.setImageBitmap(bitmap);
-
+    private void changePage() {
+        imbLop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentTranstoPhone = new Intent(HomePage.this, Class.class);
+                startActivity(intentTranstoPhone);
+            }
+        });
 
     }
 
     private void linkViews() {
-
         txtName = findViewById(R.id.txtName);
-        imvAva = findViewById(R.id.imvAvaHP);
+        imbLop = findViewById(R.id.imbLop);
+        imbGv = findViewById(R.id.imbGv);
+        imbTin = findViewById(R.id.imbTin);
+        imbLeo = findViewById(R.id.imbLeo);
     }
 
     private void bottomNav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.homepage);
+
+        
 
 
 
@@ -92,7 +86,6 @@ public class HomePage extends AppCompatActivity {
                 return false;
             }
         });
-
 
     }
 }

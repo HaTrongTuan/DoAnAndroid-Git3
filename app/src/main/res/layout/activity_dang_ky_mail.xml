@@ -81,30 +81,18 @@
 
     </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtName"
-        android:layout_width="350dp"
-
-        android:layout_gravity="center"
-
-        android:layout_height="50dp">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:background="@drawable/edt_bg"
             android:id="@+id/edtNameEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
             android:inputType="textEmailAddress"
+            android:textColorHint="@color/edtText"
+            android:layout_gravity="center"
+            android:paddingStart="15dp"
+            android:textSize="18sp"
+            android:paddingEnd="15dp"
             android:hint="Tên tài khoản"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-        android:background="@drawable/edt_bg"
-        android:textColorHint="@color/edtText"
-        android:paddingStart="15dp"
-        android:textSize="18sp"
-        android:paddingEnd="15dp"
-        android:inputType="textEmailAddress"
-        android:hint="Tên tài khoản"/>
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -173,7 +161,7 @@
 
             android:layout_marginBottom="50dp"
             android:background="@drawable/button_login"
-
+            app:backgroundTint="@null"
             android:gravity="center_horizontal"
             android:padding="8dp"
             android:text="ĐĂNG KÝ"
