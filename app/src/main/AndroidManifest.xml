@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
+            android:name=".Leo"
+            android:exported="true" />
+        <activity
+            android:name=".News"
+            android:exported="true" />
+        <activity
+            android:name=".GiangVien"
+            android:exported="true" />
+        <activity
+            android:name=".ClassDetail"
+            android:exported="true" />
+        <activity
             android:name=".User_Page_Edit"
             android:exported="true" />
         <activity
