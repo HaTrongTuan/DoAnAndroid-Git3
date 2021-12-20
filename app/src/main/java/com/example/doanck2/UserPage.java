@@ -6,18 +6,73 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UserPage extends AppCompatActivity {
+
+    TextView txtIdUser, txtNameUser, txtPhoneUser, txtEmailUser;
+    Button btnChangePass, btnPolicy, btnContact, btnQues,btnEditAcc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_page);
 
+        linkViews();
         bottomNav();
+        setEvents();
 
+
+
+    }
+
+    private void setEvents() {
+        btnQues.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.user_page_faq);
+            }
+        });
+        btnPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.user_page_rule);
+            }
+        });
+        btnContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.user_page_contact);
+            }
+        });
+        btnChangePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_user_page_change_pass);
+            }
+        });
+        btnEditAcc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_user_page_edit);
+            }
+        });
+    }
+
+    private void linkViews() {
+        txtIdUser = findViewById(R.id.txtIdUser);
+        txtNameUser = findViewById(R.id.txtNameUser);
+        txtPhoneUser = findViewById(R.id.txtPhoneUser);
+        txtEmailUser = findViewById(R.id.txtEmailUser);
+        btnChangePass = findViewById(R.id.btnChangePassword);
+        btnPolicy = findViewById(R.id.btnDieuKhoan);
+        btnContact = findViewById(R.id.btnLienhe);
+        btnQues = findViewById(R.id.btnCauhoithuonggap);
+        btnEditAcc = findViewById(R.id.btnEditAcc);
 
     }
 

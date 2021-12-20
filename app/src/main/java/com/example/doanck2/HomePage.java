@@ -4,18 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.utils.General;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomePage extends AppCompatActivity {
 
     TextView txtName;
     ImageButton imbLop, imbGv, imbTin, imbLeo;
+    ImageView imvAvaHP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +30,21 @@ public class HomePage extends AppCompatActivity {
 
         bottomNav();
         linkViews();
+        showInfo();
         changePage();
 
 
+
+    }
+
+    private void showInfo() {
+        Intent nhanUsername = getIntent();
+        String fullname = nhanUsername.getStringExtra("UserName");
+        txtName.setText(General.ADB.ShowInfo(fullname).getString(2));
+        //convert photo
+        byte[] photo = General.ADB.ShowInfo(fullname).getBlob(7);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+        imvAvaHP.setImageBitmap(bitmap);
     }
 
     private void changePage() {
@@ -47,6 +64,8 @@ public class HomePage extends AppCompatActivity {
         imbGv = findViewById(R.id.imbGv);
         imbTin = findViewById(R.id.imbTin);
         imbLeo = findViewById(R.id.imbLeo);
+        imvAvaHP = findViewById(R.id.imvAvaHP);
+
     }
 
     private void bottomNav() {
