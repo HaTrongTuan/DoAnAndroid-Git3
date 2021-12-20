@@ -38,13 +38,23 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void showInfo() {
-        Intent nhanUsername = getIntent();
-        String fullname = nhanUsername.getStringExtra("UserName");
-        txtName.setText(General.ADB.ShowInfo(fullname).getString(2));
-        //convert photo
-        byte[] photo = General.ADB.ShowInfo(fullname).getBlob(7);
-        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
-        imvAvaHP.setImageBitmap(bitmap);
+        Intent nhanUsernamefromDNhap = getIntent();
+        String username1 = nhanUsernamefromDNhap.getStringExtra("UserName");
+        Intent nhanUsernamefromUsers = getIntent();
+        String username2 = nhanUsernamefromUsers.getStringExtra("UserNametoHP");
+        if (username1==null){
+            txtName.setText(General.ADB.ShowInfo(username2).getString(1));
+            //convert photo
+            byte[] photo = General.ADB.ShowInfo(username2).getBlob(7);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+            imvAvaHP.setImageBitmap(bitmap);
+        }else {
+            txtName.setText(General.ADB.ShowInfo(username1).getString(1));
+            //convert photo
+            byte[] photo = General.ADB.ShowInfo(username1).getBlob(7);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
+            imvAvaHP.setImageBitmap(bitmap);
+        }
     }
 
     private void changePage() {
@@ -88,8 +98,22 @@ public class HomePage extends AppCompatActivity {
 
                         return true;
                     case R.id.user:
-                        startActivity(new Intent(getApplicationContext(),UserPage.class));
-                        overridePendingTransition(0,0);
+                        Intent nhanUsernamefromDNhap = getIntent();
+                        String username = nhanUsernamefromDNhap.getStringExtra("UserName");
+                        Intent nhanUsernameFromUsers = getIntent();
+                        String usernamefromUsers = nhanUsernameFromUsers.getStringExtra("UserNametoHP");
+                        if(username==null){
+                            Intent intent1 = new Intent(HomePage.this, UserPage.class);
+                            intent1.putExtra("UserNametoUsers", usernamefromUsers);
+                            startActivity(intent1);
+                            overridePendingTransition(0, 0);
+                        }else {
+                            Intent intent = new Intent(HomePage.this, UserPage.class);
+                            intent.putExtra("UserNametoUsers", username);
+
+                            startActivity(intent);
+                            overridePendingTransition(0, 0);
+                        }
                         return true;
                     case R.id.premium:
                         startActivity(new Intent(getApplicationContext(),Premium.class));
