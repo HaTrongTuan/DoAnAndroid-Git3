@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ public class DangKyMail extends AppCompatActivity {
     ImageView imvback;
     EditText edtEmailEmail, edtNameEmail, edtPassEmail, edtRePassEmail;
     Button btnActDkEmail;
+    CheckBox chkDieuKhoan;
     AccountDataBase ADB = new AccountDataBase(this);
 
     @Override
@@ -71,10 +73,16 @@ public class DangKyMail extends AppCompatActivity {
                 String RePassEmail = edtRePassEmail.getText().toString().trim();
                 if (EmailEmail.equals("")||NameEmail.equals("")|| PassEmail.equals("")||RePassEmail.equals("")){
                     Toast.makeText(DangKyMail.this, "Vui lòng điền hết các ô!", Toast.LENGTH_SHORT).show();
+
                 }else{
-                if (RePassEmail.equals(PassEmail)) {
-                    Boolean checkUser = ADB.checkUsername(NameEmail);
-                    if (!checkUser ) {
+                    if (chkDieuKhoan.isChecked()==false){
+                        Toast.makeText(DangKyMail.this, "Bạn chưa đồng ý điều khoản!", Toast.LENGTH_SHORT).show();
+                    }else {
+                        if (ADB.checkEmail(EmailEmail)){
+                            Toast.makeText(DangKyMail.this, "Email đã có sẵn, vui lòng nhập Email khác!", Toast.LENGTH_SHORT).show();
+                        }else {
+                             if (RePassEmail.equals(PassEmail)) {
+                    if (!ADB.checkUsername(NameEmail) ) {
                         Boolean insert =  ADB.insertData(NameEmail, PassEmail, NameEmail, "Blank", EmailEmail, "Blank", convertPhoto(R.drawable.unknownava));
                     if (insert ) {
                         Intent intentActDangKyEmail = new Intent(DangKyMail.this, DangNhap.class);
@@ -84,12 +92,12 @@ public class DangKyMail extends AppCompatActivity {
                         Toast.makeText(DangKyMail.this, "Đăng kí thành công!", Toast.LENGTH_SHORT).show();
 
                         }
-                    }if (checkUser ){
+                    }else{
                         Toast.makeText(DangKyMail.this, "Tài khoản đã có sẵn, vui lòng sử dụng tài khoản khác!", Toast.LENGTH_SHORT).show();
                 }}else{
                     Toast.makeText(DangKyMail.this, "Nhập lại mật khẩu không chính xác!", Toast.LENGTH_SHORT).show();
                 }
-                }
+                }}}
             }}
         );
 }
@@ -113,5 +121,6 @@ public class DangKyMail extends AppCompatActivity {
         edtRePassEmail = findViewById(R.id.edtRePassEmail);
         btnActDkEmail = findViewById(R.id.btnActDkEmail);
         imvback = findViewById(R.id.back);
+        chkDieuKhoan = findViewById(R.id.chkQuyDinhMail);
     }
 }

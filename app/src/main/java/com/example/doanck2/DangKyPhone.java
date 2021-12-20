@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ public class DangKyPhone extends AppCompatActivity {
     ImageView imvback;
     EditText edtPhonePhone, edtNamePhone, edtPassPhone, edtRePassPhone;
     Button btnActDkPhone;
+    CheckBox chkDieuKhoan;
     AccountDataBase ADB = new AccountDataBase(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +67,12 @@ public class DangKyPhone extends AppCompatActivity {
                 String NamePhone = edtNamePhone.getText().toString().trim();
                 String PassPhone = edtPassPhone.getText().toString().trim();
                 String RePassPhone = edtRePassPhone.getText().toString().trim();
-                if (PhonePhone.equals("")||NamePhone.equals("")|| PassPhone.equals("")||RePassPhone.equals("")){
+                if (PhonePhone.equals("")||NamePhone.equals("")|| PassPhone.equals("")||RePassPhone.equals("")) {
                     Toast.makeText(DangKyPhone.this, "Vui lòng điền hết các ô!", Toast.LENGTH_SHORT).show();
-                }else{
+                }else {
+                    if(chkDieuKhoan.isChecked()==false){
+                        Toast.makeText(DangKyPhone.this, "Bạn chưa đồng ý điều khoản!", Toast.LENGTH_SHORT).show();
+                    }else{
                     if (RePassPhone.equals(PassPhone)) {
                         Boolean checkUser = ADB.checkUsername(NamePhone);
                         if (!checkUser ) {
@@ -80,12 +85,12 @@ public class DangKyPhone extends AppCompatActivity {
                                 Toast.makeText(DangKyPhone.this, "Đăng kí thành công!", Toast.LENGTH_SHORT).show();
 
                             }
-                        }if (checkUser ){
+                        }else{
                             Toast.makeText(DangKyPhone.this, "Tài khoản đã có sẵn, vui lòng sử dụng tài khoản khác!", Toast.LENGTH_SHORT).show();
                         }}else{
                         Toast.makeText(DangKyPhone.this, "Nhập lại mật khẩu không chính xác!", Toast.LENGTH_SHORT).show();
                     }
-                }
+                }}
             }}
         );
     }
@@ -108,5 +113,6 @@ public class DangKyPhone extends AppCompatActivity {
         edtRePassPhone = findViewById(R.id.edtRePassPhone);
         btnActDkPhone = findViewById(R.id.btnActDkPhone);
         imvback = findViewById(R.id.back);
+        chkDieuKhoan =findViewById(R.id.chkQuyDinhPhone);
     }
 }
