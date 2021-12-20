@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ public class DangKyPhone extends AppCompatActivity {
     TextView txtEmailDk;
     EditText edtPhonePhone, edtNamePhone, edtPassPhone, edtRePassPhone;
     Button btnActDkPhone;
+    CheckBox chkQuyDinh;
     AccountDataBase ADB = new AccountDataBase(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +57,12 @@ public class DangKyPhone extends AppCompatActivity {
                 if (PhonePhone.equals("")||NamePhone.equals("")|| PassPhone.equals("")||RePassPhone.equals("")){
                     Toast.makeText(DangKyPhone.this, "Vui lòng điền hết các ô!", Toast.LENGTH_SHORT).show();
                 }else{
+                    if (chkQuyDinh.isChecked()==false){
+                        Toast.makeText(DangKyPhone.this, "Bạn chưa đồng ý với quy định!", Toast.LENGTH_SHORT).show();
+                    }else {
                     if (RePassPhone.equals(PassPhone)) {
                         Boolean checkUser = ADB.checkUsername(NamePhone);
+
                         if (!checkUser ) {
                             Boolean insert =  ADB.insertData(NamePhone, PassPhone, NamePhone, PhonePhone, "Blank", "Blank", convertPhoto(R.drawable.unknownava));
                             if (insert ) {
@@ -70,8 +76,8 @@ public class DangKyPhone extends AppCompatActivity {
                         }if (checkUser ){
                             Toast.makeText(DangKyPhone.this, "Tài khoản đã có sẵn, vui lòng sử dụng tài khoản khác!", Toast.LENGTH_SHORT).show();
                         }}else{
-                        Toast.makeText(DangKyPhone.this, "Nhập lại mật khẩu không chính xác!", Toast.LENGTH_SHORT).show();
-                    }
+                            Toast.makeText(DangKyPhone.this, "Nhập lại mật khẩu không chính xác!", Toast.LENGTH_SHORT).show();
+                        }}
                 }
             }}
         );
@@ -94,5 +100,6 @@ public class DangKyPhone extends AppCompatActivity {
         edtPassPhone= findViewById(R.id.edtPassPhone);
         edtRePassPhone = findViewById(R.id.edtRePassPhone);
         btnActDkPhone = findViewById(R.id.btnActDkPhone);
+        chkQuyDinh = findViewById(R.id.chkQuyDinhPhone);
     }
 }

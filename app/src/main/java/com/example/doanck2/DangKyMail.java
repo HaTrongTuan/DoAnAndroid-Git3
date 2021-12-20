@@ -1,11 +1,13 @@
 package com.example.doanck2;
 
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database.AccountDataBase;
+import com.example.utils.General;
 
 import java.io.ByteArrayOutputStream;
 
@@ -20,9 +23,8 @@ public class DangKyMail extends AppCompatActivity {
 
     TextView txtPhoneDk;
     EditText edtEmailEmail, edtNameEmail, edtPassEmail, edtRePassEmail;
+    CheckBox chkQuydinh;
     Button btnActDkEmail;
-    AccountDataBase ADB = new AccountDataBase(this);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,10 +61,18 @@ public class DangKyMail extends AppCompatActivity {
                 if (EmailEmail.equals("")||NameEmail.equals("")|| PassEmail.equals("")||RePassEmail.equals("")){
                     Toast.makeText(DangKyMail.this, "Vui lòng điền hết các ô!", Toast.LENGTH_SHORT).show();
                 }else{
+                    Boolean checkEmail = General.ADB.checkEmail(EmailEmail);
+                    if (checkEmail ) {
+                        Toast.makeText(DangKyMail.this, "Email đã tồn tại, vui lòng nhập Email khác!", Toast.LENGTH_SHORT).show();
+                    }else {
+                        if (chkQuydinh.isChecked()== false){
+                            Toast.makeText(DangKyMail.this, "Bạn chưa đồng ý với điều khoản!", Toast.LENGTH_SHORT).show();
+                        }else {
+
                 if (RePassEmail.equals(PassEmail)) {
-                    Boolean checkUser = ADB.checkUsername(NameEmail);
+                    Boolean checkUser = General.ADB.checkUsername(NameEmail);
                     if (!checkUser ) {
-                        Boolean insert =  ADB.insertData(NameEmail, PassEmail, NameEmail, "Blank", EmailEmail, "Blank", convertPhoto(R.drawable.unknownava));
+                        Boolean insert =  General.ADB.insertData(NameEmail, PassEmail, NameEmail, "Blank", EmailEmail, "Blank", convertPhoto(R.drawable.unknownava));
                     if (insert ) {
                         Intent intentActDangKyEmail = new Intent(DangKyMail.this, DangNhap.class);
                         intentActDangKyEmail.putExtra("NamePhone_To_Login", NameEmail);
@@ -77,7 +87,7 @@ public class DangKyMail extends AppCompatActivity {
                     Toast.makeText(DangKyMail.this, "Nhập lại mật khẩu không chính xác!", Toast.LENGTH_SHORT).show();
                 }
                 }
-            }}
+            }}}}
         );
 }
 
@@ -99,5 +109,6 @@ public class DangKyMail extends AppCompatActivity {
         edtPassEmail = findViewById(R.id.edtPassEmail);
         edtRePassEmail = findViewById(R.id.edtRePassEmail);
         btnActDkEmail = findViewById(R.id.btnActDkEmail);
+        chkQuydinh = findViewById(R.id.chkQuyDinhMail);
     }
 }

@@ -4,15 +4,27 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.database.AccountDataBase;
+import com.example.utils.General;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.io.ByteArrayOutputStream;
 
 public class HomePage extends AppCompatActivity {
 
     TextView txtName;
+    ImageView imvAva;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +34,32 @@ public class HomePage extends AppCompatActivity {
 
         bottomNav();
         linkViews();
+        showInfo();
+
+
+    }
+
+    private void showInfo() {
+        Intent nhanUsername = getIntent();
+        String fullname = nhanUsername.getStringExtra("UserName");
+        txtName.setText(General.ADB.ShowInfo(fullname).getString(2));
+            //convert photo
+        byte[] photo = General.ADB.ShowInfo(fullname).getBlob(7);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+        imvAva.setImageBitmap(bitmap);
 
 
     }
 
     private void linkViews() {
+
         txtName = findViewById(R.id.txtName);
+        imvAva = findViewById(R.id.imvAvaHP);
     }
 
     private void bottomNav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.homepage);
-
-        
 
 
 
@@ -67,6 +92,7 @@ public class HomePage extends AppCompatActivity {
                 return false;
             }
         });
+
 
     }
 }
