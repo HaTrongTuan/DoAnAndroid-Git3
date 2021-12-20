@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:text="Cập nhật"
             android:textColor="#F10707"
-            android:background="@null"
+            android:background="#00FFFFFF"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"/>
 

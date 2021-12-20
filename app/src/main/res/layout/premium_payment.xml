@@ -24,30 +24,43 @@
             android:background="#03A9F4"
             android:orientation="vertical"
             android:layout_marginTop="5dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bạn đã chọn"
-                    android:textColor="@color/white"
                     android:layout_marginLeft="10dp"
-                    android:textSize="15dp"/>
-                <Button
-                    android:id="@+id/btnChangePremium"
+                    android:text="Bạn đã chọn"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#03A9F4"
-                    android:text="Thay đổi gói"
-                    android:textColor="@color/white"
-                    android:gravity="right"
-                    android:layout_marginRight="10dp"/>
-
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/btnChangePremium"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="#00FFFFFF"
+                        android:gravity="center"
+                        android:text="@string/changePack"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+                
             </LinearLayout>
-            <EditText
-                android:id="@+id/edtRegisterPremiumMonth"
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1 Month"
@@ -68,7 +81,6 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"/>
 
-
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -76,17 +88,8 @@
             android:layout_marginLeft="20dp"
             android:text="Hình thức thanh toán"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:textColor="@color/black"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/revPayment"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-
 
 
 

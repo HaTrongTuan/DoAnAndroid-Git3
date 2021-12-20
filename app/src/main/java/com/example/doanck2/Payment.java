@@ -3,34 +3,34 @@ package com.example.doanck2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LayLaiTkPhone extends AppCompatActivity {
+public class Payment extends AppCompatActivity {
 
-    ImageView imvback;
+    Button btnChangePremium;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lay_lai_tk_email);
+        setContentView(R.layout.premium_payment);
 
         linkView();
-        back();
+        addEvents();
     }
 
-    private void back() {
-        imvback.setOnClickListener(new View.OnClickListener() {
+    private void addEvents() {
+        btnChangePremium.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentTranstoPhone = new Intent(LayLaiTkPhone.this, DangNhap.class);
+                Intent intentTranstoPhone = new Intent(Payment.this, Register.class);
                 startActivity(intentTranstoPhone);
             }
         });
     }
 
     private void linkView() {
-        imvback = findViewById(R.id.back);
+        btnChangePremium = findViewById(R.id.btnChangePremium);
     }
 }

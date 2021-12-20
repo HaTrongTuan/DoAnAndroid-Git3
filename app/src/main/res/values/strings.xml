@@ -1,13 +1,17 @@
 <resources>
-    <string name="app_name">DoAnCK2</string>
+    <string name="app_name">LEO</string>
     <string name="chkbox">Tôi đồng ý với <text color="#25577C"><i><u>Điều khoản Dịch vụ</u></i></text> và <text color="#25577C"><i><u>Thông báo về quyền riêng tư</u></i></text></string>
     <string-array name="radiobtn_image">
         <item>@drawable/hinh6</item>
         <item>@drawable/hinh1</item>
         <item>@drawable/hinh5</item>
-    </string-array>
 
-    <string name="action_settings">Settings</string>
-    <string name="expand_all">Expand All</string>
-    <string name="collapse_all">Collapse All</string>
+    </string-array>
+    <string name="dieukhoan">Áp dụng <b>Điều khoản và điều kiện</b> khi đăng ký</string>
+    <string name="motthang"> 300,000<U>đ</U></string>
+    <string name="bathang"> 700,000<U>đ</U></string>
+    <string name="sauthang"> 1,200,000<U>đ</U></string>
+    <string name="motnam"> 2,500,000<U>đ</U></string>
+    <string name="loadingText">LEARN \n ENGLISH \n ONLINE </string>
+    <string name="changePack"><u>Thay đổi gói</u></string>
 </resources>

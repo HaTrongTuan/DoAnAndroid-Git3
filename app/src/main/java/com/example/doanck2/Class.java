@@ -1,36 +1,37 @@
 package com.example.doanck2;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class Class extends AppCompatActivity {
 
-public class LayLaiTkPhone extends AppCompatActivity {
-
-    ImageView imvback;
+    ImageButton imbBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lay_lai_tk_email);
+        setContentView(R.layout.activity_class);
 
-        linkView();
+        linkview();
         back();
     }
 
     private void back() {
-        imvback.setOnClickListener(new View.OnClickListener() {
+        imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentTranstoPhone = new Intent(LayLaiTkPhone.this, DangNhap.class);
+                Intent intentTranstoPhone = new Intent(Class.this, HomePage.class);
                 startActivity(intentTranstoPhone);
             }
         });
     }
 
-    private void linkView() {
-        imvback = findViewById(R.id.back);
+    private void linkview() {
+        imbBack = findViewById(R.id.imbBack);
     }
 }
