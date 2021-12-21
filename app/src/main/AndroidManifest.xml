@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
+            android:name=".Profile_Premium"
+            android:exported="true" />
+        <activity
             android:name=".PremiumUpdate"
             android:exported="true" />
         <activity
