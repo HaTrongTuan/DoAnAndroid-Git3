@@ -6,12 +6,14 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database.AccountDataBase;
+import com.example.utils.General;
 
 import java.io.ByteArrayOutputStream;
 
@@ -19,14 +21,14 @@ public class DangNhap extends AppCompatActivity {
 
     Button btnDn, btnDk;
     EditText edtUsername, edtPassword;
-    AccountDataBase ADB = new AccountDataBase(this);
+    CheckBox chkLuu;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_nhap);
-
+        General.ADB = new AccountDataBase(this);
         prepareDb();
         linkViews();
         getEvents();
@@ -50,17 +52,19 @@ public class DangNhap extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Lấy dữ liệu
-                String userName = edtUsername.getText().toString().trim();
-                String password = edtPassword.getText().toString().trim();
+                String userName = edtUsername.getText().toString();
+                String password = edtPassword.getText().toString();
 
                 //Check dữ liệu
-                boolean CheckUserPass = ADB.checkUsernamePassword(userName, password);
-                if (CheckUserPass == true) {
+                boolean CheckUserPass = General.ADB.checkUsernamePassword(userName, password);
+                if (CheckUserPass) {
                     Toast.makeText(DangNhap.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     //Đăng nhập
-                    Intent intentDangNhap = new Intent(DangNhap.this, HomePage.class);
-                    //Mở HomePage
-                    startActivity(intentDangNhap);
+                    //Truyền username đề dùng db cho homepage
+                    Intent truyenUserPage = new Intent(DangNhap.this, HomePage.class);
+                    truyenUserPage.putExtra("UserName",userName);
+                    startActivity(truyenUserPage);
+
                 }else
 
                     Toast.makeText(DangNhap.this, "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
@@ -78,10 +82,9 @@ public class DangNhap extends AppCompatActivity {
     }
 
     private void prepareDb() {
-        AccountDataBase accountDataBase = new AccountDataBase(this);
 //        accountDataBase.onUpgrade(accountDataBase.getWritableDatabase(), 0,1);
-        if(accountDataBase.getCount() == 0) {
-            accountDataBase.insertData("admin", "admin", "admin", "0123456789", "admin@gmail.com", "01092001", convertPhoto(R.drawable.ava));
+        if(General.ADB.getCount() == 0) {
+            General.ADB.insertData("admin", "admin", "admin", "0123456789", "admin@gmail.com", "01092001", convertPhoto(R.drawable.unknownava));
         }
     }
 
@@ -105,5 +108,6 @@ public class DangNhap extends AppCompatActivity {
         btnDk = findViewById(R.id.btnDk);
         edtPassword = findViewById(R.id.edtPassword);
         edtUsername = findViewById(R.id.edtUsername);
+        chkLuu = findViewById(R.id.chkLuu);
     }
 }
