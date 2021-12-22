@@ -25,8 +25,7 @@ public class Class extends AppCompatActivity {
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentTranstoPhone = new Intent(Class.this, HomePage.class);
-                startActivity(intentTranstoPhone);
+                finish();
             }
         });
     }
