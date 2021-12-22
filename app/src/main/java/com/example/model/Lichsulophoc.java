@@ -3,6 +3,7 @@ package com.example.model;
 public class Lichsulophoc {
     String tenbaihoc, gio, ngay, nameGV;
 
+
     public Lichsulophoc(String tenbaihoc, String gio, String ngay, String nameGV) {
         this.tenbaihoc = tenbaihoc;
         this.gio = gio;

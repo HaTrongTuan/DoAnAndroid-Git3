@@ -6,8 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.example.model.Users;
 
 public class AccountDataBase extends SQLiteOpenHelper {
     public static final int ADB_VERSION = 1;
@@ -32,8 +35,8 @@ public class AccountDataBase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         try{
-            String sql = "CREATE TABLE IF NOT EXISTS " + TBL_NAME + "(" + COL_A_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_A_USERNAME + " VARCHAR(100), " + COL_A_PASSWORD + " VARCHAR(50), " + COL_A_FULLNAME + " VARCHAR(50), " + COL_A_PHONE + " INTEGER, " + COL_A_EMAIL + " VARCHAR(100), "
-                    + COL_A_BIRTH +" INTEGER, " + COL_A_PHOTO + " BLOB)";
+            String sql = "CREATE TABLE IF NOT EXISTS " + TBL_NAME + "(" + COL_A_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_A_USERNAME + " VARCHAR(100), " + COL_A_PASSWORD + " VARCHAR(50), " + COL_A_FULLNAME + " VARCHAR(50), " + COL_A_PHONE + " VARCHAR(50), " + COL_A_EMAIL + " VARCHAR(100), "
+                    + COL_A_BIRTH +" VARCHAR(50), " + COL_A_PHOTO + " BLOB)";
             sqLiteDatabase.execSQL(sql);
         }catch (Exception e){
             Log.e("Error:", e.toString());
@@ -55,14 +58,16 @@ public class AccountDataBase extends SQLiteOpenHelper {
         return count;
     }
 
-    public Cursor getData(String sql){
-        SQLiteDatabase db = getReadableDatabase();
-        return db.rawQuery(sql, null);
-    }
 
-    public void execSql(String sql){
+    public Boolean updatePass(String username, String password){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL(sql);
+        Cursor cursor = db.rawQuery("UPDATE " + TBL_NAME + " SET " + COL_A_PASSWORD + "=? "
+                + " WHERE " + COL_A_USERNAME + "=? ",new String[]{password,username} );
+        if (cursor.getCount()>0) {
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public  boolean insertData(String username, String password,String fullname, String phone, String email, String birth, byte[] photo){
@@ -90,13 +95,32 @@ public class AccountDataBase extends SQLiteOpenHelper {
     }
 
     public  Boolean checkUsernamePassword(String username, String password) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_USERNAME +"=?" + " AND " + COL_A_PASSWORD + "=?", new String[]{username, password});
+        if (cursor.getCount()>0) {
+                return true;
+        }else{
+            return false;
+        }
+    }
+    public boolean checkEmail(String email){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-        Cursor cursor1 = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_USERNAME +"=?" , new String[]{username});
-        Cursor cursor2 = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_PASSWORD +"=?" , new String[]{password});
-        if (cursor1.getCount() > 0 && cursor2.getCount()>0 &&cursor2.getCount()==cursor1.getCount()) {
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_EMAIL +"=?" , new String[]{email});
+        if (cursor.getCount()>0) {
             return true;
         }else {
             return false;
         }
-    }}
+
+    }
+            public Cursor  ShowInfo(String username){
+                SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+                Cursor c= sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_USERNAME + "=?", new String[]{username});
+                c.moveToFirst();
+             return c;
+
+    }
+
+
+}
 

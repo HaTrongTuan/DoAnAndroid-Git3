@@ -10,10 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
-            android:name=".HomePage"
-            android:exported="true">
-        </activity>
+            android:name=".Profile_Premium"
+            android:exported="true" />
+        <activity
+            android:name=".PremiumUpdate"
+            android:exported="true" />
+         <activity
+            android:name=".User_Page_Contact"
+            android:exported="true" />
+        <activity
+            android:name=".User_Page_Rules"
+            android:exported="true" />
+        <activity
+            android:name=".User_Page_FAQ"
 
+            android:exported="true" />
+        <activity
             android:name=".User_Page_Edit"
             android:exported="true" />
         <activity
@@ -23,13 +35,13 @@
             android:name=".User_Page_ChangePass"
             android:exported="true" />
         <activity
-            android:name=".Premium_Payment"
+            android:name=".LoadingScreen"
             android:exported="true" />
         <activity
             android:name=".Class"
             android:exported="true" />
         <activity
-            android:name=".LoadingScreen"
+            android:name=".Premium_Payment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +49,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".HomePage"
+            android:exported="true" />
         <activity
             android:name=".DangNhap"
             android:exported="true" />
@@ -73,11 +87,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-        
-
-
+            android:exported="true" />
     </application>
 
 </manifest>
