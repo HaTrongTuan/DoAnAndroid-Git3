@@ -65,6 +65,27 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intentTranstoPhone);
             }
         });
+        imbGv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gv = new Intent(HomePage.this, GiangVien.class);
+                startActivity(gv);
+            }
+        });
+        imbTin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent news = new Intent(HomePage.this, News.class);
+                startActivity(news);
+            }
+        });
+        imbLeo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent leo= new Intent(HomePage.this, Leo.class);
+                startActivity(leo);
+            }
+        });
 
     }
 

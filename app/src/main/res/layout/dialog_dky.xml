@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/botron_button"
+    android:backgroundTint="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận đăng ký ?"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:padding="60dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnXnDk"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:stateListAnimator="@null"
+            android:textColor="@color/secondary_red"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:text="Hủy"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:stateListAnimator="@null"
+            app:backgroundTint="@null"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -45,23 +45,20 @@
                     android:textStyle="bold|italic" />
             </LinearLayout>
             <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_marginLeft="50dp">
-
-
-
                 <ImageView
                     android:id="@+id/imvAvaHP"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ava2"
-                    >
+                    android:src="@drawable/ava2">
                 </ImageView>
                 <ImageView
                     android:id="@+id/imvPremium"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="25dp"
                     android:src="@drawable/premium"
                     android:layout_gravity="bottom"
                     />

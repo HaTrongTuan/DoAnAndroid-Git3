@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class DangNhap extends AppCompatActivity {
     Button btnDn, btnDk;
     EditText edtUsername, edtPassword;
     CheckBox chkLuu;
+    TextView txtQuen;
 
 
     @Override
@@ -48,9 +50,20 @@ public class DangNhap extends AppCompatActivity {
                 startActivity(intentDangKy);
             }
         });
+
+        txtQuen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quen = new Intent(DangNhap.this, LayLaiTkEmail.class);
+                startActivity(quen);
+            }
+        });
+
         btnDn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 //Lấy dữ liệu
                 String userName = edtUsername.getText().toString();
                 String password = edtPassword.getText().toString();
@@ -109,5 +122,6 @@ public class DangNhap extends AppCompatActivity {
         edtPassword = findViewById(R.id.edtPassword);
         edtUsername = findViewById(R.id.edtUsername);
         chkLuu = findViewById(R.id.chkLuu);
+        txtQuen = findViewById(R.id.txtQuen);
     }
 }

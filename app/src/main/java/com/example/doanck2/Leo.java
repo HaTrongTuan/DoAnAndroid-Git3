@@ -2,14 +2,11 @@ package com.example.doanck2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
-public class Class extends AppCompatActivity {
-
+public class Leo extends AppCompatActivity {
     ImageButton imbBack;
 
     @Override

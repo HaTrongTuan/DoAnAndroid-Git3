@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClassDetail">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/imbBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_back"
+            android:layout_marginStart="10dp"
+            android:background="#00FFFFFF"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CÁC LỚP HỌC ĐANG DIỄN RA"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imvThumb"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/example"/>
+            <TextView
+                android:id="@+id/txtTenbaihoc"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Sinh học và tâm sinh lý ảnh hưởng lớn đến đâu"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtNote"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:text="“Sinh lý học của con người là mang những điều khó hiểu.
+Cũng như một môn khoa học, chúng ta cần tìm hiểu về chúng”"
+                android:textColor="#A8A8A8"
+                android:gravity="center"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnAttend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký"
+                android:background="@drawable/botron_button"
+                app:backgroundTint="@null"
+                android:backgroundTint="@color/secondary_red"
+                android:layout_margin="20dp"/>
+            <TableLayout
+                android:background="@drawable/table_border"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TableRow
+                    android:gravity="center"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="THÔNG TIN"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"/>
+                </TableRow>
+                <TableRow
+                    android:padding="5dp" >
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="Giảng viên:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtNameGV"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Bùi Văn Bỉnh"
+                        android:textColor="#4AAFF7"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow
+                    android:padding="5dp" >
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="Thời gian:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtThoiGian"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="19:00 Ngày 31/12/2021"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </TableRow>
+                <TableRow
+                    android:padding="5dp" >
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="Số lượng:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtThamGia"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="11/16"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </TableRow>
+                <TableRow
+                    android:padding="5dp" >
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="Link lớp học:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtLink"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Hãy tham gia lớp học
+để nhận được link."
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:gravity="center"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
