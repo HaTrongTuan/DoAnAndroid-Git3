@@ -22,21 +22,24 @@
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_gravity="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/hinhnen"/>
             <TextView
+                android:id="@+id/txtNameGV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PHẠM MINH TRỌNG"
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_gravity="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
             <LinearLayout
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/botron_button"
@@ -44,7 +47,7 @@
                 android:backgroundTint="#2196F3"
                 android:layout_marginTop="10dp">
                 <LinearLayout
-                    android:layout_width="350dp"
+                    android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp">
                     <ImageView
@@ -55,16 +58,17 @@
                         android:layout_marginLeft="20dp"/>
                     <TextView
                         android:id="@+id/txtPhoneGV"
-                        android:layout_width="200dp"
+                        android:layout_width="220dp"
                         android:layout_height="wrap_content"
                         android:text="0123456789"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         android:textSize="12sp"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:autoLink="phone"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="350dp"
+                    android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp">
                     <ImageView
@@ -74,16 +78,17 @@
                         android:layout_marginLeft="20dp"/>
                     <TextView
                         android:id="@+id/txtMailGV"
-                        android:layout_width="200dp"
+                        android:layout_width="220dp"
                         android:layout_height="wrap_content"
                         android:text="trongpm19411@st.uel.edu.vn"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         android:textSize="12sp"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:autoLink="email"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="350dp"
+                    android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp">
                     <ImageView
@@ -93,16 +98,18 @@
                         android:layout_marginLeft="20dp"/>
                     <TextView
                         android:id="@+id/txtFbGV"
-                        android:layout_width="280dp"
+                        android:layout_width="220dp"
                         android:layout_height="wrap_content"
                         android:text="https://www.facebook.com/TrongPham"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         android:textSize="12sp"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:linksClickable="true"
+                        android:autoLink="web"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="350dp"
+                    android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp">
                     <ImageView
@@ -112,13 +119,14 @@
                         android:layout_marginLeft="20dp"/>
                     <TextView
                         android:id="@+id/txtBeGV"
-                        android:layout_width="280dp"
+                        android:layout_width="220dp"
                         android:layout_height="wrap_content"
                         android:text="https://www.behance.net/TrongPham"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         android:textSize="12sp"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:autoLink="web"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -138,12 +146,16 @@
                 android:layout_marginTop="10dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
                 <DatePicker
-                    android:layout_width="match_parent"
+                    android:id="@+id/datepickerLich"
+                    android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:datePickerMode="calendar"
-                    android:backgroundTint="@color/white"/>
+                    android:headerBackground="#03A9F4"
+                    android:theme="@style/CalenderViewCustomText"/>
             </LinearLayout>
 
 

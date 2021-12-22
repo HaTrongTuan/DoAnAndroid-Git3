@@ -20,7 +20,7 @@
             android:name=".User_Page_FAQ"
             android:exported="true"/>
         <activity
-            android:name=".Profile_Premium"
+            android:name=".DangNhap"
             android:exported="true" />
 
         <activity
@@ -54,7 +54,7 @@
             android:name=".HomePage"
             android:exported="true" />
         <activity
-            android:name=".DangNhap"
+            android:name=".Profile_Premium"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
