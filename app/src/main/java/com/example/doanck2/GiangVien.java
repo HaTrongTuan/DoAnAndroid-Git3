@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.adapter.ItemTeacherAdapter;
+
 public class GiangVien extends AppCompatActivity {
     ImageButton imbBack;
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
+    private ItemTeacherAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
