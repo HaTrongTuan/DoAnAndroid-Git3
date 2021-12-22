@@ -62,7 +62,7 @@ public class DangNhap extends AppCompatActivity {
                     //Đăng nhập
                     //Truyền username đề dùng db cho homepage
                     Intent truyenUserPage = new Intent(DangNhap.this, HomePage.class);
-                    truyenUserPage.putExtra("UserName",userName);
+                    truyenUserPage.putExtra("UsernameFromDangNhap",userName);
                     startActivity(truyenUserPage);
 
                 }else

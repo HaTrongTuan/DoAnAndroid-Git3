@@ -39,9 +39,9 @@ public class HomePage extends AppCompatActivity {
 
     private void showInfo() {
         Intent nhanUsernamefromDNhap = getIntent();
-        String username1 = nhanUsernamefromDNhap.getStringExtra("UserName");
+        String username1 = nhanUsernamefromDNhap.getStringExtra("UsernameFromDangNhap");
         Intent nhanUsernamefromUsers = getIntent();
-        String username2 = nhanUsernamefromUsers.getStringExtra("UserNametoHP");
+        String username2 = nhanUsernamefromUsers.getStringExtra("UsernameFromUsers");
         if (username1==null){
             txtName.setText(General.ADB.ShowInfo(username2).getString(1));
             //convert photo
@@ -99,17 +99,17 @@ public class HomePage extends AppCompatActivity {
                         return true;
                     case R.id.user:
                         Intent nhanUsernamefromDNhap = getIntent();
-                        String username = nhanUsernamefromDNhap.getStringExtra("UserName");
+                        String username = nhanUsernamefromDNhap.getStringExtra("UsernameFromDangNhap");
                         Intent nhanUsernameFromUsers = getIntent();
-                        String usernamefromUsers = nhanUsernameFromUsers.getStringExtra("UserNametoHP");
+                        String usernamefromUsers = nhanUsernameFromUsers.getStringExtra("UsernameFromUsers");
                         if(username==null){
                             Intent intent1 = new Intent(HomePage.this, UserPage.class);
-                            intent1.putExtra("UserNametoUsers", usernamefromUsers);
+                            intent1.putExtra("UsernameFromHomePage", usernamefromUsers);
                             startActivity(intent1);
                             overridePendingTransition(0, 0);
                         }else {
                             Intent intent = new Intent(HomePage.this, UserPage.class);
-                            intent.putExtra("UserNametoUsers", username);
+                            intent.putExtra("UsernameFromHomePage", username);
 
                             startActivity(intent);
                             overridePendingTransition(0, 0);

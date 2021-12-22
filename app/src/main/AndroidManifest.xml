@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.doanck2">
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
-
+            android:name=".UserPage_ChangePhoto"
+            android:exported="true" />
+        <activity
             android:name=".User_Page_Contact"
             android:exported="true" />
         <activity
@@ -18,14 +21,18 @@
             android:exported="true" />
         <activity
             android:name=".User_Page_FAQ"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".DangNhap"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".PremiumUpdate"
-
             android:exported="true" />
         <activity
             android:name=".User_Page_Edit"
@@ -44,9 +51,7 @@
             android:exported="true" />
         <activity
             android:name=".Premium_Payment"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Register"
             android:exported="true" />
@@ -55,14 +60,9 @@
             android:exported="true" />
         <activity
             android:name=".Profile_Premium"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
         <activity
             android:name=".DangKyMail"
             android:exported="true" />
