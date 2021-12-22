@@ -6,26 +6,163 @@
     android:layout_height="match_parent"
     tools:context=".Profile_Premium"
     android:orientation="vertical">
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginTop="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GIẢNG VIÊN"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_gravity="center"
-            android:textColor="@color/black"/>
-        <ImageView
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/hinhnen"/>
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GIẢNG VIÊN"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hinhnen"/>
+            <TextView
+                android:id="@+id/txtNameGV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHẠM MINH TRỌNG"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/botron_button"
+                android:orientation="vertical"
+                android:backgroundTint="#2196F3"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/phone"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:id="@+id/txtPhoneGV"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:text="0123456789"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"
+                        android:autoLink="phone"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/mail"
+                        android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:id="@+id/txtMailGV"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:text="trongpm19411@st.uel.edu.vn"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"
+                        android:autoLink="email"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/fb"
+                        android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:id="@+id/txtFbGV"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:text="https://www.facebook.com/TrongPham"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"
+                        android:linksClickable="true"
+                        android:autoLink="web"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/be"
+                        android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:id="@+id/txtBeGV"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:text="https://www.behance.net/TrongPham"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"
+                        android:autoLink="web"/>
+                </LinearLayout>
 
-    </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#000204" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lựa chọn lịch học"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+                <DatePicker
+                    android:id="@+id/datepickerLich"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="calendar"
+                    android:headerBackground="#03A9F4"
+                    android:theme="@style/CalenderViewCustomText"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
