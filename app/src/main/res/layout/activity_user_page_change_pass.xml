@@ -49,6 +49,7 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/edt_hcn"
                 android:layout_weight="0.6"/>
@@ -69,6 +70,7 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/edt_hcn"
                 android:layout_weight="0.6"/>
@@ -90,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:background="@drawable/edt_hcn"
                 android:layout_weight="0.6"/>
         </LinearLayout>
@@ -105,15 +108,7 @@
 
 
     </LinearLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:menu="@menu/bottom_nav_menu"
-        android:background="#2196F3">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </LinearLayout>
