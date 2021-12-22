@@ -52,7 +52,7 @@
                         tools:ignore="MissingConstraints" />
 
                     <ImageButton
-                        android:id="@+id/btnCamera"
+                        android:id="@+id/imbCamera"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
