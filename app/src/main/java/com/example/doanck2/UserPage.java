@@ -54,10 +54,12 @@ public class UserPage extends AppCompatActivity {
 
     public void showInfo() {
         Intent nhanUsername1 = getIntent();
-        String username1 = nhanUsername1.getStringExtra("UserNametoUsers");
+        String username1 = nhanUsername1.getStringExtra("UsernameFromHomePage");
         Intent nhanUsername2 = getIntent();
         String username2 = nhanUsername2.getStringExtra("UsernameFromChangePhoto");
-        if (username1 == null) {
+        Intent nhanUsername3 = getIntent();
+        String username3 = nhanUsername3.getStringExtra("UsernameFromEdit");
+        if (username2 != null) {
             byte[] photo = General.ADB.ShowInfo(username2).getBlob(7);
             Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
             imvAva.setImageBitmap(bitmap);
@@ -65,7 +67,7 @@ public class UserPage extends AppCompatActivity {
             txtNameUser.setText(General.ADB.ShowInfo(username2).getString(3));
             txtPhoneUser.setText(General.ADB.ShowInfo(username2).getString(4));
             txtEmailUser.setText(General.ADB.ShowInfo(username2).getString(5));
-        } else {
+        }if(username1!=null){
             byte[] photo = General.ADB.ShowInfo(username1).getBlob(7);
             Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
             imvAva.setImageBitmap(bitmap);
@@ -73,6 +75,14 @@ public class UserPage extends AppCompatActivity {
             txtNameUser.setText(General.ADB.ShowInfo(username1).getString(3));
             txtPhoneUser.setText(General.ADB.ShowInfo(username1).getString(4));
             txtEmailUser.setText(General.ADB.ShowInfo(username1).getString(5));
+        }if (username3!=null){
+            byte[] photo = General.ADB.ShowInfo(username3).getBlob(7);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
+            imvAva.setImageBitmap(bitmap);
+            txtIdUser.setText(General.ADB.ShowInfo(username3).getString(0));
+            txtNameUser.setText(General.ADB.ShowInfo(username3).getString(3));
+            txtPhoneUser.setText(General.ADB.ShowInfo(username3).getString(4));
+            txtEmailUser.setText(General.ADB.ShowInfo(username3).getString(5));
         }
     }
 
@@ -112,22 +122,24 @@ public class UserPage extends AppCompatActivity {
         btnEditAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nhanUsername = getIntent();
-                String username1 = nhanUsername.getStringExtra("UserNametoUsers");
-
-                if (username1 == null){
-                    Intent nhanUsername2 = getIntent();
-                    String username2 = nhanUsername2.getStringExtra("UsernameFromChangePhoto");
+                Intent nhanUsername1 = getIntent();
+                String username1 = nhanUsername1.getStringExtra("UsernameFromHomePage");
+                Intent nhanUsername2 = getIntent();
+                String username2 = nhanUsername2.getStringExtra("UsernameFromEdit");
+                Intent nhanUsername3 = getIntent();
+                String username3 = nhanUsername3.getStringExtra("UsernameFromChangePhoto");
+                if (username1!=null) {
                     Intent intent = new Intent(UserPage.this,User_Page_Edit.class);
-                    intent.putExtra("UserNametoChange",username2);
+                    intent.putExtra("UsernameFromUsers",username1);
                     startActivity(intent);
-
-                }else {
-                    Intent intent = new Intent(UserPage.this,User_Page_Edit.class);
-                    intent.putExtra("UserNametoChange",username1);
-
+                }if (username2!=null) {
+                    Intent intent = new Intent(UserPage.this, User_Page_Edit.class);
+                    intent.putExtra("UsernameFromUsers", username2);
                     startActivity(intent);
-
+                }if (username3!=null) {
+                    Intent intent = new Intent(UserPage.this, User_Page_Edit.class);
+                    intent.putExtra("UsernameFromUsers", username3);
+                    startActivity(intent);
                 }
             }
         });
@@ -135,7 +147,18 @@ public class UserPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent nhanUsername = getIntent();
-                String username = nhanUsername.getStringExtra("UserNametoUsers");
+                String username1 = nhanUsername.getStringExtra("UsernameFromHomePage");
+                Intent nhanUsername2 = getIntent();
+                String username2 = nhanUsername2.getStringExtra("UsernameFromEdit");
+                if(username1!=null){
+                    Intent intent = new Intent(UserPage.this,UserPage_ChangePhoto.class);
+                    intent.putExtra("UsernametoChangePhoto",username1);
+                    startActivity(intent);
+                }if (username2 !=null){
+                    Intent intent = new Intent(UserPage.this,UserPage_ChangePhoto.class);
+                    intent.putExtra("UsernametoChangePhoto",username2);
+                    startActivity(intent);
+                }
 
             }
         });
@@ -170,22 +193,30 @@ public class UserPage extends AppCompatActivity {
                         return true;
                     case R.id.homepage:
                         Intent nhanUsername = getIntent();
-                        String username1 = nhanUsername.getStringExtra("UserNametoUsers");
+                        String username1 = nhanUsername.getStringExtra("UsernameFromHomePage");
+                        Intent nhanUsername2 = getIntent();
+                        String username2 = nhanUsername2.getStringExtra("UsernameFromChangePhoto");
+                        Intent nhanUsername3 = getIntent();
+                        String username3 = nhanUsername3.getStringExtra("UsernameFromEdit");
 
-                        if (username1 == null){
-                            Intent nhanUsername2 = getIntent();
-                            String username2 = nhanUsername2.getStringExtra("UsernameFromChangePhoto");
+                        if (username1 != null){
                             Intent intent = new Intent(UserPage.this,HomePage.class);
-                            intent.putExtra("UserNametoHP",username2);
+                            intent.putExtra("UsernameFromUsers",username1);
                             startActivity(intent);
                             overridePendingTransition(0,0);
-                        }else {
+                        }if (username2!=null){
                             Intent intent = new Intent(UserPage.this,HomePage.class);
-                            intent.putExtra("UserNametoHP",username1);
+                            intent.putExtra("UsernameFromUsers",username2);
 
                             startActivity(intent);
                             overridePendingTransition(0,0);
-                        }
+                        }if (username3!=null){
+                        Intent intent = new Intent(UserPage.this,HomePage.class);
+                        intent.putExtra("UsernameFromUsers",username3);
+
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                    }
                         return true;
                     case R.id.user:
 

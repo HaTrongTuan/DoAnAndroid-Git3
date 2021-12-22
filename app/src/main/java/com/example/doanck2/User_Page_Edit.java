@@ -33,7 +33,7 @@ public class User_Page_Edit extends AppCompatActivity {
 
     private void showInfo() {
         Intent nhanUsername = getIntent();
-        String username = nhanUsername.getStringExtra("UserNametoChange");
+        String username = nhanUsername.getStringExtra("UsernameFromUsers");
         txtId.setText(General.ADB.ShowInfo(username).getString(0));
         edtEmail.setText(General.ADB.ShowInfo(username).getString(5));
         edtName.setText(General.ADB.ShowInfo(username).getString(3));
@@ -43,7 +43,7 @@ public class User_Page_Edit extends AppCompatActivity {
 
     private void setEvents() {
         Intent nhanUsername = getIntent();
-        String username = nhanUsername.getStringExtra("UserNametoChange");
+        String username = nhanUsername.getStringExtra("UsernameFromUsers");
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +57,7 @@ public class User_Page_Edit extends AppCompatActivity {
                 String email = edtEmail.getText().toString().trim();
                 String phoneS = edtPhone.getText().toString();
                 int phone = Integer.parseInt(phoneS);
-                String birth = edtPhone.getText().toString();
+                String birth = edtBirth.getText().toString();
                 if (name.equals("") || email.equals("") ||phoneS.equals("")||birth.equals("")){
                     Toast.makeText(User_Page_Edit.this, "Vui lòng điền đủ các ô thông tin!", Toast.LENGTH_SHORT).show();
                 }else{
@@ -65,6 +65,10 @@ public class User_Page_Edit extends AppCompatActivity {
                     General.ADB.updateEmail(username, email);
                     General.ADB.updatePhone(username,phone);
                     General.ADB.updateBirth(username,birth);
+                    Toast.makeText(User_Page_Edit.this, "Cập nhật thông tin thành công!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(User_Page_Edit.this,UserPage.class);
+                    intent.putExtra("UsernameFromEdit",username);
+                    startActivity(intent);
                 }
             }
         });
