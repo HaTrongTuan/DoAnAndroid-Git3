@@ -32,20 +32,34 @@ public class Premium extends AppCompatActivity {
 
 
         bottomNav();
-        register();
         linkview();
+        setEvent();
 
     }
 
-    private void register() {
+    private void setEvent() {
+        rgChangeImage.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkID) {
+                if (checkID == radChangeImage1.getId()){
+                    itemImage.setImageResource(R.drawable.hinh6);
+                }else if (checkID == radChangeImage2.getId()){
+                    itemImage.setImageResource(R.drawable.hinh1);
+                }else if (checkID == radChangeImage3.getId()) {
+                    itemImage.setImageResource(R.drawable.hinh5);
+                }
+            }
+        });
         btnDangKy.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intentTranstoPhone = new Intent(Premium.this, Register.class);
-                startActivity(intentTranstoPhone);
+            public void onClick(View view) {
+                Intent intent = new Intent(Premium.this, Register.class);
+                startActivity(intent);
             }
         });
     }
+
+
 
     private void bottomNav() {
 
@@ -81,18 +95,7 @@ public class Premium extends AppCompatActivity {
         });
 
 
-        rgChangeImage.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int checkID) {
-                if (checkID == radChangeImage1.getId()){
-                    itemImage.setImageResource(R.drawable.hinh6);
-                }else if (checkID == radChangeImage2.getId()){
-                    itemImage.setImageResource(R.drawable.hinh1);
-                }else if (checkID == radChangeImage3.getId()) {
-                    itemImage.setImageResource(R.drawable.hinh5);
-                }
-            }
-        });
+
 
     }
 
