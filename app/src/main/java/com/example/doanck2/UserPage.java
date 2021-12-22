@@ -136,9 +136,7 @@ public class UserPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent nhanUsername = getIntent();
                 String username = nhanUsername.getStringExtra("UserNametoUsers");
-                Intent intent = new Intent(UserPage.this,User_Page_ChangePhoto.class);
-                intent.putExtra("UsernametoChangePhoto",username);
-                startActivity(intent);
+
             }
         });
     }

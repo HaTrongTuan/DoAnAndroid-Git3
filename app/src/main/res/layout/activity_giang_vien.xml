@@ -57,17 +57,18 @@
                 android:text="GIÁO VIÊN NỔI BẬT"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
         </LinearLayout>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvTeacher"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:padding="5dp"
             android:layout_height="wrap_content"/>
+
+
     </LinearLayout>
+
 
 
 

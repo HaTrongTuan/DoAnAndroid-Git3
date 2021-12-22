@@ -2,13 +2,11 @@ package com.example.model;
 
 public class Teacher{
     private int Ava;
-    private String Name, NgaySinh, SDT;
+    private String Name;
 
-    public Teacher(int ava, String name, String ngaySinh, String SDT) {
+    public Teacher(int ava, String name) {
         Ava = ava;
         Name = name;
-        NgaySinh = ngaySinh;
-        this.SDT = SDT;
     }
 
 
@@ -23,22 +21,6 @@ public class Teacher{
 
     public void setName(String name) {
         Name = name;
-    }
-
-    public String getNgaySinh() {
-        return NgaySinh;
-    }
-
-    public void setNgaySinh(String ngaySinh) {
-        NgaySinh = ngaySinh;
-    }
-
-    public String getSDT() {
-        return SDT;
-    }
-
-    public void setSDT(String SDT) {
-        this.SDT = SDT;
     }
 
     public int getAva() {
