@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7000BCD4"
+    android:padding="10dp"
+    android:id="@+id/expandedLayoutBank">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Việc thanh toán thông qua Ngân Hàng phải lưu ý những Điều khoản và điều kiện."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sử dụng cú pháp: Họ và Tên_Gói học_ Tên tài khoản"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ví dụ: NGUYEN MINH TRI_1 MONTH_MINTCOOKIE"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Ngân hàng Agribank: 099166343965"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Ngân hàng BIDV       : 099166343966"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.utils.General;
@@ -15,6 +16,7 @@ public class User_Page_ChangePass extends AppCompatActivity {
 
     EditText edtPass, edtNewPass,edtReNewPass;
     Button btnUpdate;
+    ImageButton imbBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,12 @@ public class User_Page_ChangePass extends AppCompatActivity {
                     }
                 }}}
         });
+        imbBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void linkViews() {
@@ -59,6 +67,7 @@ public class User_Page_ChangePass extends AppCompatActivity {
         edtNewPass = findViewById(R.id.edtPassNew);
         edtReNewPass = findViewById(R.id.edtPassNewConfirm);
         btnUpdate = findViewById(R.id.btnUpdatePass);
+        imbBack = findViewById(R.id.imbBack);
     }
 
 

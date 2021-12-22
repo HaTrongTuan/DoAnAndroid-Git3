@@ -93,9 +93,9 @@
             android:layout_marginTop="5dp"
             android:textColor="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewPayment"
+            android:id="@+id/recycleviewPayment"
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"/>
 
