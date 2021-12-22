@@ -1,5 +1,6 @@
 package com.example.database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -57,8 +58,61 @@ public class AccountDataBase extends SQLiteOpenHelper {
         cursor.close();
         return count;
     }
+    public Boolean updatePhoto(String username, byte[] photo){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_A_PHOTO,photo);
+        int check= db.update(TBL_NAME,values,COL_A_USERNAME + "=?",new String[]{username});
+        if (check>0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public Boolean updatePhone(String username, int phone){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_A_PHONE,phone);
+        int check= db.update(TBL_NAME,values,COL_A_USERNAME + "=?",new String[]{username});
+        if (check>0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public Boolean updateBirth(String username, String birth){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_A_BIRTH,birth);
+        int check= db.update(TBL_NAME,values,COL_A_USERNAME + "=?",new String[]{username});
+        if (check>0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 
+    public Boolean updateEmail(String username, String mail){
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("UPDATE " + TBL_NAME + " SET " + COL_A_EMAIL + "=? "
+                + " WHERE " + COL_A_USERNAME + "=? ",new String[]{mail,username} );
+        if (cursor.getCount()>0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 
+    public Boolean updateName(String username, String name){
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("UPDATE " + TBL_NAME + " SET " + COL_A_FULLNAME + "=? "
+                + " WHERE " + COL_A_USERNAME + "=? ",new String[]{name,username} );
+        if (cursor.getCount()>0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
     public Boolean updatePass(String username, String password){
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.rawQuery("UPDATE " + TBL_NAME + " SET " + COL_A_PASSWORD + "=? "
@@ -120,6 +174,7 @@ public class AccountDataBase extends SQLiteOpenHelper {
              return c;
 
     }
+
 
 
 }
