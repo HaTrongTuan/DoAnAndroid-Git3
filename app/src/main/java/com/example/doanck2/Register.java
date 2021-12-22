@@ -28,8 +28,7 @@ public class Register extends AppCompatActivity {
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentTranstoPhone = new Intent(Register.this, Premium.class);
-                startActivity(intentTranstoPhone);
+               finish();
             }
         });
         Register1Month.setOnClickListener(new View.OnClickListener() {

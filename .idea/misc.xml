@@ -3,53 +3,79 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/drawable/botron_button.xml" value="0.2703125" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/drawable/edt_hcn.xml" value="0.26615384615384613" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/drawable/ic_baseline_account_balance_wallet_24.xml" value="0.2703125" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/drawable/test.xml" value="0.2703125" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_phone.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_nhap.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_loading_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium.xml" value="0.25416666666666665" />
-        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_update.xml" value="0.25416666666666665" />
-        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_profile_premium.xml" value="0.4" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_update.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_process.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_profile_premium.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.2703125" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/drawable/ic_baseline_photo_library_24.xml" value="0.2703125" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_change_pass.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_edit.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_xac_nhan.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_xac_nhan_lay_lai_tk.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_class.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_payment_details_bank.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_payment_details_qrcode.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_payment_head.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_lichsulophoc.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_notification.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/premium_item_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/premium_payment.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/premium_payment_bank.xml" value="0.24010416666666667" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/premium_payment_qrcode.xml" value="0.24010416666666667" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/premium_register.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/user_page_changepass.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/user_page_contact.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/user_page_edit.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/user_page_faq.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/user_page_rule.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/menu/expand_recyclerview.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.25052083333333336" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_phone.xml" value="0.25052083333333336" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_nhap.xml" value="0.25052083333333336" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_home_page.xml" value="0.176" />
+        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_home_page.xml" value="0.12760416666666666" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_lay_lai_tk_email.xml" value="0.25052083333333336" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_lay_lai_tk_phone.xml" value="0.1046875" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_notification.xml" value="0.12760416666666666" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium.xml" value="0.1296875" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium.xml" value="0.2" />
+        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_update.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_process.xml" value="0.25052083333333336" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page.xml" value="0.264" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_change_pass.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_contact.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_edit.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_faq.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_rules.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_xac_nhan.xml" value="0.1046875" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/bottom_sheet.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/bottom_sheet_cameraOpen.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/bottom_sheet_camera_open.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_class.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page.xml" value="0.152" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_lichsulophoc.xml" value="0.12760416666666666" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/premium_register.xml" value="0.10052083333333334" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/user_page_changepass.xml" value="0.2" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/user_page_contact.xml" value="0.1046875" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/user_page_edit.xml" value="0.2" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/user_page_faq.xml" value="0.25416666666666665" />
-        <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/user_page_rule.xml" value="0.25416666666666665" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_notification.xml" value="0.264" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_premium.xml" value="0.2" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_process.xml" value="0.25052083333333336" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/layout/activity_user_page.xml" value="0.25052083333333336" />
         <entry key="..\:/M-Commerce/DoAnCK2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.12760416666666666" />
-        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable-v24/gradient.xml" value="0.2890625" />
-        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/botron_button.xml" value="0.2890625" />
-        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.1" />
-        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_main.xml" value="0.19882246376811594" />
-        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_notification.xml" value="0.1" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/button_dki_login.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/button_login.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/edt_bg.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.25" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_phone.xml" value="0.25" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_nhap.xml" value="0.16" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_home_page.xml" value="0.128125" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_lay_lai_tk_email.xml" value="0.14" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_lay_lai_tk_phone.xml" value="0.128125" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_main.xml" value="0.128125" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_notification.xml" value="0.128125" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium.xml" value="0.18" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_process.xml" value="0.128125" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_xac_nhan.xml" value="0.22" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_xac_nhan_lay_lai_tk.xml" value="0.14" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/button_dki_login.xml" value="0.128125" />
       </map>
     </option>
   </component>
