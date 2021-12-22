@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
-        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_profile_premium.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_update.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_profile_premium.xml" value="0.4" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.2703125" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/drawable/ic_baseline_photo_library_24.xml" value="0.2703125" />
         <entry key="..\:/GitHub/Android/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.25052083333333336" />

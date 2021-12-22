@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
-<<<<<<<<< Temporary merge branch 1
+
             android:name=".User_Page_Contact"
             android:exported="true" />
         <activity
@@ -18,12 +18,14 @@
             android:exported="true" />
         <activity
             android:name=".User_Page_FAQ"
-=========
+            android:exported="true"/>
+        <activity
             android:name=".Profile_Premium"
             android:exported="true" />
+
         <activity
             android:name=".PremiumUpdate"
->>>>>>>>> Temporary merge branch 2
+
             android:exported="true" />
         <activity
             android:name=".User_Page_Edit"
