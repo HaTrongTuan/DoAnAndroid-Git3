@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lấy lại tai mật khẩu"
+            android:text="Lấy lại mật khẩu"
             android:layout_gravity="bottom"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -81,7 +81,7 @@
         android:padding="24dp">
 
         <Button
-            android:id="@+id/btnXnmk"
+            android:id="@+id/btnXnmkPhone"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_login"

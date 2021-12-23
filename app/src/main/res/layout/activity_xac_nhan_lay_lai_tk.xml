@@ -48,7 +48,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtNewPass"
+            android:id="@+id/edtNewPassXNTK"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
         android:layout_height="50dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtReNewPass"
+            android:id="@+id/edtReNewPassXNTK"
             android:textSize="18sp"
             android:textColorHint="@color/edtText"
             android:layout_width="match_parent"
@@ -85,7 +85,7 @@
         android:padding="24dp">
 
         <Button
-            android:id="@+id/btnXNmk"
+            android:id="@+id/btnXNTK"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
