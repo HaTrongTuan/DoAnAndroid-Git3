@@ -1,7 +1,6 @@
 package com.example.adapter;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,31 +9,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.doanck2.R;
-import com.example.model.Class;
-import com.example.model.Lichsulophoc;
+import com.example.model.MClass;
 
 import java.util.ArrayList;
 
 public class ItemClass extends BaseAdapter {
 
     private Activity context;
-    ArrayList<Class> classes;
+    ArrayList<MClass> MClasses;
 
 
 
-    public ItemClass(Activity context, ArrayList<Class> classes){
+    public ItemClass(Activity context, ArrayList<MClass> MClasses){
         this.context = context;
-        this.classes = classes;
+        this.MClasses = MClasses;
     }
 
     @Override
     public int getCount() {
-        return classes.size();
+        return MClasses.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return classes.get(position);
+        return MClasses.get(position);
     }
 
     @Override
@@ -62,7 +60,7 @@ public class ItemClass extends BaseAdapter {
 
         }
 
-        Class c = classes.get(position);
+        MClass c = MClasses.get(position);
         holder.txtNgay.setText(c.getNgay());
         holder.txtGio.setText(c.getGio());
         holder.txtThamGia.setText(c.getThamgia());
