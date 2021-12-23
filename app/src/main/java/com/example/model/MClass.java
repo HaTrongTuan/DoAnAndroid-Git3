@@ -2,11 +2,11 @@ package com.example.model;
 
 import android.widget.ImageView;
 
-public class Class {
+public class MClass {
     int Thumb;
     String tenbaihoc, Thamgia, gio, ngay, nameGV;
 
-    public Class(int thumb, String tenbaihoc, String thamgia, String gio, String ngay, String nameGV) {
+    public MClass(int thumb, String tenbaihoc, String thamgia, String gio, String ngay, String nameGV) {
         Thumb = thumb;
         this.tenbaihoc = tenbaihoc;
         Thamgia = thamgia;
