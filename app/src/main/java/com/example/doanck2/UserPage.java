@@ -7,6 +7,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,7 +31,7 @@ import java.io.InputStream;
 public class UserPage extends AppCompatActivity {
 
     TextView txtIdUser, txtNameUser, txtPhoneUser, txtEmailUser;
-    Button btnChangePass, btnPolicy, btnContact, btnQues,btnEditAcc;
+    Button btnChangePass, btnPolicy, btnContact, btnQues,btnEditAcc,btnLogOut;
     ImageButton imbCamera;
     ImageView imvAva;
     LinearLayout sheetOpenCamera, sheetOpenGallery;
@@ -162,6 +163,32 @@ public class UserPage extends AppCompatActivity {
 
             }
         });
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog dialog = new Dialog(UserPage.this);
+                dialog.setContentView(R.layout.confirm_dialog);
+                dialog.setCanceledOnTouchOutside(false);
+                TextView txtYes = dialog.findViewById(R.id.txtYes);
+                TextView  txtNo = dialog.findViewById(R.id.txtNo);
+
+                txtYes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(UserPage.this,DangNhap.class);
+                        startActivity(intent);
+                    }
+                });
+                txtNo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
+
     }
 
     private void linkViews() {
@@ -176,6 +203,7 @@ public class UserPage extends AppCompatActivity {
         btnEditAcc = findViewById(R.id.btnEditAcc);
         imvAva = findViewById(R.id.imvAvatar);
         imbCamera = findViewById(R.id.imbCamera);
+        btnLogOut = findViewById(R.id.btnLogOut);
 
     }
 
