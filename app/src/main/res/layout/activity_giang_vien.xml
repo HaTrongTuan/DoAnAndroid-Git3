@@ -69,13 +69,26 @@
 
 
     </LinearLayout>
-
+    <TextView
+        android:layout_marginStart="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="DANH SÁCH GIÁO VIÊN"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp" />
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvNorTeacher"
+        android:id="@+id/rcvTeacherNormal"
         android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:padding="5dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+
+
+
 
 
 
