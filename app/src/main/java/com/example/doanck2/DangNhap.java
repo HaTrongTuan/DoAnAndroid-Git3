@@ -84,6 +84,13 @@ public class DangNhap extends AppCompatActivity {
             }
 
         });
+        txtQuen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DangNhap.this,LayLaiTkEmail.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private byte[] convertPhoto(int image) {

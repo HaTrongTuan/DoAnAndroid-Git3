@@ -39,7 +39,7 @@
             android:name=".User_Page_ChangePass"
             android:exported="true" />
         <activity
-            android:name=".LoadingScreen"
+            android:name=".Premium_Payment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +51,7 @@
             android:name=".Class"
             android:exported="true" />
         <activity
-            android:name=".Premium_Payment"
+            android:name=".LoadingScreen"
             android:exported="true"></activity>
         <activity
             android:name=".Register"

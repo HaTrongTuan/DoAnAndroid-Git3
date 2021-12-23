@@ -8,12 +8,11 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edt_hcn"
             android:padding="10dp"
-            android:id="@+id/linearLayoutPayment">
+            android:id="@+id/linearLayoutLeo">
                 <TextView
-                    android:id="@+id/txtMethodPayment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thanh toán qua ngân hàng"
+                    android:text="Quá trình thành lập"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:layout_weight="0.7"/>
@@ -36,38 +35,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Việc thanh toán thông qua Ngân Hàng phải lưu ý những Điều khoản và điều kiện."
+                    android:text="“Love English Organization” được thành lập bởi 4 sinh viên Khoa HTTT - trường Đại học Kinh tế - Luật vào năm 2019 với mục đích giúp người trẻ, đặc biệt là sinh viên có cơ hội cải thiện kĩ năng nói tiếng Anh."
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sử dụng cú pháp: Họ và Tên_Gói học_ID tài khoản"
+                    android:text="Năm 2021, “Love English Organization” đánh dấu sự có mặt của mình trên “Internet” bằng ứng dụng học tiếng Anh có tên “LEO” - góp phần lan tỏa giá trị nhân văn của mình và nhũng giá trị xã hội cho cộng đồng người Việt"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:gravity="center"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ví dụ: NGUYEN MINH TRI_1 MONTH_123456789"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Ngân hàng Agribank: 099166343965"
-                    android:textSize="12sp"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Ngân hàng BIDV       : 099166343966"
-                    android:textSize="12sp"
-                    android:gravity="center"/>
+
         </LinearLayout>
 
 

@@ -2,47 +2,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edt_hcn"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:id="@+id/linearLayoutPayment">
         <TextView
-            android:id="@+id/txtPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thanh toán qua mã QR"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:layout_weight="0.7"/>
         <ImageView
             android:id="@+id/imvArrow"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
             android:layout_gravity="end"
             android:layout_weight="0.3"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:id="@+id/expandedLayout"
-        android:background="#7000BCD4">
+        android:id="@+id/expandableLayout"
+        android:background="@drawable/hcn_botron_color"
+        android:padding="5dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
             <ImageView
-                android:id="@+id/imvQRCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/qrcode"
                 android:layout_marginTop="10dp" />
         </LinearLayout>
         <TextView
-            android:id="@+id/txtDetailPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thực hiện thanh toán thông qua quét mã QR trên các phần mềm Internet banking hoặc ví điện tử"

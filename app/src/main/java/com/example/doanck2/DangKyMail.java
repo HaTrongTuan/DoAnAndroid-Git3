@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database.AccountDataBase;
+import com.example.utils.General;
 
 import java.io.ByteArrayOutputStream;
 
@@ -25,7 +26,7 @@ public class DangKyMail extends AppCompatActivity {
     EditText edtEmailEmail, edtNameEmail, edtPassEmail, edtRePassEmail;
     Button btnActDkEmail;
     CheckBox chkDieuKhoan;
-    AccountDataBase ADB = new AccountDataBase(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,12 +79,12 @@ public class DangKyMail extends AppCompatActivity {
                     if (chkDieuKhoan.isChecked()==false){
                         Toast.makeText(DangKyMail.this, "Bạn chưa đồng ý điều khoản!", Toast.LENGTH_SHORT).show();
                     }else {
-                        if (ADB.checkEmail(EmailEmail)){
+                        if (General.ADB.checkEmail(EmailEmail)){
                             Toast.makeText(DangKyMail.this, "Email đã có sẵn, vui lòng nhập Email khác!", Toast.LENGTH_SHORT).show();
                         }else {
                              if (RePassEmail.equals(PassEmail)) {
-                    if (!ADB.checkUsername(NameEmail) ) {
-                        Boolean insert =  ADB.insertData(NameEmail, PassEmail, NameEmail, "Blank", EmailEmail, "Blank", convertPhoto(R.drawable.unknownava));
+                    if (!General.ADB.checkUsername(NameEmail) ) {
+                        Boolean insert =  General.ADB.insertData(NameEmail, PassEmail, NameEmail, "Blank", EmailEmail, "Blank", convertPhoto(R.drawable.unknownava));
                     if (insert ) {
                         Intent intentActDangKyEmail = new Intent(DangKyMail.this, DangNhap.class);
                         intentActDangKyEmail.putExtra("NamePhone_To_Login", NameEmail);
