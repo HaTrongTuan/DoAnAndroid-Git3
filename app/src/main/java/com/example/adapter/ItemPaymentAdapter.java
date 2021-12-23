@@ -37,8 +37,8 @@ public class ItemPaymentAdapter extends RecyclerView.Adapter<ItemPaymentAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         PremiumPayment premiumPayment = premiumPaymentList.get(position);
         holder.txtPayment.setText(premiumPayment.getPayment());
-        boolean isExpanded = premiumPaymentList.get(position).isExpanded();
-        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
+//        boolean isExpanded = premiumPaymentList.get(position).isExpanded();
+//        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
 
@@ -60,9 +60,9 @@ public class ItemPaymentAdapter extends RecyclerView.Adapter<ItemPaymentAdapter.
             txtPayment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    PremiumPayment premiumPayment = premiumPaymentList.get(getAdapterPosition());
-                    premiumPayment.setExpanded(!premiumPayment.isExpanded());
-                    notifyItemChanged(getAdapterPosition());
+//                    PremiumPayment premiumPayment = premiumPaymentList.get(getAdapterPosition());
+//                    premiumPayment.setExpanded(!premiumPayment.isExpanded());
+//                    notifyItemChanged(getAdapterPosition());
                 }
             });
 
