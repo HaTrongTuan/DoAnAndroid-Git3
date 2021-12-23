@@ -44,6 +44,7 @@
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/class.xml" value="0.2890625" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/container.xml" value="0.2890625" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/item_class.xml" value="0.2890625" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/item_news.xml" value="0.2890625" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_class.xml" value="0.24864130434782608" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_class_detail.xml" value="0.24864130434782608" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.33" />
@@ -73,6 +74,8 @@
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/confirm_dialog.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/dialog_dky.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/dropdown_thanhlap.xml" value="0.33" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itam_feature_news.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itam_news.xml" value="0.2" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/item_teacher.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_class.xml" value="0.5" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_lichsulophoc.xml" value="0.23324275362318841" />
