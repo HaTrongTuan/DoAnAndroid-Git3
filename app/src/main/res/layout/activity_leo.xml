@@ -71,8 +71,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:layout_height="50dp"
-                android:spinnerMode="dropdown"
-                android:entries="@array/thanhlap"/>
+                android:spinnerMode="dropdown"/>
             <Spinner
                 android:id="@+id/spBDH"
                 android:background="@drawable/spinner_border"
