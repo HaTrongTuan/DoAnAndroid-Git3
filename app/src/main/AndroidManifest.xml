@@ -38,7 +38,13 @@
             android:exported="true" />
         <activity
             android:name=".LoadingScreen"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Class"
             android:exported="true" />
@@ -56,11 +62,7 @@
         <activity
             android:name=".Profile_Premium"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -95,6 +97,15 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GiangVien"
+            android:exported="true" />
+        <activity
+            android:name=".Leo"
+            android:exported="true" />
+        <activity
+            android:name=".News"
             android:exported="true" />
     </application>
 
