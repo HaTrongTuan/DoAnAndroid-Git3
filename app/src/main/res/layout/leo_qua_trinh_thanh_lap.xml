@@ -10,6 +10,7 @@
             android:padding="10dp"
             android:id="@+id/linearLayoutLeo">
                 <TextView
+                    android:id="@+id/txtLeo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quá trình thành lập"
@@ -25,27 +26,30 @@
                     android:layout_weight="0.3"/>
         </LinearLayout>
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:id="@+id/expandableLayout"
+            android:id="@+id/expandableLayoutLeo"
             android:background="@drawable/hcn_botron_color"
             android:gravity="center"
             android:padding="5dp">
                 <TextView
+                    android:id="@+id/txtDetailLeo1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="“Love English Organization” được thành lập bởi 4 sinh viên Khoa HTTT - trường Đại học Kinh tế - Luật vào năm 2019 với mục đích giúp người trẻ, đặc biệt là sinh viên có cơ hội cải thiện kĩ năng nói tiếng Anh."
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
                 <TextView
+                    android:id="@+id/txtDetailLeo2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Năm 2021, “Love English Organization” đánh dấu sự có mặt của mình trên “Internet” bằng ứng dụng học tiếng Anh có tên “LEO” - góp phần lan tỏa giá trị nhân văn của mình và nhũng giá trị xã hội cho cộng đồng người Việt"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:gravity="center"/>
+                    android:gravity="left"/>
 
         </LinearLayout>
 
