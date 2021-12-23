@@ -31,7 +31,7 @@ public class ItemPaymentAdapter extends RecyclerView.Adapter<ItemPaymentAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_qrcode,parent, false);
+        View itemView ;
         switch (viewType){
             case 2:
                 itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_bank, parent, false);

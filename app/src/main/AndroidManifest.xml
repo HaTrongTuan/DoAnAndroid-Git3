@@ -39,7 +39,7 @@
             android:name=".User_Page_ChangePass"
             android:exported="true" />
         <activity
-            android:name=".Premium_Payment"
+            android:name=".Leo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -99,7 +99,7 @@
             android:name=".GiangVien"
             android:exported="true" />
         <activity
-            android:name=".Leo"
+            android:name=".Premium_Payment"
             android:exported="true" />
         <activity
             android:name=".News"
