@@ -20,49 +20,72 @@ import com.example.model.PremiumPayment;
 import java.util.List;
 
 public class ItemPaymentAdapter extends RecyclerView.Adapter<ItemPaymentAdapter.ViewHolder> {
-    List<PremiumPayment> premiumPaymentList;
+    private Context context;
+    private List<PremiumPayment> premiumPaymentList;
 
-    public ItemPaymentAdapter(List<PremiumPayment> premiumPaymentList) {
+    public ItemPaymentAdapter(Context context, List<PremiumPayment> premiumPaymentList) {
+        this.context = context;
         this.premiumPaymentList = premiumPaymentList;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_qrcode,parent, false);
-        return new ViewHolder(view);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_qrcode,parent, false);
+        switch (viewType){
+            case 2:
+                itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_bank, parent, false);
+                break;
+            case 1:
+            default:
+                itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_qrcode,parent,false);
+                break;
+        }
+        return new ViewHolder(itemView);
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if(premiumPaymentList.get(position).isLayoutPayment()){
+            return 1;
+        }
+        else {
+            return 2;
+        }
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         PremiumPayment premiumPayment = premiumPaymentList.get(position);
-        holder.txtPayment.setText(premiumPayment.getPayment());
-//        boolean isExpanded = premiumPaymentList.get(position).isExpanded();
-//        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
+
+       boolean isExpanded = premiumPaymentList.get(position).isExpandable();
+        holder.expandableLayout.setVisibility(isExpanded ? View.GONE : View.VISIBLE);
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return premiumPaymentList.size();
     }
 
 
      public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtPayment;
-        RelativeLayout expandableLayout;
+
+        LinearLayout expandableLayout, linearLayoutPayment;
 
 
         public ViewHolder(@NonNull final View itemView){
             super(itemView);
-            txtPayment = itemView.findViewById(R.id.txtPayment);
-            expandableLayout = itemView.findViewById(R.id.expandedLayout);
-            txtPayment.setOnClickListener(new View.OnClickListener() {
+            linearLayoutPayment = itemView.findViewById(R.id.linearLayoutPayment);
+
+            expandableLayout = itemView.findViewById(R.id.expandableLayout);
+            linearLayoutPayment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    PremiumPayment premiumPayment = premiumPaymentList.get(getAdapterPosition());
-//                    premiumPayment.setExpanded(!premiumPayment.isExpanded());
-//                    notifyItemChanged(getAdapterPosition());
+                    PremiumPayment premiumPayment = premiumPaymentList.get(getAdapterPosition());
+                   premiumPayment.setExpandable(!premiumPayment.isExpandable());
+                    notifyItemChanged(getAdapterPosition());
                 }
             });
 

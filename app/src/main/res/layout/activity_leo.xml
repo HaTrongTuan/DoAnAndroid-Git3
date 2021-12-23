@@ -63,37 +63,12 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/divider"
                 android:layout_margin="20dp"/>
-            <Spinner
-                android:id="@+id/spThanhLap"
-                android:background="@drawable/spinner_border"
-                android:layout_width="360dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:padding="5dp"
-                android:layout_height="50dp"
-                android:spinnerMode="dropdown"/>
-            <Spinner
-                android:id="@+id/spBDH"
-                android:background="@drawable/spinner_border"
-                android:layout_width="360dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:padding="5dp"
-                android:layout_height="50dp"
-                android:spinnerMode="dropdown"
-                android:entries="@array/bdh"/>
-            <Spinner
-                android:id="@+id/spThanhTich"
-                android:background="@drawable/spinner_border"
-                android:layout_width="360dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:padding="5dp"
-                android:layout_height="50dp"
-                android:spinnerMode="dropdown"
-                android:entries="@array/thanhtich"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvLeo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"/>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

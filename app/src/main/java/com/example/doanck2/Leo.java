@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class Leo extends AppCompatActivity {
     ImageButton imbBack;
-    Spinner spThanhLap, spBDH, spThanhTich;
+
     ArrayAdapter<CharSequence> adapter;
 
     @Override
@@ -42,9 +42,7 @@ public class Leo extends AppCompatActivity {
 
     private void linkview() {
         imbBack = findViewById(R.id.imbBack);
-        spThanhLap = findViewById(R.id.spThanhLap);
-        spBDH = findViewById(R.id.spBDH);
-        spThanhTich = findViewById(R.id.spThanhTich);
+
 
     }
 }
