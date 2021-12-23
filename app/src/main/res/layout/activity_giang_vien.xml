@@ -39,7 +39,7 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:backgroundTint="#B4E0FF"
-        android:background="@color/black"
+        android:background="@drawable/container"
         android:orientation="vertical"
         android:padding="10dp">
 
