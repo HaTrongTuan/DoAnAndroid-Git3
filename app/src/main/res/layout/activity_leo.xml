@@ -1,9 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Leo">
+    tools:context=".News"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/imbBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_back"
+            android:layout_marginStart="10dp"
+            android:background="#00FFFFFF"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LEO"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@drawable/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TRUNG TÂM LEO"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Love English Organization"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_margin="20dp"/>
+            <Spinner
+                android:id="@+id/spThanhLap"
+                android:background="@drawable/spinner_border"
+                android:layout_width="360dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_height="50dp"
+                android:spinnerMode="dropdown"
+                android:entries="@array/thanhlap"/>
+            <Spinner
+                android:id="@+id/spBDH"
+                android:background="@drawable/spinner_border"
+                android:layout_width="360dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="50dp"
+                android:spinnerMode="dropdown"
+                android:entries="@array/bdh"/>
+            <Spinner
+                android:id="@+id/spThanhTich"
+                android:background="@drawable/spinner_border"
+                android:layout_width="360dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_height="50dp"
+                android:spinnerMode="dropdown"
+                android:entries="@array/thanhtich"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_margin="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="APP LEO"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Learn English Online"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_margin="20dp"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:layout_marginTop="30dp">
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/imbLop"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/hl"/>
+                    <ImageView
+                        android:id="@+id/imbGv"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/chl"/>
+                </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:id="@+id/imbTin"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/gl"/>
+                    <ImageView
+                        android:id="@+id/imbLeo"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/nk"/>
+                </TableRow>
+            </TableLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divider"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
