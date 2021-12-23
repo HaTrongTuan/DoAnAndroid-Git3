@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -21,76 +20,51 @@ import com.example.model.PremiumPayment;
 import java.util.List;
 
 public class ItemPaymentAdapter extends RecyclerView.Adapter<ItemPaymentAdapter.ViewHolder> {
-    Context context;
-    List<PremiumPayment> premiumPayments;
+    List<PremiumPayment> premiumPaymentList;
 
-    public ItemPaymentAdapter(Context context, List<PremiumPayment> premiumPayments) {
-        this.context = context;
-        this.premiumPayments = premiumPayments;
-
+    public ItemPaymentAdapter(List<PremiumPayment> premiumPaymentList) {
+        this.premiumPaymentList = premiumPaymentList;
     }
-
-
 
     @NonNull
     @Override
-    public ItemPaymentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView;
-        switch (viewType) {
-            case 1:
-                itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_qrcode, parent, false);
-                break;
-            case 2:
-            default:
-                itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_bank, parent, false);
-        }
-
-        return new ViewHolder(itemView);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.premium_payment_qrcode,parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public int getItemViewType(int position) {
-        if (premiumPayments.get(position).isLayoutPayment())
-        {
-            return 1;
-        }else {
-            return  2;
-        }
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        PremiumPayment premiumPayment = premiumPaymentList.get(position);
+        holder.txtPayment.setText(premiumPayment.getPayment());
+//        boolean isExpanded = premiumPaymentList.get(position).isExpanded();
+//        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
 
     @Override
     public int getItemCount() {
-        return premiumPayments.size();
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PremiumPayment premiumPayment = premiumPayments.get(position);
-        boolean isExpandable = premiumPayments.get(position).isExpandable();
-        holder.expandableLayout.setVisibility(isExpandable ? View.GONE : View.VISIBLE);
-
-
+        return 0;
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout  linearLayoutPayment, expandableLayout;
+     public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txtPayment;
+        RelativeLayout expandableLayout;
 
-        public ViewHolder(View itemView) {
+
+        public ViewHolder(@NonNull final View itemView){
             super(itemView);
-            expandableLayout = itemView.findViewById(R.id.expandableLayout);
-            linearLayoutPayment = itemView.findViewById(R.id.linearLayoutPayment);
-            linearLayoutPayment.setOnClickListener(new View.OnClickListener() {
+            txtPayment = itemView.findViewById(R.id.txtPayment);
+            expandableLayout = itemView.findViewById(R.id.expandedLayout);
+            txtPayment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    PremiumPayment premiumPayment = premiumPayments.get(getAdapterPosition());
-                    premiumPayment.setExpandable(!premiumPayment.isExpandable());
-                    notifyItemChanged(getAdapterPosition());
+//                    PremiumPayment premiumPayment = premiumPaymentList.get(getAdapterPosition());
+//                    premiumPayment.setExpanded(!premiumPayment.isExpanded());
+//                    notifyItemChanged(getAdapterPosition());
                 }
             });
-
 
 
         }

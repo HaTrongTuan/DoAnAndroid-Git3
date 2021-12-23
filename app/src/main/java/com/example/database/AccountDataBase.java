@@ -174,8 +174,35 @@ public class AccountDataBase extends SQLiteOpenHelper {
              return c;
 
     }
+    public boolean checkPhone(String phone) {
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_PHONE + "=?", new String[]{phone});
+        if (cursor.getCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
 
-
-
+    }
+    public Boolean updatePassFromEmail(String mail, String password) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("UPDATE " + TBL_NAME + " SET " + COL_A_PASSWORD + "=? "
+                + " WHERE " + COL_A_EMAIL + "=? ", new String[]{password, mail});
+        if (cursor.getCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public Boolean updatePassFromPhone(String phone, String password) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("UPDATE " + TBL_NAME + " SET " + COL_A_PASSWORD + "=? "
+                + " WHERE " + COL_A_PHONE + "=? ", new String[]{password, phone});
+        if (cursor.getCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 

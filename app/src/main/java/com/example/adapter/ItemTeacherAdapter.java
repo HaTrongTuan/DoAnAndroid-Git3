@@ -1,5 +1,6 @@
 package com.example.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,51 +13,47 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.doanck2.R;
 import com.example.model.Teacher;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ItemTeacherAdapter extends RecyclerView.Adapter<ItemTeacherAdapter.TeacherViewHoler> {
+public class ItemTeacherAdapter extends RecyclerView.Adapter<ItemTeacherAdapter.ViewHolder> {
 
-    private List<Teacher> teachers;
+    Context context;
+    ArrayList<Teacher> teachers;
 
-    public void setData(List<Teacher> teachers){
+    public ItemTeacherAdapter(Context context, ArrayList<Teacher> teachers) {
+        this.context = context;
         this.teachers = teachers;
-        notifyDataSetChanged();
     }
+
 
     @NonNull
     @Override
-    public TeacherViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_teacher,parent,false);
-        return new TeacherViewHoler(view);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View customView = inflater.inflate(R.layout.item_teacher, parent, false);
+
+        return new ViewHolder(customView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TeacherViewHoler holder, int position) {
-        Teacher teacher =teachers.get(position);
-        if(teacher == null){
-            return;
-        }
-
-        holder.imvAva.setImageResource(teacher.getAva());
-        holder.txtNameGV.setText(teacher.getName());
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.imvAva.setImageResource(teachers.get(position).getAva());
+        holder.txtNameGV.setText(teachers.get(position).getName());
     }
+
 
     @Override
     public int getItemCount() {
-        if (teachers != null){
-            return teachers.size();
-        }
-        return 0;
+        return teachers.size();
     }
 
-    public class TeacherViewHoler extends RecyclerView.ViewHolder {
-
-        private ImageView imvAva;
-        private TextView txtNameGV;
-
-        public TeacherViewHoler(@NonNull View itemView) {
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txtNameGV;
+        ImageView imvAva;
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            //Link View
             imvAva = itemView.findViewById(R.id.imvAva);
             txtNameGV = itemView.findViewById(R.id.txtNameGV);
         }

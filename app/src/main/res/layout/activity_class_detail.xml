@@ -44,7 +44,8 @@
                 android:id="@+id/imvThumb"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/example"/>
+                android:src="@drawable/example"
+                android:background="@color/black"/>
             <TextView
                 android:id="@+id/txtTenbaihoc"
                 android:layout_width="300dp"

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database.AccountDataBase;
+import com.example.utils.General;
 
 import java.io.ByteArrayOutputStream;
 
@@ -74,9 +75,9 @@ public class DangKyPhone extends AppCompatActivity {
                         Toast.makeText(DangKyPhone.this, "Bạn chưa đồng ý điều khoản!", Toast.LENGTH_SHORT).show();
                     }else{
                     if (RePassPhone.equals(PassPhone)) {
-                        Boolean checkUser = ADB.checkUsername(NamePhone);
+                        Boolean checkUser = General.ADB.checkUsername(NamePhone);
                         if (!checkUser ) {
-                            Boolean insert =  ADB.insertData(NamePhone, PassPhone, NamePhone, PhonePhone, "Blank", "Blank", convertPhoto(R.drawable.unknownava));
+                            Boolean insert = General.ADB.insertData(NamePhone, PassPhone, NamePhone, PhonePhone, "Blank", "Blank", convertPhoto(R.drawable.unknownava));
                             if (insert ) {
                                 Intent intentActDangKyEmail = new Intent(DangKyPhone.this, DangNhap.class);
                                 intentActDangKyEmail.putExtra("NamePhone_To_Login", NamePhone);

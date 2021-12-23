@@ -97,6 +97,5 @@ public class Process extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(Process.this, android.R.layout.simple_spinner_dropdown_item);
         adapter.addAll(Sapxep);
         spSapxep.setAdapter(adapter);
-
     }
 }

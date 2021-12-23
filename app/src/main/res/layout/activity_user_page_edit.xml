@@ -155,7 +155,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
         android:textSize="15sp"
-        android:textColor="#11AFEF"/>
+        android:textColor="#11AFEF" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

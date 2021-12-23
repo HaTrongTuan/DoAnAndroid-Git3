@@ -2,10 +2,12 @@ package com.example.doanck2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -61,17 +63,23 @@ public class User_Page_Edit extends AppCompatActivity {
                 if (name.equals("") || email.equals("") ||phoneS.equals("")||birth.equals("")){
                     Toast.makeText(User_Page_Edit.this, "Vui lòng điền đủ các ô thông tin!", Toast.LENGTH_SHORT).show();
                 }else{
-                    General.ADB.updateName(username, name);
-                    General.ADB.updateEmail(username, email);
-                    General.ADB.updatePhone(username,phone);
-                    General.ADB.updateBirth(username,birth);
-                    Toast.makeText(User_Page_Edit.this, "Cập nhật thông tin thành công!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(User_Page_Edit.this,UserPage.class);
-                    intent.putExtra("UsernameFromEdit",username);
-                    startActivity(intent);
+                    if (General.ADB.checkEmail(email)){
+                        Toast.makeText(User_Page_Edit.this, "Email đã có người sử dụng!", Toast.LENGTH_SHORT).show();
+                    }else {
+                        General.ADB.updateName(username, name);
+                        General.ADB.updateEmail(username, email);
+                        General.ADB.updatePhone(username,phone);
+                        General.ADB.updateBirth(username,birth);
+                        Toast.makeText(User_Page_Edit.this, "Cập nhật thông tin thành công!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(User_Page_Edit.this,UserPage.class);
+                        intent.putExtra("UsernameFromEdit",username);
+                        startActivity(intent);
+                    }
                 }
             }
         });
+
+
     }
 
 
@@ -85,6 +93,5 @@ public class User_Page_Edit extends AppCompatActivity {
         edtBirth =findViewById(R.id.edtBirthUserChange);
 
     }
-
 
 }

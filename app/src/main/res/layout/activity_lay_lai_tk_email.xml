@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lấy lại tai mật khẩu"
+            android:text="Lấy lại mật khẩu"
             android:layout_gravity="bottom"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -39,16 +39,16 @@
 
     <EditText
         android:id="@+id/edtEmailmk"
-        android:background="@drawable/edt_bg"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_gravity="center"
-        android:inputType="textEmailAddress"
+        android:background="@drawable/edt_bg"
         android:hint="Nhập Email"
-        android:textSize="18sp"
-        android:textColorHint="@color/edtText"
+        android:inputType="textEmailAddress"
         android:paddingStart="15dp"
-        android:paddingEnd="15dp"/>
+        android:paddingEnd="15dp"
+        android:textColorHint="@color/edtText"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
         android:padding="24dp">
 
         <Button
-            android:id="@+id/btnXnmk"
+            android:id="@+id/btnXnmkMail"
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_login"
