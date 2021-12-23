@@ -15,11 +15,9 @@
     <string name="loadingText">LEARN \n ENGLISH \n ONLINE </string>
     <string name="changePack"><u>Thay đổi gói</u></string>
 
-    <string-array name="thanhlap">
-        <item>“Love English Organization” được thành lập bởi 4 sinh viên Khoa HTTT - trường Đại học Kinh tế - Luật vào năm 2019 với mục đích giúp người trẻ, đặc biệt là sinh viên có cơ hội cải thiện kĩ năng nói tiếng Anh. /n
+    <string name="thanhlap">“Love English Organization” được thành lập bởi 4 sinh viên Khoa HTTT - trường Đại học Kinh tế - Luật vào năm 2019 với mục đích giúp người trẻ, đặc biệt là sinh viên có cơ hội cải thiện kĩ năng nói tiếng Anh.
+        \t\t\t\t\t\t Năm 2021, “Love English Organization” đánh dấu sự có mặt của mình trên “Internet” bằng ứng dụng học tiếng Anh có tên “LEO” - góp phần lan tỏa giá trị nhân văn của mình và nhũng giá trị xã hội cho cộng đồng người Việt.</string>
 
-Năm 2021, “Love English Organization” đánh dấu sự có mặt của mình trên “Internet” bằng ứng dụng học tiếng Anh có tên “LEO” - góp phần lan tỏa giá trị nhân văn của mình và nhũng giá trị xã hội cho cộng đồng người Việt.</item>
-    </string-array>
 
     <string-array name="bdh">
         <item>
