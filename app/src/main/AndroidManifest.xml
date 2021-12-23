@@ -23,7 +23,7 @@
             android:name=".User_Page_FAQ"
             android:exported="true" />
         <activity
-            android:name=".DangNhap"
+            android:name=".Premium_Payment"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,8 +50,8 @@
             android:name=".Class"
             android:exported="true" />
         <activity
-            android:name=".Premium_Payment"
-            android:exported="true"></activity>
+            android:name=".DangNhap"
+            android:exported="true"/>
         <activity
             android:name=".Register"
             android:exported="true" />

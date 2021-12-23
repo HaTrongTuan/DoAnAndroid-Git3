@@ -2,47 +2,75 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#7000BCD4"
-    android:padding="10dp"
-    android:id="@+id/expandedLayoutBank">
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edt_hcn"
+            android:padding="10dp"
+            android:id="@+id/linearLayoutPayment">
+                <TextView
+                    android:id="@+id/txtMethodPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thanh toán qua ngân hàng"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_weight="0.7"/>
+                <ImageView
+                    android:id="@+id/imvArrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.3"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/expandableLayout"
+            android:background="@drawable/hcn_botron_color"
+            android:gravity="center"
+            android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Việc thanh toán thông qua Ngân Hàng phải lưu ý những Điều khoản và điều kiện."
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sử dụng cú pháp: Họ và Tên_Gói học_ID tài khoản"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ví dụ: NGUYEN MINH TRI_1 MONTH_123456789"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Ngân hàng Agribank: 099166343965"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Ngân hàng BIDV       : 099166343966"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+        </LinearLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Việc thanh toán thông qua Ngân Hàng phải lưu ý những Điều khoản và điều kiện."
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sử dụng cú pháp: Họ và Tên_Gói học_ Tên tài khoản"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ví dụ: NGUYEN MINH TRI_1 MONTH_MINTCOOKIE"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Ngân hàng Agribank: 099166343965"
-            android:textSize="20sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Ngân hàng BIDV       : 099166343966"
-            android:textSize="20sp"
-            android:gravity="center"/>
 
 
 

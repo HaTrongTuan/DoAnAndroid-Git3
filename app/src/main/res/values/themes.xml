@@ -25,5 +25,11 @@
         <item name="android:weekNumberColor">@color/black</item>
 
     </style>
+    <style name="ChangeColorButton" parent="Theme.AppCompat.DayNight.DarkActionBar">
+
+
+
+
+    </style>
 
 </resources>
