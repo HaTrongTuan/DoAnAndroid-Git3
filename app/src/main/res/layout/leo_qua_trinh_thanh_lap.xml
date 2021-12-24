@@ -8,7 +8,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edt_hcn"
             android:padding="10dp"
-            android:id="@+id/linearLayoutLeo">
+            android:id="@+id/linearLayoutLeo"
+            android:gravity="center">
                 <TextView
                     android:id="@+id/txtLeo"
                     android:layout_width="wrap_content"
@@ -16,10 +17,11 @@
                     android:text="Quá trình thành lập"
                     android:textColor="@color/black"
                     android:textSize="12sp"
+                    android:layout_marginStart="20dp"
                     android:layout_weight="0.7"/>
                 <ImageView
                     android:id="@+id/imvArrow"
-                    android:layout_width="25dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
                     android:layout_gravity="end"

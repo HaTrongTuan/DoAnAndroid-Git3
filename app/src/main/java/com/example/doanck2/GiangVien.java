@@ -44,18 +44,18 @@ public class GiangVien extends AppCompatActivity {
         adapter = new ItemTeacherAdapter(getApplicationContext(), demo);
         rcvTeacher.setAdapter(adapter);
 
-        ArrayList<Teacher> normal = new ArrayList<>();
-        demo.add(new Teacher(R.drawable.hinh4,"Minh Hoàn"));
-        demo.add(new Teacher(R.drawable.hinh1,"Nguyễn Minh Long"));
-        demo.add(new Teacher(R.drawable.hinh3,"Lê Thị Hồng"));
-        demo.add(new Teacher(R.drawable.hinh7,"Văn Minh Hồ"));
-        demo.add(new Teacher(R.drawable.avapro3,"Hồ Minh Nghĩa"));
-        demo.add(new Teacher(R.drawable.hinh3,"Đinh Minh Lộc"));
-        demo.add(new Teacher(R.drawable.gl,"Nguyễn Thị Thu"));
-        demo.add(new Teacher(R.drawable.hinh6,"Hoàng Kim Trinh"));
-
-        adapter = new ItemTeacherAdapter(getApplicationContext(), normal);
-        rcvTeacherNormal.setAdapter(adapter);
+//        ArrayList<Teacher> normal = new ArrayList<>();
+//        demo.add(new Teacher(R.drawable.hinh4,"Minh Hoàn"));
+//        demo.add(new Teacher(R.drawable.hinh1,"Nguyễn Minh Long"));
+//        demo.add(new Teacher(R.drawable.hinh3,"Lê Thị Hồng"));
+//        demo.add(new Teacher(R.drawable.hinh7,"Văn Minh Hồ"));
+//        demo.add(new Teacher(R.drawable.avapro3,"Hồ Minh Nghĩa"));
+//        demo.add(new Teacher(R.drawable.hinh3,"Đinh Minh Lộc"));
+//        demo.add(new Teacher(R.drawable.gl,"Nguyễn Thị Thu"));
+//        demo.add(new Teacher(R.drawable.hinh6,"Hoàng Kim Trinh"));
+//
+//        adapter = new ItemTeacherAdapter(getApplicationContext(), normal);
+//        rcvTeacherNormal.setAdapter(adapter);
     }
 
     private void configRecyclerView() {
@@ -65,7 +65,8 @@ public class GiangVien extends AppCompatActivity {
         rcvTeacher.addItemDecoration(decoration);
         rcvTeacher.setHasFixedSize(true);
 
-        rcvTeacherNormal.setLayoutManager(manager);
+//        LinearLayoutManager manager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
+//        rcvTeacherNormal.setLayoutManager(manager2);
     }
 
     private void back() {

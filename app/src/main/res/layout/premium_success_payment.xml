@@ -23,12 +23,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Chào mừng thành viên Premium mới"
+        android:text="CHÀO MỪNG \n THÀNH VIÊN PREMIUM MỚI"
         android:layout_gravity="center"
+        android:textStyle="italic"
         android:textSize="15sp"
         android:layout_marginBottom="50dp"
         android:textColor="@color/white"
-        android:gravity="bottom"/>
+        android:gravity="bottom|center"/>
 
 
 

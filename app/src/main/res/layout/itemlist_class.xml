@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:padding="10dp"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="25dp"
     android:gravity="center"
     android:background="@drawable/botron_button"
     android:backgroundTint="@color/white"
-    android:layout_margin="10dp"
     android:elevation="4dp">
 
     <LinearLayout

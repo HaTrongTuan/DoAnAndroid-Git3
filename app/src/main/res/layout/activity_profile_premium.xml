@@ -150,13 +150,22 @@
                 android:gravity="center"
                 android:layout_marginTop="10dp">
                 <DatePicker
-                    android:id="@+id/datepickerLich"
+                    android:id="@+id/dpCalendar"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     android:datePickerMode="calendar"
                     android:headerBackground="#03A9F4"
                     android:theme="@style/CalenderViewCustomText"/>
             </LinearLayout>
+            <Button
+                android:id="@+id/btnDangKyLichHoc"
+                android:layout_gravity="center"
+                android:background="@drawable/botron_button"
+                app:backgroundTint="@null"
+                android:text="ĐĂNG KÝ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"/>
 
 
 
