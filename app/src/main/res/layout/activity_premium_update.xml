@@ -105,6 +105,7 @@
                     android:layout_gravity="center"
                     app:backgroundTint="@null"/>
                 <TextView
+                    android:id="@+id/txtNameGV1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phạm Minh Trọng"
@@ -125,6 +126,7 @@
                     android:layout_gravity="center"
                     app:backgroundTint="@null"/>
                 <TextView
+                    android:id="@+id/txtNameGV2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nguyễn Minh Trí"
@@ -154,6 +156,7 @@
                     android:layout_gravity="center"
                     app:backgroundTint="@null"/>
                 <TextView
+                    android:id="@+id/txtNameGV3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hà Trọng Tuấn"
@@ -174,6 +177,7 @@
                     android:layout_gravity="center"
                     app:backgroundTint="@null"/>
                 <TextView
+                    android:id="@+id/txtNameGV4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phạm Long Thuyên"
