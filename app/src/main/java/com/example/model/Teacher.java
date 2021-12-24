@@ -1,6 +1,8 @@
 package com.example.model;
 
-public class Teacher{
+import java.io.Serializable;
+
+public class Teacher implements Serializable {
     private int Ava;
     private String Name;
 

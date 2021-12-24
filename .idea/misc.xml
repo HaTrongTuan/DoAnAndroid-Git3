@@ -77,6 +77,7 @@
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.25" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_phone.xml" value="0.25" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_nhap.xml" value="0.16" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_giang_vien.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_home_page.xml" value="0.128125" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_lay_lai_tk_email.xml" value="0.14" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_lay_lai_tk_phone.xml" value="0.128125" />
@@ -85,7 +86,12 @@
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_news.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_notification.xml" value="0.128125" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium.xml" value="0.18" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_premium_update.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_process.xml" value="0.128125" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_profile_premium.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_change_pass.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_user_page_change_photo.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_xac_nhan.xml" value="0.22" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_xac_nhan_lay_lai_tk.xml" value="0.14" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/bottom_sheet_camera_open.xml" value="0.15489130434782608" />
