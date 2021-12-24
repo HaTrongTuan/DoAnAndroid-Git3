@@ -8,16 +8,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:src="@drawable/lichto"/>
         <TextView
-            android:id="@+id/txtThongbao"
+            android:id="@+id/txtNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bạn còn 1 tiếng trước buổi học C11 của giảng viên Trần Thoa"
             android:layout_marginLeft="20dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
     </LinearLayout>
 
 </LinearLayout>

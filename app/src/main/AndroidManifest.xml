@@ -39,7 +39,7 @@
             android:name=".User_Page_ChangePass"
             android:exported="true" />
         <activity
-            android:name=".Leo"
+            android:name=".Notification"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -72,7 +72,7 @@
             android:name=".Premium"
             android:exported="true" />
         <activity
-            android:name=".Notification"
+            android:name=".Leo"
             android:exported="true" />
         <activity
             android:name=".UserPage"
