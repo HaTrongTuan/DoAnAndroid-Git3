@@ -72,6 +72,8 @@
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/button_login.xml" value="0.14427083333333332" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/edt_bg.xml" value="0.14427083333333332" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/drawable/text_color.xml" value="0.1609375" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_class.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_class_detail.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_mail.xml" value="0.25" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_phone.xml" value="0.25" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_nhap.xml" value="0.16" />
@@ -92,7 +94,7 @@
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/confirm_dialog.xml" value="0.2" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/dialog_dky.xml" value="0.33" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itam_feature_news.xml" value="0.15489130434782608" />
-        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itam_news.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itam_news.xml" value="0.25" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/item_teacher.xml" value="0.33" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/item_teacher_normal.xml" value="0.14479166666666668" />
         <entry key="..\:/Users/Mint Tree/Desktop/UI/DoAnAndroid-Git3/app/src/main/res/layout/itemlist_class.xml" value="0.18" />
