@@ -3,10 +3,13 @@ package com.example.doanck2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -21,6 +24,7 @@ public class HomePage extends AppCompatActivity {
     TextView txtName;
     ImageButton imbLop, imbGv, imbTin, imbLeo;
     ImageView imvAvaHP;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,23 +42,13 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void showInfo() {
-        Intent nhanUsernamefromDNhap = getIntent();
-        String username1 = nhanUsernamefromDNhap.getStringExtra("UsernameFromDangNhap");
-        Intent nhanUsernamefromUsers = getIntent();
-        String username2 = nhanUsernamefromUsers.getStringExtra("UsernameFromUsers");
-        if (username1==null){
-            txtName.setText(General.ADB.ShowInfo(username2).getString(1));
-            //convert photo
-            byte[] photo = General.ADB.ShowInfo(username2).getBlob(7);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
-            imvAvaHP.setImageBitmap(bitmap);
-        }else {
-            txtName.setText(General.ADB.ShowInfo(username1).getString(1));
-            //convert photo
-            byte[] photo = General.ADB.ShowInfo(username1).getBlob(7);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
-            imvAvaHP.setImageBitmap(bitmap);
-        }
+        String username = General.Us.getUsername();
+        txtName.setText(General.ADB.ShowInfo(username).getString(1));
+        //convert photo
+        byte[] photo = General.ADB.ShowInfo(username).getBlob(7);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+        imvAvaHP.setImageBitmap(bitmap);
+
     }
 
     private void changePage() {
@@ -119,22 +113,9 @@ public class HomePage extends AppCompatActivity {
 
                         return true;
                     case R.id.user:
-                        Intent nhanUsernamefromDNhap = getIntent();
-                        String username = nhanUsernamefromDNhap.getStringExtra("UsernameFromDangNhap");
-                        Intent nhanUsernameFromUsers = getIntent();
-                        String usernamefromUsers = nhanUsernameFromUsers.getStringExtra("UsernameFromUsers");
-                        if(username==null){
-                            Intent intent1 = new Intent(HomePage.this, UserPage.class);
-                            intent1.putExtra("UsernameFromHomePage", usernamefromUsers);
-                            startActivity(intent1);
-                            overridePendingTransition(0, 0);
-                        }else {
                             Intent intent = new Intent(HomePage.this, UserPage.class);
-                            intent.putExtra("UsernameFromHomePage", username);
-
                             startActivity(intent);
                             overridePendingTransition(0, 0);
-                        }
                         return true;
                     case R.id.premium:
                         startActivity(new Intent(getApplicationContext(),Premium.class));

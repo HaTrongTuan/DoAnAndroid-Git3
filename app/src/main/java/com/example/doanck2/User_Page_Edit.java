@@ -24,6 +24,7 @@ public class User_Page_Edit extends AppCompatActivity {
     EditText edtName,edtEmail,edtPhone,edtBirth;
     TextView txtId;
     Button btnUpdate;
+    String username = General.Us.getUsername();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +35,6 @@ public class User_Page_Edit extends AppCompatActivity {
     }
 
     private void showInfo() {
-        Intent nhanUsername = getIntent();
-        String username = nhanUsername.getStringExtra("UsernameFromUsers");
         txtId.setText(General.ADB.ShowInfo(username).getString(0));
         edtEmail.setText(General.ADB.ShowInfo(username).getString(5));
         edtName.setText(General.ADB.ShowInfo(username).getString(3));
@@ -44,8 +43,6 @@ public class User_Page_Edit extends AppCompatActivity {
     }
 
     private void setEvents() {
-        Intent nhanUsername = getIntent();
-        String username = nhanUsername.getStringExtra("UsernameFromUsers");
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,15 +63,19 @@ public class User_Page_Edit extends AppCompatActivity {
                     if (General.ADB.checkEmail(email)){
                         Toast.makeText(User_Page_Edit.this, "Email đã có người sử dụng!", Toast.LENGTH_SHORT).show();
                     }else {
-                        General.ADB.updateName(username, name);
-                        General.ADB.updateEmail(username, email);
-                        General.ADB.updatePhone(username,phone);
-                        General.ADB.updateBirth(username,birth);
-                        Toast.makeText(User_Page_Edit.this, "Cập nhật thông tin thành công!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(User_Page_Edit.this,UserPage.class);
-                        intent.putExtra("UsernameFromEdit",username);
-                        startActivity(intent);
-                    }
+                        if (General.ADB.checkPhone(phoneS)){
+                            Toast.makeText(User_Page_Edit.this, "Số điện thoại đã có người sử dụng", Toast.LENGTH_SHORT).show();
+                        }else {
+                            General.ADB.updateName(username, name);
+                            General.ADB.updateEmail(username, email);
+                            General.ADB.updatePhone(username, phone);
+                            General.ADB.updateBirth(username, birth);
+                            Toast.makeText(User_Page_Edit.this, "Cập nhật thông tin thành công!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(User_Page_Edit.this, UserPage.class);
+                            startActivity(intent);
+                        }
+                        }
+
                 }
             }
         });

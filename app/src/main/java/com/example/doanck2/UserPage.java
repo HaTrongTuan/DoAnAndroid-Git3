@@ -34,11 +34,7 @@ public class UserPage extends AppCompatActivity {
     Button btnChangePass, btnPolicy, btnContact, btnQues,btnEditAcc,btnLogOut;
     ImageButton imbCamera;
     ImageView imvAva;
-    LinearLayout sheetOpenCamera, sheetOpenGallery;
-    BottomSheetDialog sheetDialog;
-    ActivityResultLauncher<Intent> activityResultLauncher;
-    boolean isCamera;
-
+    String username = General.Us.getUsername();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,37 +50,14 @@ public class UserPage extends AppCompatActivity {
     }
 
     public void showInfo() {
-        Intent nhanUsername1 = getIntent();
-        String username1 = nhanUsername1.getStringExtra("UsernameFromHomePage");
-        Intent nhanUsername2 = getIntent();
-        String username2 = nhanUsername2.getStringExtra("UsernameFromChangePhoto");
-        Intent nhanUsername3 = getIntent();
-        String username3 = nhanUsername3.getStringExtra("UsernameFromEdit");
-        if (username2 != null) {
-            byte[] photo = General.ADB.ShowInfo(username2).getBlob(7);
+
+            byte[] photo = General.ADB.ShowInfo(username).getBlob(7);
             Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
             imvAva.setImageBitmap(bitmap);
-            txtIdUser.setText(General.ADB.ShowInfo(username2).getString(0));
-            txtNameUser.setText(General.ADB.ShowInfo(username2).getString(3));
-            txtPhoneUser.setText(General.ADB.ShowInfo(username2).getString(4));
-            txtEmailUser.setText(General.ADB.ShowInfo(username2).getString(5));
-        }if(username1!=null){
-            byte[] photo = General.ADB.ShowInfo(username1).getBlob(7);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
-            imvAva.setImageBitmap(bitmap);
-            txtIdUser.setText(General.ADB.ShowInfo(username1).getString(0));
-            txtNameUser.setText(General.ADB.ShowInfo(username1).getString(3));
-            txtPhoneUser.setText(General.ADB.ShowInfo(username1).getString(4));
-            txtEmailUser.setText(General.ADB.ShowInfo(username1).getString(5));
-        }if (username3!=null){
-            byte[] photo = General.ADB.ShowInfo(username3).getBlob(7);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
-            imvAva.setImageBitmap(bitmap);
-            txtIdUser.setText(General.ADB.ShowInfo(username3).getString(0));
-            txtNameUser.setText(General.ADB.ShowInfo(username3).getString(3));
-            txtPhoneUser.setText(General.ADB.ShowInfo(username3).getString(4));
-            txtEmailUser.setText(General.ADB.ShowInfo(username3).getString(5));
-        }
+            txtIdUser.setText(General.ADB.ShowInfo(username).getString(0));
+            txtNameUser.setText(General.ADB.ShowInfo(username).getString(3));
+            txtPhoneUser.setText(General.ADB.ShowInfo(username).getString(4));
+            txtEmailUser.setText(General.ADB.ShowInfo(username).getString(5));
     }
 
     private void setEvents() {
@@ -113,53 +86,25 @@ public class UserPage extends AppCompatActivity {
         btnChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nhanUsername = getIntent();
-                String fullname = nhanUsername.getStringExtra("UserNametoUsers");
+
                Intent intent = new Intent(UserPage.this,User_Page_ChangePass.class);
-               intent.putExtra("UserNametoChangePass",fullname);
                startActivity(intent);
             }
         });
         btnEditAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nhanUsername1 = getIntent();
-                String username1 = nhanUsername1.getStringExtra("UsernameFromHomePage");
-                Intent nhanUsername2 = getIntent();
-                String username2 = nhanUsername2.getStringExtra("UsernameFromEdit");
-                Intent nhanUsername3 = getIntent();
-                String username3 = nhanUsername3.getStringExtra("UsernameFromChangePhoto");
-                if (username1!=null) {
                     Intent intent = new Intent(UserPage.this,User_Page_Edit.class);
-                    intent.putExtra("UsernameFromUsers",username1);
                     startActivity(intent);
-                }if (username2!=null) {
-                    Intent intent = new Intent(UserPage.this, User_Page_Edit.class);
-                    intent.putExtra("UsernameFromUsers", username2);
-                    startActivity(intent);
-                }if (username3!=null) {
-                    Intent intent = new Intent(UserPage.this, User_Page_Edit.class);
-                    intent.putExtra("UsernameFromUsers", username3);
-                    startActivity(intent);
-                }
+
             }
         });
         imbCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nhanUsername = getIntent();
-                String username1 = nhanUsername.getStringExtra("UsernameFromHomePage");
-                Intent nhanUsername2 = getIntent();
-                String username2 = nhanUsername2.getStringExtra("UsernameFromEdit");
-                if(username1!=null){
                     Intent intent = new Intent(UserPage.this,UserPage_ChangePhoto.class);
-                    intent.putExtra("UsernametoChangePhoto",username1);
                     startActivity(intent);
-                }if (username2 !=null){
-                    Intent intent = new Intent(UserPage.this,UserPage_ChangePhoto.class);
-                    intent.putExtra("UsernametoChangePhoto",username2);
-                    startActivity(intent);
-                }
+
 
             }
         });
@@ -220,31 +165,11 @@ public class UserPage extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.homepage:
-                        Intent nhanUsername = getIntent();
-                        String username1 = nhanUsername.getStringExtra("UsernameFromHomePage");
-                        Intent nhanUsername2 = getIntent();
-                        String username2 = nhanUsername2.getStringExtra("UsernameFromChangePhoto");
-                        Intent nhanUsername3 = getIntent();
-                        String username3 = nhanUsername3.getStringExtra("UsernameFromEdit");
 
-                        if (username1 != null){
                             Intent intent = new Intent(UserPage.this,HomePage.class);
-                            intent.putExtra("UsernameFromUsers",username1);
                             startActivity(intent);
                             overridePendingTransition(0,0);
-                        }if (username2!=null){
-                            Intent intent = new Intent(UserPage.this,HomePage.class);
-                            intent.putExtra("UsernameFromUsers",username2);
 
-                            startActivity(intent);
-                            overridePendingTransition(0,0);
-                        }if (username3!=null){
-                        Intent intent = new Intent(UserPage.this,HomePage.class);
-                        intent.putExtra("UsernameFromUsers",username3);
-
-                        startActivity(intent);
-                        overridePendingTransition(0,0);
-                    }
                         return true;
                     case R.id.user:
 

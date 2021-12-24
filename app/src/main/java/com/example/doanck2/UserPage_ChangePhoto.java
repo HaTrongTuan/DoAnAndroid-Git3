@@ -40,6 +40,7 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
     BottomSheetDialog sheetDialog;
     ActivityResultLauncher<Intent> activityResultLauncher;
     boolean isCamera;
+    String username = General.Us.getUsername();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
 
 
         linkViews();
+        showInfo();
         createSheetDialog();
         addEvents();
 
@@ -81,6 +83,13 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
         });
     }
 
+    private void showInfo() {
+        byte[] photo = General.ADB.ShowInfo(username).getBlob(7);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
+        imvPhoto.setImageBitmap(bitmap);
+
+    }
+
     private void addEvents() {
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,8 +102,6 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Insert Data
-                Intent nhanUsername = getIntent();
-                String username = nhanUsername.getStringExtra("UsernametoChangePhoto");
 
                 boolean check= General.ADB.updatePhoto(username,convertPhoto());
                 if (check){
@@ -107,6 +114,12 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
                 }
 
 
+            }
+        });
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

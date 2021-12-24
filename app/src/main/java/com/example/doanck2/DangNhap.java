@@ -1,6 +1,8 @@
 package com.example.doanck2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database.AccountDataBase;
+import com.example.model.Users;
 import com.example.utils.General;
 
 import java.io.ByteArrayOutputStream;
@@ -26,11 +29,14 @@ public class DangNhap extends AppCompatActivity {
     TextView txtQuen;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_nhap);
         General.ADB = new AccountDataBase(this);
+        General.Us = new Users();
         prepareDb();
         linkViews();
         getEvents();
@@ -70,19 +76,37 @@ public class DangNhap extends AppCompatActivity {
 
                 //Check dữ liệu
                 boolean CheckUserPass = General.ADB.checkUsernamePassword(userName, password);
+                boolean CheckEmailPass = General.ADB.checkEmailPassword(userName, password);
+                boolean CheckPhonePass = General.ADB.checkPhonePassword(userName, password);
                 if (CheckUserPass) {
                     Toast.makeText(DangNhap.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                    //Đăng nhập
-                    //Truyền username đề dùng db cho homepage
+
+                    General.Us.setUsername(userName);
                     Intent truyenUserPage = new Intent(DangNhap.this, HomePage.class);
-                    truyenUserPage.putExtra("UsernameFromDangNhap",userName);
+                    truyenUserPage.putExtra("UsernameFromDangNhap", userName);
+                    startActivity(truyenUserPage);
+                }else{
+                    if (CheckEmailPass) {
+                        Toast.makeText(DangNhap.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+
+                        String email = General.ADB.ChangeEmailtoUsername(userName);
+                        General.Us.setUsername(email);
+
+                        Intent truyenUserPage = new Intent(DangNhap.this, HomePage.class);
+                        startActivity(truyenUserPage);
+                }else{
+                if (CheckPhonePass) {
+                    Toast.makeText(DangNhap.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+
+                    String phone = General.ADB.ChangePhonetoUsername(userName);
+                    General.Us.setUsername(phone);
+                    Intent truyenUserPage = new Intent(DangNhap.this, HomePage.class);
                     startActivity(truyenUserPage);
 
-                }else
-
+                } else {
                     Toast.makeText(DangNhap.this, "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
-            }
-
+                }
+            }}}
         });
         txtQuen.setOnClickListener(new View.OnClickListener() {
             @Override

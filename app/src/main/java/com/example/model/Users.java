@@ -20,6 +20,7 @@ public class Users {
         this.Birth = birth;
         this.Photo = photo;
     }
+    public Users(){}
 
     public Integer getID() {
         return ID;
@@ -29,9 +30,7 @@ public class Users {
         this.ID = ID;
     }
 
-    public String getUsername() {
-        return Username;
-    }
+    public  String getUsername() { return Username; }
 
     public void setUsername(String username) {
         Username = username;
