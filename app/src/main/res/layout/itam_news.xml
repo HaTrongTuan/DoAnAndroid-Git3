@@ -6,7 +6,8 @@
     android:padding="5dp"
     android:background="@drawable/item_news"
     android:layout_marginTop="20dp"
-    android:layout_gravity="center_horizontal">
+    android:layout_gravity="center"
+    android:gravity="center">
     <ImageView
         android:id="@+id/imvNewThumb"
         android:layout_width="120dp"

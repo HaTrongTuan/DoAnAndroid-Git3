@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="200dp"
     android:id="@+id/DiaLog_Confirm"
     android:background="@drawable/botron_button"
     android:backgroundTint="@color/white">
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Xác nhận muốn đăng xuất"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="16sp"
         android:gravity="center"
         android:padding="60dp"/>
 
@@ -25,14 +25,16 @@
         <Button
             android:id="@+id/txtYes"
             android:layout_width="205dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="Xác nhận"
+            android:textSize="12sp"
             android:stateListAnimator="@null"
             android:textColor="@color/secondary_red"
             android:backgroundTint="@color/white"
             app:backgroundTint="@null" />
 
         <Button
+            android:textSize="12sp"
             android:id="@+id/txtNo"
             android:layout_width="205dp"
             android:layout_height="match_parent"
