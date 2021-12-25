@@ -100,11 +100,13 @@
             android:textColor="@color/black"
             android:layout_marginTop="10dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
+        <GridView
             android:layout_marginTop="10dp"
-            android:id="@+id/rcvPreTeacher"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:id="@+id/grvPreTeacher"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numColumns="2"/>
 
     </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView

@@ -14,6 +14,7 @@
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_ky_phone.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_dang_nhap.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_giang_vien.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_giang_vien_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_home_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_leo.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/activity_loading_screen.xml" value="0.25416666666666665" />
@@ -38,6 +39,8 @@
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/dialog_dky.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/dialog_huybuoihoc.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_class.xml" value="0.264" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_gv_noibat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_gv_normal.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_payment_details_bank.xml" value="0.264" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_payment_details_qrcode.xml" value="0.264" />
         <entry key="..\:/Android/AndroidStudioProject/DoAnAndroid-Git3/app/src/main/res/layout/item_payment_head.xml" value="0.264" />

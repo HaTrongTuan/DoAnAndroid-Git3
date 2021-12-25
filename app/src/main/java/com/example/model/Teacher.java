@@ -4,26 +4,30 @@ import java.io.Serializable;
 
 public class Teacher {
     private int Ava;
-    private String Name;
+    private String NameGV;
 
-    public Teacher(int ava, String name) {
+
+    public Teacher(int ava, String nameGV) {
         Ava = ava;
-        Name = name;
+        NameGV = nameGV;
+
+    }
+
+    public int getAva() {
+        return Ava;
     }
 
     public void setAva(int ava) {
         Ava = ava;
     }
 
-    public String getName() {
-        return Name;
+    public String getNameGV() {
+        return NameGV;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setNameGV(String nameGV) {
+        NameGV = nameGV;
     }
 
-    public int getAva() {
-        return Ava;
-    }
+
 }

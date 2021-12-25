@@ -3,38 +3,30 @@ package com.example.model;
 import java.util.List;
 
 public class DanhMuc {
+    private int Ava;
+    private String NameGV;
 
-    private String name;
-    private List<Teacher> teacher;
-    private boolean isFeature;
-
-    public DanhMuc(String name, List<Teacher> teacher, boolean isFeature) {
-        this.name = name;
-        this.teacher = teacher;
-        this.isFeature = isFeature;
+    public DanhMuc(int ava, String nameGV) {
+        Ava = ava;
+        NameGV = nameGV;
     }
 
-    public boolean isFeature() {
-        return isFeature;
+    public int getAva() {
+        return Ava;
     }
 
-    public void setFeature(boolean feature) {
-        isFeature = feature;
+    public void setAva(int ava) {
+        Ava = ava;
     }
 
-    public String getName() {
-        return name;
+    public String getNameGV() {
+        return NameGV;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Teacher> getTeacher() {
-        return teacher;
-    }
-
-    public void setTeacher(List<Teacher> teacher) {
-        this.teacher = teacher;
+    public void setNameGV(String nameGV) {
+        NameGV = nameGV;
     }
 }
+
+
+

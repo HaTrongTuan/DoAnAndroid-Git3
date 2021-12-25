@@ -9,7 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -19,7 +22,7 @@ import java.util.Calendar;
 public class Profile_Premium extends AppCompatActivity {
     private DatePicker dpCalendar;
     Button btnDangKyLichHoc;
-    TextView txtNameGV;
+
     Calendar calendar;
     String date;
 
@@ -33,6 +36,7 @@ public class Profile_Premium extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_premium);
         linkview();
+
         calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
         int year = calendar.get(Calendar.YEAR);
@@ -72,13 +76,25 @@ public class Profile_Premium extends AppCompatActivity {
         dialog.setContentView(R.layout.calender_time);
         TextView txtDate = dialog.findViewById(R.id.txtDate);
         txtDate.setText(date);
+        RadioButton radTime = dialog.findViewById(R.id.radTime);
+        RadioButton radTime1 = dialog.findViewById(R.id.radTime1);
+        RadioButton radTime2 = dialog.findViewById(R.id.radTime2);
+        RadioButton radTime3 = dialog.findViewById(R.id.radTime3);
 
         dialog.show();
         Button btnDangkyTime = dialog.findViewById(R.id.btnDangKyTime);
         btnDangkyTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 DialogConfirmRegister();
+            }
+        });
+        ImageButton imbBack = dialog.findViewById(R.id.imbBack);
+        imbBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
             }
         });
     }
@@ -89,6 +105,14 @@ public class Profile_Premium extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        Button btnXnDky = dialog.findViewById(R.id.btnXnDk);
+        btnXnDky.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Profile_Premium.this, "Bạn đã đăng ký thành công. Hãy vào trang quản lý học vụ để nhận tài liệu từ giảng viên.", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
@@ -104,7 +128,7 @@ public class Profile_Premium extends AppCompatActivity {
     private void linkview() {
         dpCalendar = findViewById(R.id.dpCalendar);
         btnDangKyLichHoc = findViewById(R.id.btnDangKyLichHoc);
-        txtNameGV = findViewById(R.id.txtNameGV);
+
 
 
 

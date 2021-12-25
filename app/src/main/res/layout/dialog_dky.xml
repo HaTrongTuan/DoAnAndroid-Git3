@@ -15,11 +15,7 @@
         android:textSize="15dp"
         android:gravity="center"
         android:padding="60dp"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:background="#000204" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,10 +34,7 @@
             app:backgroundTint="@null"
             android:backgroundTint="@color/white"
             android:textSize="15sp"/>
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="#000204" />
+
 
         <Button
             android:id="@+id/btnHuy"

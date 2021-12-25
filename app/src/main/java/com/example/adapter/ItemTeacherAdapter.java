@@ -1,13 +1,16 @@
 package com.example.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,47 +23,59 @@ import com.example.model.Teacher;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemTeacherAdapter extends RecyclerView.Adapter<ItemTeacherAdapter.ViewHolder> {
+public class ItemTeacherAdapter extends BaseAdapter {
+    Activity context;
+    int item;
+    List<Teacher> teachers;
 
-    List<Teacher> lteachers;
-
-    public void setData(List<Teacher> teachers){
-        this.lteachers = teachers;
-        notifyDataSetChanged();
+    public ItemTeacherAdapter(Activity context, int item, List<Teacher> teachers) {
+        this.context = context;
+        this.item = item;
+        this.teachers = teachers;
     }
 
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View customView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_teacher,parent,false);
 
-        return new ViewHolder(customView);
+    @Override
+    public int getCount() {
+        return teachers.size() ;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Teacher teacher = lteachers.get(position);
+    public Object getItem(int i) {
+        return teachers.get(i);
+    }
 
+    @Override
+    public long getItemId(int i) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        ViewHolder holder ;
+        if (view == null) {
+            holder = new ViewHolder();
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(item,null);
+            holder.imvAva = view.findViewById(R.id.imvAva);
+            holder.txtNameGV = view.findViewById(R.id.txtNameGV);
+            view.setTag(holder);
+        }else {
+            holder= (ViewHolder) view.getTag();
+        }
+        Teacher teacher = teachers.get(i);
         holder.imvAva.setImageResource(teacher.getAva());
-        holder.txtNameGV.setText(teacher.getName());
+        holder.txtNameGV.setText(teacher.getNameGV());
+        return view;
+
     }
 
-
-    @Override
-    public int getItemCount() {
-        return lteachers.size();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder {
         TextView txtNameGV;
         ImageView imvAva;
 
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            //Link View
-            imvAva = itemView.findViewById(R.id.imvAva);
-            txtNameGV = itemView.findViewById(R.id.txtNameGV);
-        }
+
+
     }
 }
