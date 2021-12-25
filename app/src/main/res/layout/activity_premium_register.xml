@@ -23,15 +23,16 @@
                 android:src="@drawable/button_back"
                 android:background="@null"
                 />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PREMIUM"
-                android:textStyle="bold"
-                android:textSize="20dp"
                 android:layout_gravity="center"
+                android:gravity="center"
+                android:text="PREMIUM"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
         <ImageView
@@ -80,6 +81,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/lnPrem300"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -134,6 +136,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/lnPrem700"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -188,6 +191,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/lnPrem1200"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -242,6 +246,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/lnPrem2500"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -267,15 +272,6 @@
     </LinearLayout>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottom_navigation"
-        app:menu="@menu/bottom_nav_menu"
-        android:layout_gravity="bottom"
-        android:background="#2196F3"
-        >
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>

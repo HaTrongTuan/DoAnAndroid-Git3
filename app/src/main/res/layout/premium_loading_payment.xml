@@ -20,6 +20,7 @@
         android:src="@drawable/loadingpayment"
         android:layout_marginTop="20dp"/>
     <TextView
+        android:id="@+id/txtChangePremSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bạn vui lòng chờ 24h để xác nhận..."

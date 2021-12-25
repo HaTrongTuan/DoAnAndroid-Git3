@@ -23,7 +23,7 @@ public class HomePage extends AppCompatActivity {
 
     TextView txtName;
     ImageButton imbLop, imbGv, imbTin, imbLeo;
-    ImageView imvAvaHP;
+    ImageView imvAvaHP,imvPremium;
 
 
     @Override
@@ -48,6 +48,7 @@ public class HomePage extends AppCompatActivity {
         byte[] photo = General.ADB.ShowInfo(username).getBlob(7);
         Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
         imvAvaHP.setImageBitmap(bitmap);
+        imvPremium.setVisibility(View.INVISIBLE);
 
     }
 
@@ -90,6 +91,7 @@ public class HomePage extends AppCompatActivity {
         imbTin = findViewById(R.id.imbTin);
         imbLeo = findViewById(R.id.imbLeo);
         imvAvaHP = findViewById(R.id.imvAvaHP);
+        imvPremium = findViewById(R.id.imvPremium);
 
     }
 
