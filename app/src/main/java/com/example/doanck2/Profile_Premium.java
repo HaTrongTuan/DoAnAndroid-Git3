@@ -14,6 +14,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
@@ -35,6 +37,8 @@ public class Profile_Premium extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_premium);
+
+        bottomNav();
         linkview();
 
         calendar = Calendar.getInstance();
@@ -58,6 +62,12 @@ public class Profile_Premium extends AppCompatActivity {
         });
 
     }
+
+    private void bottomNav() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.premium);
+    }
+
     private String datePickerChange(DatePicker datePicker, int year, int month, int dayOfMonth) {
         Log.d("Date", "Year=" + year + " Month=" + (month + 1) + " day=" + dayOfMonth);
         calendar.set(Calendar.YEAR, year);
@@ -76,13 +86,13 @@ public class Profile_Premium extends AppCompatActivity {
         dialog.setContentView(R.layout.calender_time);
         TextView txtDate = dialog.findViewById(R.id.txtDate);
         txtDate.setText(date);
-        RadioButton radTime = dialog.findViewById(R.id.radTime);
-        RadioButton radTime1 = dialog.findViewById(R.id.radTime1);
-        RadioButton radTime2 = dialog.findViewById(R.id.radTime2);
-        RadioButton radTime3 = dialog.findViewById(R.id.radTime3);
-
-        dialog.show();
+//        RadioButton radTime = dialog.findViewById(R.id.radTime);
+//        RadioButton radTime1 = dialog.findViewById(R.id.radTime1);
+//        RadioButton radTime2 = dialog.findViewById(R.id.radTime2);
+//        RadioButton radTime3 = dialog.findViewById(R.id.radTime3);
         Button btnDangkyTime = dialog.findViewById(R.id.btnDangKyTime);
+        dialog.show();
+
         btnDangkyTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -16,6 +16,7 @@ import com.example.adapter.DanhMucAdapter;
 import com.example.adapter.ItemTeacherAdapter;
 import com.example.model.DanhMuc;
 import com.example.model.Teacher;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +32,10 @@ public class PremiumUpdate extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium_update);
 
+        bottomnav();
         linkViews();
         loadData();
+
         grvPreTeacher.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -42,6 +45,11 @@ public class PremiumUpdate extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void bottomnav() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.premium);
     }
 
     private void loadData() {

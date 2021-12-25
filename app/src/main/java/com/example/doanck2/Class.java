@@ -26,8 +26,9 @@ public class Class extends AppCompatActivity {
         setContentView(R.layout.activity_class);
 
         linkview();
-        back();
         loadData();
+        back();
+
     }
 
     private void loadData() {
