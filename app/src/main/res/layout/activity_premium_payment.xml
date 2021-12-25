@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Về trang chủ"
-                android:textColor="#0E0C07"
+                android:textColor="#808080"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:textSize="13sp"
