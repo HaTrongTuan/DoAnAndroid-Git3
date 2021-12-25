@@ -32,21 +32,26 @@ public class GiangVien extends AppCompatActivity {
         linkview();
 
         configRecyclerView();
-
         back();
     }
 
     private void configRecyclerView() {
+
         danhMucAdapter = new DanhMucAdapter(this);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         rcvList.setLayoutManager(linearLayoutManager);
 
         danhMucAdapter.setData(initData());
+        rcvList.setHasFixedSize(true);
+
         rcvList.setAdapter(danhMucAdapter);
     }
 
     private List<DanhMuc> initData() {
+
+
+
         List<DanhMuc> list = new ArrayList<>();
 
         List<Teacher> listNoiBat = new ArrayList<>();

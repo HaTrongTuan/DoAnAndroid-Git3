@@ -23,6 +23,7 @@ public class Process extends AppCompatActivity {
     ArrayList<Lichsulophoc> lichsulophocs;
     ItemBuoiHocAdapter itemBuoiHocAdapter;
     ListView lvLichsulophoc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,9 +93,9 @@ public class Process extends AppCompatActivity {
 
     private void loadDataSapxep() {
         Sapxep = new ArrayList<>();
-        Sapxep.add("Sắp xếp theo mới nhất");
+        Sapxep.add(0,"Sắp xếp theo mới nhất");
         Sapxep.add("Sắp xếp theo cũ nhất");
-        adapter = new ArrayAdapter<String>(Process.this, android.R.layout.simple_spinner_dropdown_item);
+        adapter = new ArrayAdapter<String>(Process.this, R.layout.spinner_tittle);
         adapter.addAll(Sapxep);
         spSapxep.setAdapter(adapter);
     }
