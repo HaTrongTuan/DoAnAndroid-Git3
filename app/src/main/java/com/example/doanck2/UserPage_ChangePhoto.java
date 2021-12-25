@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -32,9 +33,9 @@ import java.io.InputStream;
 
 public class UserPage_ChangePhoto extends AppCompatActivity {
 
-    Button btnCapture, btnSave, btnCancel;
+    Button  btnSave, btnCancel;
     ImageView imvPhoto;
-
+    ImageButton btnCapture;
     LinearLayout sheetOpenCamera, sheetOpenGallery;
 
     BottomSheetDialog sheetDialog;
@@ -107,7 +108,6 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
                 if (check){
                     Toast.makeText(UserPage_ChangePhoto.this, "Cập nhật hình ảnh thành công!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(UserPage_ChangePhoto.this,UserPage.class);
-                    intent.putExtra("UsernameFromChangePhoto",username);
                     startActivity(intent);
                 }else {
                     Toast.makeText(UserPage_ChangePhoto.this, "Fail!", Toast.LENGTH_SHORT).show();

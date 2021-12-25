@@ -22,7 +22,7 @@ public class User_Page_Edit extends AppCompatActivity {
 
     ImageButton imbBack;
     EditText edtName,edtEmail,edtPhone,edtBirth;
-    TextView txtId;
+    TextView txtId,txtOldFullname,txtOldPhone,txtOldEmail,txtOldBirh;
     Button btnUpdate;
     String username = General.Us.getUsername();
     @Override
@@ -40,6 +40,10 @@ public class User_Page_Edit extends AppCompatActivity {
         edtName.setText(General.ADB.ShowInfo(username).getString(3));
         edtPhone.setText(General.ADB.ShowInfo(username).getString(4));
         edtBirth.setText(General.ADB.ShowInfo(username).getString(6));
+        txtOldEmail.setText(General.ADB.ShowInfo(username).getString(5));
+        txtOldFullname.setText(General.ADB.ShowInfo(username).getString(3));
+        txtOldPhone.setText(General.ADB.ShowInfo(username).getString(4));
+        txtOldBirh.setText(General.ADB.ShowInfo(username).getString(6));
     }
 
     private void setEvents() {
@@ -52,6 +56,8 @@ public class User_Page_Edit extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               String oldEmail = General.ADB.ShowInfo(username).getString(5);
+               String oldPhone = General.ADB.ShowInfo(username).getString(4);
                 String name = edtName.getText().toString().trim();
                 String email = edtEmail.getText().toString().trim();
                 String phoneS = edtPhone.getText().toString();
@@ -60,10 +66,10 @@ public class User_Page_Edit extends AppCompatActivity {
                 if (name.equals("") || email.equals("") ||phoneS.equals("")||birth.equals("")){
                     Toast.makeText(User_Page_Edit.this, "Vui lòng điền đủ các ô thông tin!", Toast.LENGTH_SHORT).show();
                 }else{
-                    if (General.ADB.checkEmail(email)){
+                    if (General.ADB.checkEmail(email)&& email.equals(oldEmail)==false){
                         Toast.makeText(User_Page_Edit.this, "Email đã có người sử dụng!", Toast.LENGTH_SHORT).show();
                     }else {
-                        if (General.ADB.checkPhone(phoneS)){
+                        if (General.ADB.checkPhone(phoneS)&& phoneS.equals(oldPhone)==false){
                             Toast.makeText(User_Page_Edit.this, "Số điện thoại đã có người sử dụng", Toast.LENGTH_SHORT).show();
                         }else {
                             General.ADB.updateName(username, name);
@@ -92,6 +98,10 @@ public class User_Page_Edit extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmailUserChange);
         btnUpdate = findViewById(R.id.btnUpdateInfo);
         edtBirth =findViewById(R.id.edtBirthUserChange);
+        txtOldFullname = findViewById(R.id.txtOldFullname);
+        txtOldBirh = findViewById(R.id.txtOldBirth);
+        txtOldEmail = findViewById(R.id.txtOldEmail);
+        txtOldPhone = findViewById(R.id.txtOldPhone);
 
     }
 
