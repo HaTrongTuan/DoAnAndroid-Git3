@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Process_HistoryClass_Feedback extends AppCompatActivity {
+
     Button btnSendFeedback;
     ImageButton imbBack;
 
