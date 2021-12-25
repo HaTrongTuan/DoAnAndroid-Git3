@@ -12,15 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
-            android:name=".Process_coming_Class_Detail"
-            android:exported="true" />
-        <activity
-            android:name=".Process_HistoryClass_Feedback"
-            android:exported="true" />
-        <activity
-            android:name=".Process_HistoryClass_Detail"
-            android:exported="true" />
-        <activity
             android:name=".QuanLyPremium"
             android:exported="true" />
         <activity
@@ -37,10 +28,19 @@
             android:exported="true" />
         <activity
             android:name=".DangNhap"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".GiangVien"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".Premium_LoadingPage"
             android:exported="true" />
@@ -58,18 +58,15 @@
             android:exported="true" />
         <activity
             android:name=".Profile_Premium"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".Class"
             android:exported="true" />
         <activity
-            android:name=".Process"
+            android:name=".PremiumUpdate"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".HomePage"
@@ -93,7 +90,7 @@
             android:name=".UserPage"
             android:exported="true" />
         <activity
-            android:name=".PremiumUpdate"
+            android:name=".Process"
             android:exported="true" />
         <activity
             android:name=".XacNhan"
@@ -112,7 +109,9 @@
             android:exported="true" />
         <activity
             android:name=".LoadingScreen"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".Premium_Payment"
             android:exported="true" />

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class QuanLyPremium extends AppCompatActivity {
     ImageButton imbBack;
 
@@ -14,8 +16,14 @@ public class QuanLyPremium extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quan_ly_premium);
 
+        bottomnav();
         linkViews();
         setEvents();
+    }
+
+    private void bottomnav() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.premium);
     }
 
     private void setEvents() {

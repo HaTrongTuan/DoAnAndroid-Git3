@@ -24,7 +24,7 @@ public class HomePage extends AppCompatActivity {
     TextView txtName;
     ImageButton imbLop, imbGv, imbTin, imbLeo;
     ImageView imvAvaHP,imvPremium;
-
+    String username = General.Us.getUsername();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,8 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void showInfo() {
-        String username = General.Us.getUsername();
-        txtName.setText(General.ADB.ShowInfo(username).getString(1));
+
+        txtName.setText(General.ADB.ShowInfo(username).getString(3));
         //convert photo
         byte[] photo = General.ADB.ShowInfo(username).getBlob(7);
         Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
