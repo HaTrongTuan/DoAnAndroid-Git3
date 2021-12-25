@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnCK2">
         <activity
+            android:name=".Process_coming_Class_Detail"
+            android:exported="true" />
+        <activity
+            android:name=".Process_HistoryClass_Feedback"
+            android:exported="true" />
+        <activity
+            android:name=".Process_HistoryClass_Detail"
+            android:exported="true" />
+        <activity
             android:name=".GiangVienDetail"
             android:exported="true" />
         <activity
@@ -40,17 +49,13 @@
             android:exported="true" />
         <activity
             android:name=".Profile_Premium"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Class"
             android:exported="true" />
         <activity
             android:name=".LoadingScreen"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Register"
             android:exported="true" />
@@ -59,7 +64,7 @@
             android:exported="true" />
         <activity
             android:name=".Notification"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DangKyMail"
             android:exported="true" />
@@ -77,7 +82,14 @@
             android:exported="true" />
         <activity
             android:name=".Process"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            />
+        </activity>
         <activity
             android:name=".XacNhan"
             android:exported="true" />

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Process_HistoryClass_Detail"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageButton
+            android:id="@+id/imbBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_back"
+            android:background="@null"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LỊCH SỬ LỚP HỌC"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtNgayUpdate"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Ngày 15/12/2021"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="#03A9F4"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Tình trạng lớp học"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="#03A9F4"/>
+        <TextView
+            android:id="@+id/txtTinhTrangLopHoc"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Hoàn thành"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="#3E4CAF50"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Tài liệu"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="#03A9F4"/>
+        <TextView
+            android:id="@+id/txtTaiLieu"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="https://drive.google.com/drive/folders"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="#3E4CAF50"
+            android:autoLink="web"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Video"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="#03A9F4"/>
+        <TextView
+            android:id="@+id/txtVideo"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="https://drive.google.com/drive/folders"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="#3E4CAF50"
+            android:autoLink="web"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#03A9F4"
+            android:text="Nhận xét của giảng viên"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/txtNhanXetCuaGV"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:textSize="12sp"
+            android:text="Chưa tập trung, còn rụt rè"
+            android:textColor="@color/black"
+            android:background="#3E4CAF50"
+            android:gravity="center"/>
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đánh giá của học viên"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/botron_button"
+        app:backgroundTint="@null"/>
+
+
+
+</LinearLayout>
