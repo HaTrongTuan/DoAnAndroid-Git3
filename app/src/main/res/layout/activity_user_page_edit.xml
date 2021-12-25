@@ -41,14 +41,15 @@
            android:text="ID tài khoản"
            android:textSize="15sp"
            android:textColor="@color/black"/>
+
        <TextView
            android:id="@+id/txtIdUserChange"
-           android:gravity="right"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:gravity="right"
            android:text="admin"
-           android:textSize="15sp"
-           android:textColor="@color/black"/>
+           android:textColor="@color/black"
+           android:textSize="15sp" />
    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,6 +63,15 @@
             android:text="Họ và tên"
             android:textSize="15sp"
             android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtOldFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="admin"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="5dp"/>
         <EditText
             android:id="@+id/edtFullNameUserChange"
 
@@ -90,6 +100,14 @@
             android:text="Số điện thoại"
             android:textSize="15sp"
             android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txtOldPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0123456789"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="5dp"/>
         <EditText
             android:id="@+id/edtPhoneUserChange"
             android:inputType="number"
@@ -118,6 +136,14 @@
         android:text="Email"
         android:textSize="15sp"
         android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txtOldEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="admin@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="5dp"/>
     <EditText
         android:id="@+id/edtEmailUserChange"
 
@@ -146,6 +172,14 @@
         android:text="Birth(ddMMyyyy)"
         android:textSize="15sp"
         android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txtOldBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="01092001"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="5dp"/>
     <EditText
         android:id="@+id/edtBirthUserChange"
         android:inputType="number"
