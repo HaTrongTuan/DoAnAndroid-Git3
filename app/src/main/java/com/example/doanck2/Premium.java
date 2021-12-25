@@ -53,7 +53,7 @@ public class Premium extends AppCompatActivity {
         btnDangKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Premium.this, Register.class);
+                Intent intent = new Intent(Premium.this, Premium_Register.class);
                 startActivity(intent);
             }
         });

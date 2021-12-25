@@ -29,10 +29,14 @@ public class GiangVien extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giang_vien);
 
+        prepareDb();
         linkview();
 
         configRecyclerView();
         back();
+    }
+
+    private void prepareDb() {
     }
 
     private void configRecyclerView() {

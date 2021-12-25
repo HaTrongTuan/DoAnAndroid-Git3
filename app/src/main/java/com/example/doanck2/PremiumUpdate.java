@@ -1,60 +1,48 @@
 package com.example.doanck2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
-import com.example.adapter.DanhMucAdapter;
-import com.example.model.DanhMuc;
-import com.example.model.Teacher;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PremiumUpdate extends AppCompatActivity {
 
     RecyclerView rcvPreTeacher;
-    private DanhMucAdapter danhMucAdapter;
+    LinearLayout lnQuanLyTKPrem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium_update);
-
+        
+        bottomNav();
         linkViews();
-        configRecyclerView();
-
+        setEvents();
     }
 
-
-    private void configRecyclerView() {
-        danhMucAdapter = new DanhMucAdapter(this);
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
-        rcvPreTeacher.setLayoutManager(linearLayoutManager);
-
-        danhMucAdapter.setData(initData());
-        rcvPreTeacher.setAdapter(danhMucAdapter);
+    private void setEvents() {
+        lnQuanLyTKPrem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PremiumUpdate.this, QuanLyPremium.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    private List<DanhMuc> initData() {
-        List<DanhMuc> list = new ArrayList<>();
-
-        List<Teacher> listNoiBat = new ArrayList<>();
-        listNoiBat.add(new Teacher(R.drawable.ava,"Hồ Hoàng"));
-        listNoiBat.add(new Teacher(R.drawable.ava2,"Hoàng Minh"));
-        listNoiBat.add(new Teacher(R.drawable.avapro5,"Mỹ Lệ"));
-        listNoiBat.add(new Teacher(R.drawable.avapro,"Văn Minh"));
-
-        list.add(new DanhMuc("",listNoiBat,false));
-
-        return list;
+    private void bottomNav() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.premium);
     }
 
     private void linkViews() {
         rcvPreTeacher = findViewById(R.id.rcvPreTeacher);
+        lnQuanLyTKPrem = findViewById(R.id.lnQuanLyTKPrem);
     }
 }
