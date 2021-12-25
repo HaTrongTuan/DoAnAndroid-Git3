@@ -22,64 +22,49 @@ import java.util.List;
 
 public class ItemTeacherAdapter extends RecyclerView.Adapter<ItemTeacherAdapter.ViewHolder> {
 
-    Context context;
-    ArrayList<Teacher> teachers;
+    private List<Teacher> lteachers;
 
-    public ItemTeacherAdapter(Context context, ArrayList<Teacher> teachers) {
-        this.context = context;
-        this.teachers = teachers;
+    public void setData(List<Teacher> teachers){
+        this.lteachers = teachers;
+        notifyDataSetChanged();
     }
 
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View customView = inflater.inflate(R.layout.item_teacher, parent, false);
+        View customView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_teacher,parent,false);
 
         return new ViewHolder(customView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Teacher teacher = teachers.get(position);
+        Teacher teacher = lteachers.get(position);
         if (teacher == null){
             return;
         }
 
-        holder.imvAva.setImageResource(teachers.get(position).getAva());
-        holder.txtNameGV.setText(teachers.get(position).getName());
-
-        holder.itemGV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeToDetail(teacher);
-            }
-
-            private void changeToDetail(Teacher teacher) {
-                Intent intent = new Intent(context, GiangVienDetail.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("gv_detail",teacher);
-                intent.putExtras(bundle);
-                context.startActivity(intent);
-            }
-        });
+        holder.imvAva.setImageResource(teacher.getAva());
+        holder.txtNameGV.setText(teacher.getName());
     }
 
 
     @Override
     public int getItemCount() {
-        return teachers.size();
+        if (lteachers != null){
+            return lteachers.size();
+        }
+         return 0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private LinearLayout itemGV;
         TextView txtNameGV;
         ImageView imvAva;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             //Link View
-            itemGV = itemView.findViewById(R.id.itemGv);
             imvAva = itemView.findViewById(R.id.imvAva);
             txtNameGV = itemView.findViewById(R.id.txtNameGV);
         }
