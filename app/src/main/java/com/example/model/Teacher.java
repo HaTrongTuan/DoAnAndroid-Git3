@@ -11,8 +11,6 @@ public class Teacher {
         Name = name;
     }
 
-
-
     public void setAva(int ava) {
         Ava = ava;
     }

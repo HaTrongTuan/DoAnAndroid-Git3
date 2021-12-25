@@ -22,7 +22,7 @@ import java.util.List;
 
 public class ItemTeacherAdapter extends RecyclerView.Adapter<ItemTeacherAdapter.ViewHolder> {
 
-    private List<Teacher> lteachers;
+    List<Teacher> lteachers;
 
     public void setData(List<Teacher> teachers){
         this.lteachers = teachers;
@@ -41,9 +41,6 @@ public class ItemTeacherAdapter extends RecyclerView.Adapter<ItemTeacherAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Teacher teacher = lteachers.get(position);
-        if (teacher == null){
-            return;
-        }
 
         holder.imvAva.setImageResource(teacher.getAva());
         holder.txtNameGV.setText(teacher.getName());
@@ -52,10 +49,7 @@ public class ItemTeacherAdapter extends RecyclerView.Adapter<ItemTeacherAdapter.
 
     @Override
     public int getItemCount() {
-        if (lteachers != null){
-            return lteachers.size();
-        }
-         return 0;
+        return lteachers.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

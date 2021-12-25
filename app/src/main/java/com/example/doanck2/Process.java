@@ -6,12 +6,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.adapter.ItemBuoiHocAdapter;
+import com.example.adapter.ItemLopHocSapDienRaAdapter;
 import com.example.model.Lichsulophoc;
+import com.example.model.LopHocSapDienRa;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -22,14 +28,35 @@ public class Process extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     ArrayList<Lichsulophoc> lichsulophocs;
     ItemBuoiHocAdapter itemBuoiHocAdapter;
-    ListView lvLichsulophoc;
+    ListView lvHienThiLopHoc;
+    Button btnLichSuLopHoc, btnLopHocSapDienRa;
+    ArrayList<LopHocSapDienRa> lopHocSapDienRas;
+    ItemLopHocSapDienRaAdapter itemLopHocSapDienRaAdapter;
+    TextView txtNgay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_process);
-
+        this.spSapxep = (Spinner) findViewById(R.id.spSapxep);
 
         bottomNav();
+        loadDataSapxep();
+        linkview();
+        loadDataLichsulophoc();
+
+        btnLichSuLopHoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadDataLichsulophoc();
+            }
+        });
+        btnLopHocSapDienRa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadDataLopHocSapDienRa();
+            }
+        });
+
 
 
 
@@ -68,25 +95,53 @@ public class Process extends AppCompatActivity {
             }
         });
 
-        this.spSapxep = (Spinner) findViewById(R.id.spSapxep);
-        loadDataSapxep();
-        linkview();
-        loadDataLichsulophoc();
+
     }
     private void linkview() {
 
-        lvLichsulophoc = findViewById(R.id.lvLichsulophoc);
+        lvHienThiLopHoc = findViewById(R.id.lvHienThiLopHoc);
+        btnLichSuLopHoc = findViewById(R.id.btnLichsulophoc);
+        btnLopHocSapDienRa = findViewById(R.id.btnLophocsapdienra);
+        txtNgay = findViewById(R.id.txtNgay);
+
     }
 
     private void loadDataLichsulophoc() {
         lichsulophocs = new ArrayList<>();
-        lichsulophocs.add(new Lichsulophoc("Study 1:1: How to introduce yourself", "18:00", "22/12/2021", "Phạm Minh Trọng" ));
-        lichsulophocs.add(new Lichsulophoc("Topic: Home and family", "19:00", "17/12/2021", "Phạm Long Thuyên" ));
-        lichsulophocs.add(new Lichsulophoc("Topic: Education", "18:00", "10/12/2021", "Hà Trọng Tuấn" ));
-        lichsulophocs.add(new Lichsulophoc("Study 1:1: My hometown", "19:00", "24/12/2021", "Nguyễn Minh Trí" ));
+        lichsulophocs.add(new Lichsulophoc("Study 1:1: How to introduce yourself", "12:00", "22/12/2021", "Phạm Minh Trọng" ));
+        lichsulophocs.add(new Lichsulophoc("Topic: Home and family", "9:00", "17/12/2021", "Phạm Long Thuyên" ));
+        lichsulophocs.add(new Lichsulophoc("Topic: Education", "16:00", "10/12/2021", "Hà Trọng Tuấn" ));
+        lichsulophocs.add(new Lichsulophoc("Study 1:1: My hometown", "9:00", "24/12/2021", "Nguyễn Minh Trí" ));
+        lichsulophocs.add(new Lichsulophoc("Study 1:1: History", "12:00", "6/12/2021", "Nguyễn Minh Trí" ));
         itemBuoiHocAdapter = new ItemBuoiHocAdapter(this, lichsulophocs);
-        lvLichsulophoc.setAdapter(itemBuoiHocAdapter);
+        lvHienThiLopHoc.setAdapter(itemBuoiHocAdapter);
+        lvHienThiLopHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(Process.this, Process_HistoryClass_Detail.class);
+                startActivity(intent);
 
+            }
+        });
+
+
+    }
+    private void loadDataLopHocSapDienRa() {
+        lopHocSapDienRas = new ArrayList<>();
+        lopHocSapDienRas.add(new LopHocSapDienRa("Topic: Animal", "9:00", "6/1/2022", "Nguyễn Minh Trí", "11/16 người" ));
+        lopHocSapDienRas.add(new LopHocSapDienRa("Study 1:1: How to introduce my hometown", "12:00", "15/1/2022", "Nguyễn Minh Trí", "1/1 người" ));
+        lopHocSapDienRas.add(new LopHocSapDienRa("Topic: Travel", "16:00", "16/1/2022", "Phạm Long Thuyên", "05/16 người" ));
+        lopHocSapDienRas.add(new LopHocSapDienRa("Study 1:1: School", "16:00", "22/1/2022", "Phạm Minh Trọng", "1/1 người"));
+        lopHocSapDienRas.add(new LopHocSapDienRa("Study 1:1: Technology", "12:00", "26/1/2022", "Hà Trọng Tuấn", "1/1 người" ));
+        itemLopHocSapDienRaAdapter = new ItemLopHocSapDienRaAdapter(this, lopHocSapDienRas);
+        lvHienThiLopHoc.setAdapter(itemLopHocSapDienRaAdapter);
+        lvHienThiLopHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(Process.this, Process_coming_Class_Detail.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
