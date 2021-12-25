@@ -23,59 +23,72 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#03A9F4"
+            android:orientation="horizontal"
+            android:background="@drawable/gradient"
             android:padding="5dp">
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="360dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="QUẢN LÝ TÀI KHOẢN"
-                    android:textColor="@color/white"
-                    android:layout_marginLeft="25dp"
-                    android:gravity="center"
-                    android:textSize="20sp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QUẢN LÝ TÀI KHOẢN"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center"
+                        android:textSize="20sp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_account_balance_wallet_24"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_account_balance_wallet_24"
-                    android:layout_marginLeft="10dp"/>
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="25dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Còn"
+                        android:textColor="#72FFBB"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp" />
+                    <EditText
+                        android:id="@+id/edtDemnguoc2"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#72FFBB"
+                        app:backgroundTint="@null"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ngày"
+                        android:textColor="#72FFBB"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="25dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Còn"
-                    android:textColor="#59DD12"
-                    android:layout_marginLeft="5dp"
-                    android:textStyle="bold"
-                    android:textSize="15dp" />
-                <EditText
-                    android:id="@+id/edtDemnguoc2"
-                    android:layout_width="10dp"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="#59DD12"
-                    app:backgroundTint="@null"
-                    android:textStyle="bold"
-                    android:textSize="15dp"
-                    android:layout_marginLeft="5dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ngày"
-                    android:textColor="#59DD12"
-                    android:layout_marginLeft="5dp"
-                    android:textStyle="bold"
-                    android:textSize="15dp"/>
-            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_light_24"
+                />
+
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -86,108 +99,12 @@
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"/>
-        <LinearLayout
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/rcvPreTeacher"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="20dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="20dp">
-                <ImageButton
-                    android:id="@+id/imbGV1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ava2"
-                    android:layout_gravity="center"
-                    app:backgroundTint="@null"/>
-                <TextView
-                    android:id="@+id/txtNameGV1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Phạm Minh Trọng"
-                    android:textColor="@color/black"
-                    android:layout_gravity="center"
-                    android:textSize="12sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageButton
-                    android:id="@+id/imbGV2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ava2"
-                    android:layout_gravity="center"
-                    app:backgroundTint="@null"/>
-                <TextView
-                    android:id="@+id/txtNameGV2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nguyễn Minh Trí"
-                    android:textColor="@color/black"
-                    android:layout_gravity="center"
-                    android:textSize="12sp"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="20dp">
-                <ImageButton
-                    android:id="@+id/imbGV3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ava2"
-                    android:layout_gravity="center"
-                    app:backgroundTint="@null"/>
-                <TextView
-                    android:id="@+id/txtNameGV3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hà Trọng Tuấn"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:layout_gravity="center"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageButton
-                    android:id="@+id/imbGV4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ava2"
-                    android:layout_gravity="center"
-                    app:backgroundTint="@null"/>
-                <TextView
-                    android:id="@+id/txtNameGV4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Phạm Long Thuyên"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:layout_gravity="center"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -196,8 +113,7 @@
         android:id="@+id/bottom_navigation"
         app:menu="@menu/bottom_nav_menu"
         android:layout_gravity="bottom"
-        android:background="#2196F3"
-        >
+        android:background="#2196F3">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

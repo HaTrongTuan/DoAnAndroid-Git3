@@ -17,6 +17,7 @@ public class User_Page_ChangePass extends AppCompatActivity {
     EditText edtPass, edtNewPass,edtReNewPass;
     Button btnUpdate;
     ImageButton imbBack;
+    String username = General.Us.getUsername();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +28,6 @@ public class User_Page_ChangePass extends AppCompatActivity {
     }
 
     private void getEvents() {
-        Intent nhanUsername = getIntent();
-        String username = nhanUsername.getStringExtra("UserNametoChangePass");
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

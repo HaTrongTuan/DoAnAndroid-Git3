@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -32,14 +33,15 @@ import java.io.InputStream;
 
 public class UserPage_ChangePhoto extends AppCompatActivity {
 
-    Button btnCapture, btnSave, btnCancel;
+    Button  btnSave, btnCancel;
     ImageView imvPhoto;
-
+    ImageButton btnCapture;
     LinearLayout sheetOpenCamera, sheetOpenGallery;
 
     BottomSheetDialog sheetDialog;
     ActivityResultLauncher<Intent> activityResultLauncher;
     boolean isCamera;
+    String username = General.Us.getUsername();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
 
 
         linkViews();
+        showInfo();
         createSheetDialog();
         addEvents();
 
@@ -81,6 +84,13 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
         });
     }
 
+    private void showInfo() {
+        byte[] photo = General.ADB.ShowInfo(username).getBlob(7);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo, 0, photo.length);
+        imvPhoto.setImageBitmap(bitmap);
+
+    }
+
     private void addEvents() {
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,20 +103,23 @@ public class UserPage_ChangePhoto extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Insert Data
-                Intent nhanUsername = getIntent();
-                String username = nhanUsername.getStringExtra("UsernametoChangePhoto");
 
                 boolean check= General.ADB.updatePhoto(username,convertPhoto());
                 if (check){
                     Toast.makeText(UserPage_ChangePhoto.this, "Cập nhật hình ảnh thành công!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(UserPage_ChangePhoto.this,UserPage.class);
-                    intent.putExtra("UsernameFromChangePhoto",username);
                     startActivity(intent);
                 }else {
                     Toast.makeText(UserPage_ChangePhoto.this, "Fail!", Toast.LENGTH_SHORT).show();
                 }
 
 
+            }
+        });
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

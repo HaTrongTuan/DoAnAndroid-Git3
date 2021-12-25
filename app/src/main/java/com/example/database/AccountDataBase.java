@@ -157,6 +157,24 @@ public class AccountDataBase extends SQLiteOpenHelper {
             return false;
         }
     }
+    public  Boolean checkEmailPassword(String email, String password) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_EMAIL +"=?" + " AND " + COL_A_PASSWORD + "=?", new String[]{email, password});
+        if (cursor.getCount()>0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public  Boolean checkPhonePassword(String phone, String password) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_PHONE +"=?" + " AND " + COL_A_PASSWORD + "=?", new String[]{phone, password});
+        if (cursor.getCount()>0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
     public boolean checkEmail(String email){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_EMAIL +"=?" , new String[]{email});
@@ -203,6 +221,20 @@ public class AccountDataBase extends SQLiteOpenHelper {
         } else {
             return false;
         }
+    }
+    public String ChangePhonetoUsername(String phone) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_PHONE + "=?", new String[]{phone});
+        c.moveToFirst();
+        String username = c.getString(1);
+        return username;
+    }
+    public String ChangeEmailtoUsername(String email) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM " + TBL_NAME + " WHERE " + COL_A_EMAIL + "=?", new String[]{email});
+        c.moveToFirst();
+        String username = c.getString(1);
+        return username;
     }
 }
 

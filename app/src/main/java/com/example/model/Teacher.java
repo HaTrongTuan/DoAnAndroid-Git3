@@ -1,6 +1,8 @@
 package com.example.model;
 
-public class Teacher{
+import java.io.Serializable;
+
+public class Teacher {
     private int Ava;
     private String Name;
 
@@ -8,8 +10,6 @@ public class Teacher{
         Ava = ava;
         Name = name;
     }
-
-
 
     public void setAva(int ava) {
         Ava = ava;

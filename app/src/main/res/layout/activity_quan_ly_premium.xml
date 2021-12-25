@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuanLyPremium"
+    android:background="@drawable/bgconfirmpayment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/imbBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_back"
+            android:layout_marginStart="10dp"
+            android:background="#00FFFFFF"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GIẢNG VIÊN"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logoto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/premium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 MONTH"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txtSince"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Premium được kích hoạt từ ngày 30/10/2021"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top">
+
+        <TableLayout
+            android:background="@drawable/table_frame"
+            android:layout_width="360dp"
+            android:layout_height="200dp"
+            android:stretchColumns="*">
+            <TableRow>
+                <TextView
+                    android:background="@drawable/table_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="Buổi học hoàn thành "
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:background="@drawable/table_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="Buổi học còn lại"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:background="@drawable/table_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="4 buổi"
+                    android:textColor="#72FFBB"
+                    android:textStyle="bold|italic"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+                <TextView
+                    android:background="@drawable/table_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="6 buổi"
+                    android:textColor="#72FFBB"
+                    android:textStyle="bold|italic"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+
+            </TableRow>
+        </TableLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

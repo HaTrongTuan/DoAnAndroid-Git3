@@ -10,7 +10,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import com.example.adapter.DanhMucAdapter;
 import com.example.adapter.ItemTeacherAdapter;
+import com.example.model.DanhMuc;
 import com.example.model.Teacher;
 
 import java.util.ArrayList;
@@ -18,8 +20,9 @@ import java.util.List;
 
 public class GiangVien extends AppCompatActivity {
     ImageButton imbBack;
-    RecyclerView rcvTeacher, rcvTeacherNormal;
-    ItemTeacherAdapter adapter;
+    RecyclerView rcvList;
+
+    private DanhMucAdapter danhMucAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,45 +32,50 @@ public class GiangVien extends AppCompatActivity {
         linkview();
 
         configRecyclerView();
-        initData();
-
         back();
     }
 
-    private void initData() {
-        ArrayList<Teacher> demo = new ArrayList<>();
-        demo.add(new Teacher(R.drawable.ava,"Hồ Hoàng"));
-        demo.add(new Teacher(R.drawable.ava2,"Hoàng Minh"));
-        demo.add(new Teacher(R.drawable.avapro5,"Mỹ Lệ"));
-        demo.add(new Teacher(R.drawable.avapro,"Văn Minh"));
-
-        adapter = new ItemTeacherAdapter(getApplicationContext(), demo);
-        rcvTeacher.setAdapter(adapter);
-
-//        ArrayList<Teacher> normal = new ArrayList<>();
-//        demo.add(new Teacher(R.drawable.hinh4,"Minh Hoàn"));
-//        demo.add(new Teacher(R.drawable.hinh1,"Nguyễn Minh Long"));
-//        demo.add(new Teacher(R.drawable.hinh3,"Lê Thị Hồng"));
-//        demo.add(new Teacher(R.drawable.hinh7,"Văn Minh Hồ"));
-//        demo.add(new Teacher(R.drawable.avapro3,"Hồ Minh Nghĩa"));
-//        demo.add(new Teacher(R.drawable.hinh3,"Đinh Minh Lộc"));
-//        demo.add(new Teacher(R.drawable.gl,"Nguyễn Thị Thu"));
-//        demo.add(new Teacher(R.drawable.hinh6,"Hoàng Kim Trinh"));
-//
-//        adapter = new ItemTeacherAdapter(getApplicationContext(), normal);
-//        rcvTeacherNormal.setAdapter(adapter);
-    }
-
     private void configRecyclerView() {
-        LinearLayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
-        rcvTeacher.setLayoutManager(manager);
-        DividerItemDecoration decoration = new DividerItemDecoration(this, manager.getOrientation());
-        rcvTeacher.addItemDecoration(decoration);
-        rcvTeacher.setHasFixedSize(true);
 
-//        LinearLayoutManager manager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
-//        rcvTeacherNormal.setLayoutManager(manager2);
+        danhMucAdapter = new DanhMucAdapter(this);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
+        rcvList.setLayoutManager(linearLayoutManager);
+
+        danhMucAdapter.setData(initData());
+        rcvList.setHasFixedSize(true);
+
+        rcvList.setAdapter(danhMucAdapter);
     }
+
+    private List<DanhMuc> initData() {
+
+
+
+        List<DanhMuc> list = new ArrayList<>();
+
+        List<Teacher> listNoiBat = new ArrayList<>();
+        listNoiBat.add(new Teacher(R.drawable.ava,"Hồ Hoàng"));
+        listNoiBat.add(new Teacher(R.drawable.ava2,"Hoàng Minh"));
+        listNoiBat.add(new Teacher(R.drawable.avapro5,"Mỹ Lệ"));
+        listNoiBat.add(new Teacher(R.drawable.avapro,"Văn Minh"));
+
+        List<Teacher> listNormal = new ArrayList<>();
+        listNormal.add(new Teacher(R.drawable.hinh4,"Minh Hoàn"));
+        listNormal.add(new Teacher(R.drawable.hinh1,"Nguyễn Minh Long"));
+        listNormal.add(new Teacher(R.drawable.hinh3,"Lê Thị Hồng"));
+        listNormal.add(new Teacher(R.drawable.hinh7,"Văn Minh Hồ"));
+        listNormal.add(new Teacher(R.drawable.avapro3,"Hồ Minh Nghĩa"));
+        listNormal.add(new Teacher(R.drawable.hinh3,"Đinh Minh Lộc"));
+        listNormal.add(new Teacher(R.drawable.gl,"Nguyễn Thị Thu"));
+        listNormal.add(new Teacher(R.drawable.hinh6,"Hoàng Kim Trinh"));
+
+        list.add(new DanhMuc("GIÁO VIÊN NỔI BẬT",listNoiBat,true));
+        list.add(new DanhMuc("DANH SÁCH GIÁO VIÊN",listNormal,false));
+
+        return list;
+    }
+
 
     private void back() {
         imbBack.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +88,6 @@ public class GiangVien extends AppCompatActivity {
 
     private void linkview() {
         imbBack = findViewById(R.id.imbBack);
-        rcvTeacher =findViewById(R.id.rcvTeacher);
-        rcvTeacherNormal = findViewById(R.id.rcvTeacherNormal);
+        rcvList =findViewById(R.id.rcvList);
     }
 }
