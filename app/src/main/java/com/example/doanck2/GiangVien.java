@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -38,7 +40,7 @@ public class GiangVien extends AppCompatActivity {
         linkview();
         GiangVienNormal();
         DanhMucNoiBat();
-        back();
+        setEvents();
     }
 
     private void GiangVienNormal() {
@@ -78,11 +80,18 @@ public class GiangVien extends AppCompatActivity {
 
 
 
-    private void back() {
+    private void setEvents() {
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        grvGVNormal.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(GiangVien.this, GiangVienDetail.class);
+                startActivity(intent);
             }
         });
     }

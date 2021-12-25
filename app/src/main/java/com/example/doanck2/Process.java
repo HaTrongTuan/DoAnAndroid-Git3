@@ -50,30 +50,18 @@ public class Process extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 loadDataLichsulophoc();
-                lvHienThiLopHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        Intent intent = new Intent(Process.this, Process_HistoryClass_Detail.class);
-                        startActivity(intent);
 
-
-                    }
-                });
             }
         });
         btnLopHocSapDienRa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loadDataLopHocSapDienRa();
-                lvHienThiLopHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        Intent intent = new Intent(Process.this, Process_coming_Class_Detail.class);
-                        startActivity(intent);
-                    }
-                });
+
+
             }
         });
+
 
 
 
@@ -134,6 +122,15 @@ public class Process extends AppCompatActivity {
         lichsulophocs.add(new Lichsulophoc("Study 1:1: History", "12:00", "6/12/2021", "Nguyễn Minh Trí" ));
         itemBuoiHocAdapter = new ItemBuoiHocAdapter(this, lichsulophocs);
         lvHienThiLopHoc.setAdapter(itemBuoiHocAdapter);
+        lvHienThiLopHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(Process.this, Process_HistoryClass_Detail.class);
+                startActivity(intent);
+
+
+            }
+        });
 
 
 
@@ -148,6 +145,13 @@ public class Process extends AppCompatActivity {
         lopHocSapDienRas.add(new LopHocSapDienRa("Study 1:1: Technology", "12:00", "26/1/2022", "Hà Trọng Tuấn", "1/1 người" ));
         itemLopHocSapDienRaAdapter = new ItemLopHocSapDienRaAdapter(this, lopHocSapDienRas);
         lvHienThiLopHoc.setAdapter(itemLopHocSapDienRaAdapter);
+        lvHienThiLopHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(Process.this, Process_coming_Class_Detail.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

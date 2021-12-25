@@ -25,6 +25,7 @@ public class PremiumUpdate extends AppCompatActivity {
 
     GridView grvPreTeacher;
 
+    List<Teacher> teachers = new ArrayList<Teacher>();
     TextView txtNameGV;
 
     @Override
@@ -35,7 +36,12 @@ public class PremiumUpdate extends AppCompatActivity {
         bottomnav();
         linkViews();
         loadData();
+        setEvents();
 
+
+    }
+
+    private void setEvents() {
         grvPreTeacher.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -44,8 +50,9 @@ public class PremiumUpdate extends AppCompatActivity {
 
             }
         });
-
     }
+
+
 
     private void bottomnav() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -53,7 +60,6 @@ public class PremiumUpdate extends AppCompatActivity {
     }
 
     private void loadData() {
-        List<Teacher> teachers = new ArrayList<Teacher>();
 
         teachers.add(new Teacher(R.drawable.ava2,"Hồ Minh Nghĩa"));
         teachers.add(new Teacher(R.drawable.ava2,"Đinh Minh Lộc"));
@@ -62,7 +68,6 @@ public class PremiumUpdate extends AppCompatActivity {
         ItemTeacherAdapter adapter = new ItemTeacherAdapter(PremiumUpdate.this, R.layout.item_teacher, teachers);
 
         grvPreTeacher.setAdapter(adapter);
-
     }
 
 

@@ -25,6 +25,7 @@ public class Process_coming_Class_Detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_process_coming_class_detail);
         btnHuyLopHoc = findViewById(R.id.btnHuyLopHoc);
+        imbBack = findViewById(R.id.imbBack);
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
